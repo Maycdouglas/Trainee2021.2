@@ -1,17 +1,17 @@
-# Trainee2021.1
-# Brion Drinks e Coquetelaria
-## Projeto Trainee, Code Jr, Grupo 3, 2021.1
+# Trainee2021.2
+# MyCão Pet Shop
+## Projeto Trainee, Code Jr, Grupo #, 2021.2
 
 Desenvolvedores:
-- Helena Lannes
-- Maycon Douglas
-- Édney
-- Guilherme Machado
+- Fulano 1
+- Fulano 2
+- Fulano 3
+- Fulano 4
 
 
 Scrum Master:
 
-- Pedro Brion
+- Maycon Douglas
 
 ## GIT TUTORIAL
 ### Primeira configuração
