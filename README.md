@@ -1,12 +1,13 @@
 # Trainee2021.2
 # MyCão Pet Shop
-## Projeto Trainee, Code Jr, Grupo #, 2021.2
+## Projeto Trainee, Code Jr, Grupo 2, 2021.2
 
 Desenvolvedores:
-- Fulano 1
-- Fulano 2
-- Fulano 3
-- Fulano 4
+- Gabriel Duque
+- Igor Ernandes
+- Isabelly Cristine
+- João Pedro Banhato
+- Lucas de Oliveira
 
 
 Scrum Master:
