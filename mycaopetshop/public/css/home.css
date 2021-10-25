@@ -1,0 +1,82 @@
+.carousel {
+    margin-bottom: 3rem;
+    overflow: no-content;
+}
+
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+.carousel-item {
+    height: 32rem;
+}
+
+.carousel-item > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e2e2e2;
+    padding: 0;
+    min-width: 100%;
+    height: 32rem;
+}
+
+.card-header img {
+    width: 140px;
+    height: 140px;
+}
+
+.products .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.products h2 {
+    font-weight: 400;
+}
+
+.products .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
+
+.divider {
+    margin: 5rem 0;
+}
+
+@media (min-width: 40em) {
+    .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    animation-name: btn-back-to-top;
+    animation-duration: 1s;
+    z-index: 100;
+}
+
+@keyframes btn-back-to-top {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
