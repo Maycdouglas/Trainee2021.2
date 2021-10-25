@@ -68,7 +68,7 @@
     right: 20px;
     display: none;
     animation-name: btn-back-to-top;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     z-index: 100;
 }
 
