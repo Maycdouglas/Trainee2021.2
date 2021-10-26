@@ -15,7 +15,8 @@
         <title>MyCão Pet Shop</title>
     </head>
     <body>
-        <button class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top" title="Back to top!" type="button">
+        <button class="btn btn-warning btn-floating btn-lg" data-bs-toggle="tooltip" id="btn-back-to-top"
+                title="Back to top!" type="button">
             <svg class="bi bi-arrow-up" fill="currentColor" height="16" viewBox="0 0 16 16" width="16"
                  xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
@@ -24,7 +25,7 @@
         </button>
 
         <header>
-            <nav class="navbar navbar-expand-md navbar-dark py-3 bg-primary">
+            <nav class="navbar navbar-expand-md navbar-dark py-3 bg-info">
                 <div class="container-fluid align-items-center justify-content-center">
                     <p class="h1 mb-0 text-danger">HEADER</p>
                 </div>
@@ -32,7 +33,7 @@
         </header>
 
         <main class="container">
-            <div class="carousel carousel-fade carousel-dark slide mb-0" data-bs-ride="carousel" id="carousel">
+            <div class="carousel carousel-dark slide mb-0" data-bs-ride="carousel" id="carousel">
                 <div class="carousel-indicators">
                     <button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0"
                             data-bs-target="#carousel" type="button"></button>
@@ -42,15 +43,15 @@
                             type="button"></button>
                 </div>
                 <div class="carousel-inner rounded-bottom">
-                    <div class="carousel-item active" data-bs-interval="10000">
+                    <div class="carousel-item active" data-bs-interval="7000">
                         <img alt="Dog 1"
                              src="../../public/img/macacode.svg">
                     </div>
-                    <div class="carousel-item" data-bs-interval="10000">
+                    <div class="carousel-item" data-bs-interval="7000">
                         <img alt="Dog 2"
                              src="../../public/img/macacode.svg">
                     </div>
-                    <div class="carousel-item" data-bs-interval="10000">
+                    <div class="carousel-item" data-bs-interval="7000">
                         <img alt="Dog 3"
                              src="../../public/img/macacode.svg">
                     </div>
@@ -69,124 +70,163 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="card bg-light">
-                            <div class="card-header">
-                                <img alt="Dog 1"
-                                     src="../../public/img/macacode.svg">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">
-                                    <h2>Product 1</h2>
+                            <a class="text-decoration-none" href="#">
+                                <div class="card-header">
+                                    <img alt="Dog 1"
+                                         src="../../public/img/macacode.svg">
                                 </div>
-                                <div class="card-text">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu odio id
-                                       erat dapibus pulvinar et sit amet ligula. Vestibulum.</p>
-                                    <p><a class="btn btn-primary" href="#">View details &raquo;</a></p>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <h2>Product 1</h2>
+                                    </div>
+                                    <div class="card-text">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu odio
+                                            id erat dapibus pulvinar et sit amet ligula. Vestibulum.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="card bg-light">
-                            <div class="card-header">
-                                <img alt="Dog 1"
-                                     src="../../public/img/macacode.svg">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">
-                                    <h2>Product 2</h2>
+                            <a class="text-decoration-none" href="#">
+                                <div class="card-header">
+                                    <img alt="Dog 1"
+                                         src="../../public/img/macacode.svg">
                                 </div>
-                                <div class="card-text">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit
-                                       lectus et leo interdum facilisis. Phasellus nulla quam, volutpat sit.</p>
-                                    <p>
-                                        <a class="btn btn-primary" href="#">View details &raquo;</a>
-                                    </p>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <h2>Product 2</h2>
+                                    </div>
+                                    <div class="card-text">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit
+                                            lectus et leo interdum facilisis. Phasellus nulla quam, volutpat sit.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="card bg-light">
-                            <div class="card-header">
-                                <img alt="Dog 1"
-                                     src="../../public/img/macacode.svg">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">
-                                    <h2>Product 3</h2>
+                            <a class="text-decoration-none" href="#">
+                                <div class="card-header">
+                                    <img alt="Dog 1"
+                                         src="../../public/img/macacode.svg">
                                 </div>
-                                <div class="card-text">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed turpis ante,
-                                       faucibus id lectus in, dictum iaculis nisi. Aenean malesuada.</p>
-                                    <p>
-                                        <a class="btn btn-primary" href="#">View details &raquo;</a>
-                                    </p>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <h2>Product 3</h2>
+                                    </div>
+                                    <div class="card-text">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed turpis ante,
+                                            faucibus id lectus in, dictum iaculis nisi. Aenean malesuada.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="card bg-light">
-                            <div class="card-header">
-                                <img alt="Dog 1"
-                                     src="../../public/img/macacode.svg">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">
-                                    <h2>Product 4</h2>
+                            <a class="text-decoration-none" href="#">
+                                <div class="card-header">
+                                    <img alt="Dog 1"
+                                         src="../../public/img/macacode.svg">
                                 </div>
-                                <div class="card-text">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium,
-                                       enim
-                                       nec consequat malesuada, neque sapien viverra ex, sed finibus.</p>
-                                    <p>
-                                        <a class="btn btn-primary" href="#">View details &raquo;</a>
-                                    </p>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <h2>Product 4</h2>
+                                    </div>
+                                    <div class="card-text">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium,
+                                            enim nec consequat malesuada, neque sapien viverra ex, sed finibus.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="card bg-light">
-                            <div class="card-header">
-                                <img alt="Dog 1"
-                                     src="../../public/img/macacode.svg">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">
-                                    <h2>Product 5</h2>
+                            <a class="text-decoration-none" href="#">
+                                <div class="card-header">
+                                    <img alt="Dog 1"
+                                         src="../../public/img/macacode.svg">
                                 </div>
-                                <div class="card-text">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a turpis
-                                       massa.
-                                       Mauris ornare elit non efficitur fermentum. Aliquam quis.</p>
-                                    <p>
-                                        <a class="btn btn-primary" href="#">View details &raquo;</a>
-                                    </p>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <h2>Product 5</h2>
+                                    </div>
+                                    <div class="card-text">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a turpis
+                                            massa. Mauris ornare elit non efficitur fermentum. Aliquam quis.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="card bg-light">
-                            <div class="card-header">
-                                <img alt="Dog 1"
-                                     src="../../public/img/macacode.svg">
+                            <a class="text-decoration-none" href="#">
+                                <div class="card-header">
+                                    <img alt="Dog 1"
+                                         src="../../public/img/macacode.svg">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <h2>Product 6</h2>
+                                    </div>
+                                    <div class="card-text">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sollicitudin
+                                            diam sed facilisis bibendum. Phasellus hendrerit diam eget mauris suscipit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row align-items-md-stretch m-5 pb-4">
+                <div class="col-md-6">
+                    <div class="h-100 ms-5 p-5 bg-light border rounded-3">
+                        <h1>Quem somos</h1>
+                        <p class="text-justify">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id volutpat libero, ut tempus
+                            arcu. Nullam laoreet eu est nec elementum. Aliquam consectetur non arcu a iaculis. Mauris
+                            volutpat mattis sollicitudin. Nunc et tempor eros. Donec non tincidunt diam. Nullam.
+                        </p>
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-md-auto">
+                                <button class="btn btn-outline-primary" type="button">Quem somos</button>
                             </div>
-                            <div class="card-body">
-                                <div class="card-title">
-                                    <h2>Product 6</h2>
-                                </div>
-                                <div class="card-text">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sollicitudin
-                                       diam
-                                       sed facilisis bibendum. Phasellus hendrerit diam eget mauris suscipit.</p>
-                                    <p>
-                                        <a class="btn btn-primary" href="#">View details &raquo;</a>
-                                    </p>
-                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="h-100 me-5 p-5 bg-light border rounded-3">
+                        <h1>Contato</h1>
+                        <p class="text-justify">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non purus ac nisl
+                            facilisis fringilla. Vivamus pharetra rhoncus tellus, rutrum faucibus nulla feugiat id.
+                            Nullam dignissim eu purus sed pulvinar. Sed id odio mattis, dictum est in, pretium nisl.
+                            Donec metus diam, congue sit amet.
+                        </p>
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-md-auto">
+                                <button class="btn btn-outline-primary" type="button">Contato</button>
                             </div>
                         </div>
                     </div>
@@ -194,7 +234,7 @@
             </section>
         </main>
 
-        <footer class="bg-primary d-flex flex-wrap justify-content-center align-items-center py-3 mt-4 border-top">
+        <footer class="bg-info d-flex flex-wrap justify-content-center align-items-center py-3">
             <p class="h1 mb-0 text-danger">FOOTER</p>
         </footer>
 
