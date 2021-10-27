@@ -1,0 +1,22 @@
+.navbar {
+    background-color: #022049;
+}
+
+.navbar h1 {
+    color: #F4A630;
+    margin: auto;
+}
+
+body {
+    background-color: white;
+}
+
+.texto-contato {
+    margin-top: 30px;
+    font-size: 40px;
+}
+
+.formulario {
+    margin-top: 50px;
+}
+
