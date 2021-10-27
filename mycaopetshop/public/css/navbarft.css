@@ -1,9 +1,24 @@
 .navbar-design {
-    background-color: #AFCBFF !important;
+    background-color: #F4A630 !important;
+}
+
+.navbar-design a {
+    text-align: right !important;
 }
 
 .logo-navbar  {
-    width: 100px;
-    height: 100px;
-    padding-right: 0px;
+    width: 70px;
+    height: 70px;
+    margin-left: 30px;
 }
+
+.conteudo_site {
+    background-color: white !important;
+    height: 800px;
+}
+
+.footer {
+    background-color: #F4A630 !important;
+    height: 300px;
+}
+
