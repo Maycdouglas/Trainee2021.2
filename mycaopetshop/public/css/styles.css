@@ -17,11 +17,49 @@ body {
 
 .texto-contato {
     margin-top: 40px;
+    margin-bottom: 15px;
     font-size: 40px;
+    color: #022049;
+}
+
+.vias-contato {
+    color: #022049;
+}
+
+.vias-contato a{
+    color: #022049;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.vias-contato a:hover{
+    color: #F4A630;
+    transition: 0.3s ease;
 }
 
 .formulario {
     margin-top: 50px;
+    margin-bottom: 60px;
+    width: 70%;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.mapa {
+    margin-top: 50px;
+}
+
+.mapa h1 {
+    text-align: center;
+    font-size: 22px;
+}
+
+.fa-map-marker-alt {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .footer {
