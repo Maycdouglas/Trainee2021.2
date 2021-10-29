@@ -60,4 +60,17 @@ a:visited {
     transition: 0.4s;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 767px) {
+    .cards {
+        margin-left: 0px;
+    }
+}
+
 /*TODO: margin left in mobile devices*/
