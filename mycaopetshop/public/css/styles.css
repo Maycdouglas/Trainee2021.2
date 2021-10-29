@@ -50,6 +50,7 @@ body {
 
 .mapa {
     margin-top: 50px;
+    margin: auto;
 }
 
 .mapa h1 {
@@ -75,4 +76,10 @@ body {
     text-align: center;
     font-size: 40px;
     list-style: none;
+}
+
+@media (max-width: 600px) {
+    .mapa {
+        width: 90%;
+    }
 }
