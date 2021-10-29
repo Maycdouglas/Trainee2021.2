@@ -1,10 +1,14 @@
 .navbar {
     background-color: #022049;
+    margin-bottom: 40px;
 }
 
-.navbar h1 {
+.navbar-text {
     color: #F4A630;
+    padding-left: 0;
     margin: auto;
+    font-size: 40px;
+    list-style: none;
 }
 
 body {
@@ -12,7 +16,7 @@ body {
 }
 
 .texto-contato {
-    margin-top: 30px;
+    margin-top: 40px;
     font-size: 40px;
 }
 
@@ -20,3 +24,17 @@ body {
     margin-top: 50px;
 }
 
+.footer {
+    background-color: #022049;
+    height: 100px;
+    margin-top: 100px;
+}
+
+.footer-text {
+    color: #F4A630;
+    line-height: 100px;
+    padding-left: 0;
+    text-align: center;
+    font-size: 40px;
+    list-style: none;
+}
