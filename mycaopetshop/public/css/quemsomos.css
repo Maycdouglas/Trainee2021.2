@@ -1,0 +1,86 @@
+:root {
+    --azul-escuro: #022049;
+    --laranja: #F4A630;
+    --azul-claro: #AFCBFF;
+}
+
+.navbar {
+
+}
+
+/* 
+    color: #F4A630 !important;
+    padding-left: 0 !important;
+    margin: auto !important;
+    font-size: 40px !important;
+    list-style: none !important; */
+
+
+
+.Titulo-quem-somos{
+      text-align: center !important;
+      color: #F4A630 !important;
+     background-color: #AFCBFF !important;  
+
+}
+
+
+.corpo{
+    background-color: #022049;
+    color: #F4A630;
+}
+
+
+
+h6{
+ border-top: 100px;
+ 
+}
+.row{
+    background-color: #022049;
+    color: #F4A630;
+}
+
+.Div-baixa{
+    background-color: #022049;
+    color: #F4A630;
+    padding-top: 100px;
+    padding: 20px;
+}
+
+.img-principal{
+     
+    border: transparent thin solid;
+    padding: 5px;
+    margin: 0px 10px 10px 0;
+    max-width: 600px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+
+}
+
+.card-missao-title{
+    text-align: center;
+    height: 30px;
+}
+.card-valores-title{
+    text-align: center;
+    height: 30px;
+}
+.card-visao-title{
+    text-align: center;
+    height: 30px;
+}
+.card-Missao{
+    background-color: #AFCBFF;
+}
+.card-Valores{
+    background-color: #AFCBFF;
+}
+.card-Visao{
+    background-color: #AFCBFF;
+}
+
+.footer{
+
+}
