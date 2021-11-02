@@ -91,3 +91,15 @@ h1 {
         margin-top: 20px;
     }
 }
+
+@media (min-width: 564px) and (max-width: 575px) {
+   .principal {
+       display: block;
+       text-align: center;
+   }
+
+   .principal form {
+       max-width: 335px;
+       margin: 30px auto 20px auto;
+   }
+}
