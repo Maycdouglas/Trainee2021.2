@@ -92,7 +92,7 @@ h1 {
     }
 }
 
-@media (min-width: 564px) and (max-width: 575px) {
+@media (min-width: 564px) and (max-width: 576px) {
    .principal {
        display: block;
        text-align: center;
