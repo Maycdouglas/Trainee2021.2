@@ -14,6 +14,21 @@ a:visited {
     background-color: var(--laranja);
 }
 
+h1 {
+    color: var(--azul-escuro);
+}
+
+.btn-principal {
+    border-color: var(--azul-escuro);
+    color: var(--azul-escuro);
+    background-color: white;
+}
+
+.btn-principal:hover {
+    background-color: var(--azul-escuro) !important;
+    color: white;
+}
+
 .principal {
     display: flex;
     flex-wrap: wrap;
@@ -70,6 +85,10 @@ a:visited {
 @media (max-width: 767px) {
     .cards {
         margin-left: 0px;
+    }
+
+    .principal form {
+        margin-top: 20px;
     }
 }
 
