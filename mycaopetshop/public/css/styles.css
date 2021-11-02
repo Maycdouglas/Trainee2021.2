@@ -36,6 +36,10 @@ body {
     transition: 0.3s ease;
 }
 
+.vias-contato span {
+    display: inline-block;
+}
+
 .formulario {
     padding-top: 60px;
     width: 70%;
