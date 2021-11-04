@@ -96,3 +96,10 @@ body {
         width: 90%;
     }
 }
+
+@media (max-width: 337px) {
+    .elemento-separa {
+        font-size: 0;
+        display: block;
+    }
+}
