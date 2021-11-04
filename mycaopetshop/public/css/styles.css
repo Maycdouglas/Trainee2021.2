@@ -1,7 +1,17 @@
-.username {
-    color: #F4A630;
+.navbar {
+    background-color: #022049;
+    margin-bottom: 40px;
 }
 
-.card {
-    display: inline-flex;
+.navbar-text {
+    color: #F4A630;
+    padding-left: 0;
+    margin: auto;
+    font-size: 40px;
+    list-style: none;
+}
+
+.username {
+    color: #F4A630;
+    font-weight: bold;
 }
