@@ -9,25 +9,42 @@
 }
 
 .links-navbar {
-    color: #AFCBFF !important;
+    color: #F4A630 !important;
+}
+
+.links-navbar:hover {
+    color: white !important;
 }
 
 .logo-navbar  {
-    width: 250px;
-    height: 250px;
+    width: 230px;
+    height: 230px;
+    overflow: hidden !important;
 }
 
 .navbar-brand {
     margin-top: 0px !important;
 }
 
+
+
+
+
 .conteudo_site {
     background-color: white !important;
     height: 1000px;
 }
 
+
+
+
+
 .links-footer {
     color: #F4A630 !important;
+}
+
+.links-footer:hover {
+    color: white !important;
 }
 
 .texto-footer {
@@ -36,5 +53,23 @@
 
 .redes-sociais {
     font-size: 24px;
+}
+
+
+
+
+
+@media (max-width: 1000px) {
+
+    .links-navbar {
+        margin-right: 2% !important;
+    }
+
+    .logo-navbar {
+        text-align: left;
+        width: 200px;
+        height: 230px;
+    }
+
 }
 
