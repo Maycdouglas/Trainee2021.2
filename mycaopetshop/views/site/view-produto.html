@@ -19,9 +19,9 @@
 
 <body>
 
-  <div class="navbar">
+  <div class="navbarT">
     <!--Aqui é onde ficará a Navbar-->
-    <h2>NAVBAR</h2>
+    <h2 class="d-flex justify-content-center">NAVBAR</h2>
   </div>
 
 
@@ -31,8 +31,6 @@
   <div class="container">
     <div class="caminho">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li> > </li>
         <li><a href="#">Produtos</a></li>
         <li> > </li>
         <li><a href="#">Categoria</a></li>
@@ -45,48 +43,48 @@
 
 
   <div class="container">
-    <div class="card-produto">
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-sm-12 col-md-12 col-lg-8">
+        <div class="card mb-3 p-2">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-sm-12 col-md-12 col-lg-6">
 
 
-            <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false"
-              data-bs-interval="false">
-
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="../../public/img/macacode.svg" class="d-block w-100" alt="...">
+              <div class="carousel carousel-dark slide mb-0" data-bs-ride="carousel" id="carousel">
+                <div class="carousel-indicators">
+                  <button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0"
+                    data-bs-target="#carousel" type="button"></button>
+                  <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carousel" type="button"></button>
+                  <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carousel" type="button"></button>
                 </div>
-                <div class="carousel-item">
-                  <img src="../../public/img/macacode.svg" class="d-block w-100" alt="...">
+                <div class="carousel-inner rounded">
+                  <div class="carousel-item active" data-bs-interval="7000">
+                    <img alt="Dog 1" src="../../public/img/macacode.svg">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="7000">
+                    <img alt="Dog 2" src="../../public/img/macacode.svg">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="7000">
+                    <img alt="Dog 3" src="../../public/assets/MyCão escrito em fundo amarelo.png">
+                  </div>
                 </div>
-                <div class="carousel-item">
-                  <img src="../../public/img/macacode.svg" class="d-block w-100" alt="...">
-                </div>
+                <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carousel" type="button">
+                  <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carousel" type="button">
+                  <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
-
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
             </div>
 
 
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Nome do Produto</h5>
-              <p class="card-text">Preço do Produto</p>
-              <p class="card-text"><small class="text-muted">Clique nas laterais da imagem para visualizar este
-                  produto</small></p>
+            <div class="col-sm-12 col-md-12 col-lg-6">
+              <div class="card-body px-0">
+                <h5 class="card-title">Nome do Produto</h5>
+                <p class="card-text"><b>R$99,99</b></p>
+              </div>
             </div>
           </div>
         </div>
