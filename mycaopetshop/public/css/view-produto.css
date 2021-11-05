@@ -1,0 +1,54 @@
+.navbar {
+    background-color: #022049 !important;
+    height: 50px !important;
+}
+
+.navbar h2 {
+    color: #F4A630 !important;
+    text-align: center !important;
+}
+
+
+
+
+.caminho {
+    font-size: 24px;
+}
+
+.caminho li {
+    display: inline-block;
+}
+
+
+
+
+.card-produto {
+    text-align: center;
+}
+
+
+
+
+@media(max-width: 1000px) {
+    
+    .informacoes-produto {
+        text-align: center;
+    }
+    
+}
+
+
+
+
+
+
+.footer {
+    background-color: #022049 !important;
+    height: 120px !important;
+    object-position: bottom;
+}
+
+.footer h2 {
+    color: #F4A630 !important;
+    text-align: center !important;
+}
