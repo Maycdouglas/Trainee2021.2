@@ -15,3 +15,29 @@
     color: #F4A630;
     font-weight: bold;
 }
+
+.btn {
+    background-color: #F4A630;
+    transition: 0.3s ease;
+    border-color: #F4A630;
+}
+
+.btn:hover {
+    background-color: #022049;
+    transition: 0.3s ease;
+    border-color: #022049;
+}
+
+.btn:focus {
+    background-color: #022049;
+    transition: 0.3s ease;
+    border-color: #022049;
+}
+
+i {
+    font-size: 50px;
+}
+
+.card-title {
+    font-size: 20px ;
+}
