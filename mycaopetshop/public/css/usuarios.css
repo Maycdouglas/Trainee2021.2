@@ -18,7 +18,7 @@ body {
     background-color: #f6f8ff !important;
 }
 
-h2 {
+h3 {
     color: var(--azul-escuro);
 }
 
@@ -76,4 +76,62 @@ h2 {
 hr {
     margin: 10px 15px;
     color: var(--azul-escuro);
+}
+
+.tabela {
+    margin: 10px 15px;
+}
+
+.tabela button {
+    margin-right: 15px;
+}
+
+.detalhes {
+    display: none;
+}
+
+.formulario input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 992px) {
+    .botoes {
+        display: flex;
+        align-items: center;
+    }
+
+    .detalhes {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .email {
+        display: none;
+    }
+
+    .detalhes {
+        display: block;
+    }
+
+    .botoes {
+        display: flex;
+    }
+
+    .td-button button{
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 507px) {
+    .senha {
+        display: none;
+    }
+}
+
+@media (max-width: 364px) {
+    .botoes {
+        flex-wrap: wrap;
+    }
 }

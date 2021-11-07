@@ -26,10 +26,242 @@
                     <img src="../../public/assets/options.svg" alt="Options">
                     <h3>Usuários</h3>
                 </div>
-                <button class="btn btn-outline btn-principal" type="submit"><img src="../../public/assets/plus-icon.svg"
+                <button class="btn btn-outline btn-principal" type="submit" data-bs-toggle="modal"
+                    data-bs-target="#adicionar-modal"><img src="../../public/assets/plus-icon.svg"
                         alt="plus">Adicionar</button>
             </div>
             <hr>
+            <div class="tabela">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col" class="email">Email</th>
+                            <th scope="col" class="senha">Senha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Lucas de Oliveira Varino</td>
+                            <td class="email">lucasvarino@email.com</td>
+                            <td class="senha">123456</td>
+                            <td class="td-button">
+                                <div class="botoes">
+                                    <button class="btn btn-primary"><img src="../../public/assets/bx_bxs-edit.svg"
+                                            alt="Editar" data-bs-toggle="modal" data-bs-target="#editar-modal"></button>
+                                    <button class="btn btn-danger" data-bs-toggle="modal"
+                                        data-bs-target="#excluir-modal"><img src="../../public/assets/bx_bx-trash.svg"
+                                            alt="Excluir"></button><button class="btn btn-success detalhes"
+                                        data-bs-toggle="modal" data-bs-target="#detalhes-modal"><img
+                                            src="../../public/assets/akar-icons_eye.svg" alt="Detalhes"></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Lucas de Oliveira Varino</td>
+                            <td class="email">lucasvarino@email.com</td>
+                            <td class="senha">123456</td>
+                            <td class="td-button">
+                                <div class="botoes">
+                                    <button class="btn btn-primary"><img src="../../public/assets/bx_bxs-edit.svg"
+                                            alt="Editar" data-bs-toggle="modal" data-bs-target="#editar-modal"></button>
+                                    <button class="btn btn-danger" data-bs-toggle="modal"
+                                        data-bs-target="#excluir-modal"><img src="../../public/assets/bx_bx-trash.svg"
+                                            alt="Excluir"></button><button class="btn btn-success detalhes"
+                                        data-bs-toggle="modal" data-bs-target="#detalhes-modal" data-bs-toggle="modal"
+                                        data-bs-target="#detalhes-modal"><img
+                                            src="../../public/assets/akar-icons_eye.svg" alt="Detalhes"></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Lucas de Oliveira Varino</td>
+                            <td class="email">lucasvarino@email.com</td>
+                            <td class="senha">123456</td>
+                            <td class="td-button">
+                                <div class="botoes">
+                                    <button class="btn btn-primary"><img src="../../public/assets/bx_bxs-edit.svg"
+                                            alt="Editar" data-bs-toggle="modal" data-bs-target="#editar-modal"></button>
+                                    <button class="btn btn-danger" data-bs-toggle="modal"
+                                        data-bs-target="#excluir-modal"><img src="../../public/assets/bx_bx-trash.svg"
+                                            alt="Excluir"></button><button class="btn btn-success detalhes"
+                                        data-bs-toggle="modal" data-bs-target="#detalhes-modal"><img
+                                            src="../../public/assets/akar-icons_eye.svg" alt="Detalhes"></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Lucas de Oliveira Varino</td>
+                            <td class="email">lucasvarino@email.com</td>
+                            <td class="senha">123456</td>
+                            <td class="td-button">
+                                <div class="botoes">
+                                    <button class="btn btn-primary"><img src="../../public/assets/bx_bxs-edit.svg"
+                                            alt="Editar" data-bs-toggle="modal" data-bs-target="#editar-modal"></button>
+                                    <button class="btn btn-danger" data-bs-toggle="modal"
+                                        data-bs-target="#excluir-modal"><img src="../../public/assets/bx_bx-trash.svg"
+                                            alt="Excluir"></button><button class="btn btn-success detalhes"
+                                        data-bs-toggle="modal" data-bs-target="#detalhes-modal"><img
+                                            src="../../public/assets/akar-icons_eye.svg" alt="Detalhes"></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Lucas de Oliveira Varino</td>
+                            <td class="email">lucasvarino@email.com</td>
+                            <td class="senha">12345616549845</td>
+                            <td class="td-button">
+                                <div class="botoes">
+                                    <button class="btn btn-primary"><img src="../../public/assets/bx_bxs-edit.svg"
+                                            alt="Editar" data-bs-toggle="modal" data-bs-target="#editar-modal"></button>
+                                    <button class="btn btn-danger" data-bs-toggle="modal"
+                                        data-bs-target="#excluir-modal"><img src="../../public/assets/bx_bx-trash.svg"
+                                            alt="Excluir"></button><button class="btn btn-success detalhes"
+                                        data-bs-toggle="modal" data-bs-target="#detalhes-modal"><img
+                                            src="../../public/assets/akar-icons_eye.svg" alt="Detalhes"></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> <!-- tabela-usuarios -->
+
+
+            <div class="modal fade" id="adicionar-modal" tabindex="-1" aria-labelledby="adicionar usuario"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Adicionar Usuário</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="formulario">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Nome do Usuário</label>
+                                    <input class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Insira o nome completo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Email</label>
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="nome@exemplo.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Senha</label>
+                                    <input class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Insira sua senha" type="password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Confirmar Senha</label>
+                                    <input class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Insira novamente sua senha" type="password">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-principal">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- modal-adicionar -->
+
+            <div class="modal fade" id="detalhes-modal" tabindex="-1" aria-labelledby="detalhar usuario"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Usuário</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h5>Nome:</h5>
+                            <p>Lucas de Oliveira Varino</p>
+                            <h5>Email:</h5>
+                            <p>lucasvarino@email.com</p>
+                            <h5>Senha:</h5>
+                            <p>1234546</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- modal-detalhes -->
+
+
+            <div class="modal fade" id="editar-modal" tabindex="-1" aria-labelledby="editar usuario" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Editar Usuário</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="formulario">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Nome do Usuário</label>
+                                    <input class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Insira o nome completo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Email</label>
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="nome@exemplo.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Senha</label>
+                                    <input class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Insira sua senha" type="password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Confirmar Senha</label>
+                                    <input class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Insira novamente sua senha" type="password">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-principal">Editar</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- modal-editar -->
+
+            <div class="modal fade" id="excluir-modal" tabindex="-1" aria-labelledby="excluir usuario"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Excluir Usuário</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h2>Você tem certeza que quer excluir o seguinte usuáiro?</h2>
+                            <br>
+                            <h5>Nome:</h5>
+                            <p>Lucas de Oliveira Varino</p>
+                            <h5>Email:</h5>
+                            <p>lucasvarino@email.com</p>
+                            <h5>Senha:</h5>
+                            <p>1234546</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-danger">Excluir</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- modal-excluir -->
+
         </div>
     </main>
 
