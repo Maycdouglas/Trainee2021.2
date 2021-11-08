@@ -83,18 +83,17 @@
     padding-top: 3px;
     padding-left: 7px;
     padding-right: 7px;
-}
-
-.card-body li:hover{
-    color: white;
-}
-
-
-.btn {
     height: 2rem;
     background-color: #dd1133;
     margin-top: 6px;
     cursor: default;
+    width: 8rem;
+    display: inline-block;
+    border-radius: 7px;
+}
+
+.card-body li:hover{
+    color: white;
 }
 
 
