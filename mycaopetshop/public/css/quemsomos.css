@@ -38,10 +38,11 @@ h6{
     color: #F4A630;
 } */
 
-.Div-baixa{
-    background-color: white;
-    color: black;
-    padding: 100px 20px 20px 20px;
+.texto-principal{
+    /* /* background-color: white;
+    color: black; 
+    padding: 100px 20px 20px 20px; */
+  text-align: justify;
 }
 
 .img-principal{
@@ -54,6 +55,7 @@ h6{
     margin-bottom: 50px;
 
 }
+
 
 .card{
     background-color: #AFCBFF;
