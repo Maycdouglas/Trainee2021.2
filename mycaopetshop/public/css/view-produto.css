@@ -16,8 +16,8 @@
 
 .caminho  ul {
     padding-left: 0px;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 }
 
 .caminho li {
@@ -74,21 +74,27 @@
     color: #3d3d3d;
 }
 
-.card-body a {
+.card-body ul {
+    padding-left: 0px;
+}
+
+.card-body li {
+    color: white;
     padding-top: 3px;
-    font-size: 0.9rem;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.card-body li:hover{
     color: white;
 }
 
-.card-body a:hover {
-    color: white;
-    cursor: default;
-}
 
 .btn {
     height: 2rem;
     background-color: #dd1133;
     margin-top: 6px;
+    cursor: default;
 }
 
 
@@ -119,7 +125,7 @@
 
     .caminho  ul {
         padding-left: 0px;
-        margin-top: 1rem;
+        margin-top: 2rem;
         margin-bottom: 2rem;
         text-align: left;
     }
