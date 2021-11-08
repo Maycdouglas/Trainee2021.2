@@ -74,6 +74,23 @@
     color: #3d3d3d;
 }
 
+.card-body a {
+    padding-top: 3px;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.card-body a:hover {
+    color: white;
+    cursor: default;
+}
+
+.btn {
+    height: 2rem;
+    background-color: #dd1133;
+    margin-top: 6px;
+}
+
 
 
 
@@ -102,9 +119,9 @@
 
     .caminho  ul {
         padding-left: 0px;
-        margin-top: 3rem;
-        margin-bottom: 1rem;
-        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        text-align: left;
     }
     
 }
