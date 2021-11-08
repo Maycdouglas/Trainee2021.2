@@ -15,29 +15,120 @@
     color: #F4A630;
     font-weight: bold;
 }
+    body {
+    background-color: white;
+}
 
-.btn {
+.texto-contato {
+    margin-top: 40px;
+    font-size: 40px;
+    color: #022049;
+}
+
+.vias-contato {
+    color: #022049;
+}
+
+.vias-contato a{
+    color: #022049;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.vias-contato a:hover{
+    color: #F4A630;
+    transition: 0.3s ease;
+}
+
+.vias-contato span {
+    display: inline-block;
+}
+
+.formulario {
+    padding-top: 60px;
+    width: 70%;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.botao-enviar {
     background-color: #F4A630;
     transition: 0.3s ease;
+}
+
+.botao-abrir {
+    background-color: #F4A630;
     border-color: #F4A630;
 }
 
-.btn:hover {
+.botao-enviar:hover {
     background-color: #022049;
     transition: 0.3s ease;
     border-color: #022049;
 }
 
-.btn:focus {
+.botao-enviar:focus {
     background-color: #022049;
     transition: 0.3s ease;
     border-color: #022049;
 }
 
-i {
+.icone-card {
     font-size: 50px;
 }
 
 .card-title {
     font-size: 20px ;
+}
+
+.botao-abrir:hover {
+    background-color: #022049;
+    border-color: #022049;
+}
+
+.mapa {
+    margin-top: 50px;
+    margin: auto;
+}
+
+.mapa h1 {
+    text-align: center;
+    font-size: 22px;
+    color: #022049;
+}
+
+.fa-map-marker-alt {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background-color: #022049;
+    height: 100px;
+    margin-top: 100px;
+}
+
+.footer-text {
+    color: #F4A630;
+    line-height: 100px;
+    padding-left: 0;
+    text-align: center;
+    font-size: 40px;
+    list-style: none;
+}
+
+@media (max-width: 600px) {
+    .mapa {
+        width: 90%;
+    }
+}
+
+@media (max-width: 337px) {
+    .elemento-separa {
+        font-size: 0;
+        display: block;
+    }
 }
