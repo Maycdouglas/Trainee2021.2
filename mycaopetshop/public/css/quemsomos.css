@@ -4,9 +4,6 @@
     --azul-claro: #AFCBFF;
 }
 
-.navbar {
-
-}
 
 /* 
     color: #F4A630 !important;
@@ -26,8 +23,8 @@
 
 
 .corpo{
-    background-color: #022049;
-    color: #F4A630;
+    background-color: white;
+    color: black;
 }
 
 
@@ -36,16 +33,15 @@ h6{
  border-top: 100px;
  
 }
-.row{
+/* .row{
     background-color: #022049;
     color: #F4A630;
-}
+} */
 
 .Div-baixa{
     background-color: #022049;
     color: #F4A630;
-    padding-top: 100px;
-    padding: 20px;
+    padding: 100px 20px 20px 20px;
 }
 
 .img-principal{
@@ -71,16 +67,9 @@ h6{
     text-align: center;
     height: 30px;
 }
-.card-Missao{
+
+.card{
     background-color: #AFCBFF;
-}
-.card-Valores{
-    background-color: #AFCBFF;
-}
-.card-Visao{
-    background-color: #AFCBFF;
+    /* text-align: center */
 }
 
-.footer{
-
-}
