@@ -4,5 +4,27 @@
     --azul-claro: #AFCBFF;
 }
 
+.logo-mycao-login{
+    max-width: 200px;
+}
 
+.formulario-login{
+    padding-top: 60px;
+    width: 80%;
+    margin: auto;
+    background-color:#AFCBFF;
+    height: 400px;
+    color: black;
+}
 
+.agrupamento-formulario{
+  padding: 20px;
+}
+.botao-login{
+    margin-left: 20px;
+    border-color:#022049;
+    
+}
+.label-login{
+    padding-bottom: 5px;
+}
