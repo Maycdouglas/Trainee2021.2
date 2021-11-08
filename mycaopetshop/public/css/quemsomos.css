@@ -5,15 +5,6 @@
 }
 
 
-/* 
-    color: #F4A630 ;
-    padding-left: 0 ;
-    margin: auto ;
-    font-size: 40px ;
-    list-style: none ; */
-
-
-
 .titulo-quem-somos{
       text-align: center;
       color: black ;
@@ -28,25 +19,11 @@
 }
 
 
-
-h6{
- border-top: 100px;
- 
-}
-/* .row{
-    background-color: #022049;
-    color: #F4A630;
-} */
-
 .texto-principal{
-    /* /* background-color: white;
-    color: black; 
-    padding: 100px 20px 20px 20px; */
   text-align: justify;
 }
 
 .img-principal{
-     
     border: transparent thin solid;
     padding: 5px;
     margin: 0px 10px 10px 0;
@@ -59,6 +36,5 @@ h6{
 
 .card{
     background-color: #AFCBFF;
-    /* text-align: center */
 }
 
