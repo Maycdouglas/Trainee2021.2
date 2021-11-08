@@ -1,0 +1,11 @@
+:root {
+    --azul-escuro: #022049;
+    --laranja: #F4A630;
+    --azul-claro: #AFCBFF;
+}
+
+.logo-mycao-login{
+ max-width: 200px;
+ background-color: #022049;
+}
+
