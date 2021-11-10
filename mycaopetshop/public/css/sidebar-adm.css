@@ -11,3 +11,16 @@ html, body {
     width: 16px;
     padding: 0px;
 }
+
+.nav-item { 
+    transition: 0.4s ease;
+}
+
+.nav-item:hover {
+    background-color: #F4A630;
+    transition: 0.4s ease;
+}
+
+.nav-link.active {
+    background-color: #F4A630 !important;
+}
