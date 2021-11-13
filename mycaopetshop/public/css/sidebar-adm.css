@@ -24,3 +24,28 @@ html, body {
 .nav-link.active {
     background-color: #F4A630 !important;
 }
+
+@media (max-width: 768px) {
+    .corpo-sidebar {
+        width: 4.5rem !important;
+    }
+
+    .sidebar-text {
+        display: none !important;
+    }
+
+    .sidebar-img {
+        padding: 0 !important;
+        padding-top: 3px !important;
+        padding-bottom: 3px !important;
+        width: 100% !important;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .sidebar-img-title {
+        margin-inline: auto !important;
+        height: 40px !important;
+        width: 40px !important;
+    }
+}
