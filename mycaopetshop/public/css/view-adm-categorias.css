@@ -1,0 +1,24 @@
+.navbarT {
+    background-color: #022049 !important;
+    height: 50px !important;
+}
+
+.navbarT h2 {
+    color: #F4A630 !important;
+}
+
+
+
+
+
+.footer {
+    background-color: #022049 !important;
+    height: 120px !important;
+    object-position: bottom;
+    margin-top: 8rem;
+}
+
+.footer h2 {
+    color: #F4A630 !important;
+    text-align: center !important;
+}
