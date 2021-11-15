@@ -6,10 +6,33 @@
 .navbarT h2 {
     color: #F4A630 !important;
 }
+.container-cabeca{
+    max-width: 2000px;
+    justify-content: end;
+}
+
+.container-corpo{
+ max-width: 2000px;
+ justify-content: center;
+ border-color: black !important;
+}
+.main-cat-adm{
+    background-color: white;
+}
+
+.cabeca-header{
+   justify-content: flex-end;
+   justify-content: end;
+
+}
+.botao-de-adicionar{
+    max-width: 100px;
+}
 
 
-
-
+.corpo-adm-categoria{
+    background-color: aliceblue;
+}
 
 .footer {
     background-color: #022049 !important;

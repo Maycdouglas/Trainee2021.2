@@ -14,39 +14,313 @@
 </head>
 
 
-<body>
-    <header>
+<body class= "corpo-adm-categoria">
+    <header class="cabeca-pagina">
         <div class="navbarT">
 
             <h2 class="d-flex justify-content-center">NAVBAR</h2>
         </div>
-    </header>
-    
-    <main class="container">
-        
+        <div class="row cabeca-header justify-content-end p-0 m-0"></div>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Categorias(Administrativo)</li>
             </ol>
         </nav>
-    
-    <form class="d-flex justify-content-center align-content-center">
-        <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
-        <button type="button" class="btn btn-primary btn-sm">Pesquisar</button>
-    
-    </form>
-  <form">
 
-    
-    <select class="custom-select" multiple>
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
-  <form>
-  
+    </header>
+
+    <main class="container container-principal-categoria justify-content-center align-content-center">
+        <div class="main-cat-adm">
+
+            <div class=" row container-cabeca justify-content-center align-content-center p-0 m-0">
+
+                <h3 class="titulo-adm-categoria text-center">Categorias</h3>
+                <div class="row justify-content-end">
+                    <form class="d-flex justify-content-end">
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
+                        <button type="button" class="btn btn-primary btn-sm">Pesquisar</button>
+
+                    </form>
+                </div>
+                <button type="button" id="adicionar-modal" class="btn btn-success botao-de-adicionar" data-toggle="modal"
+                    data-target="#exampleModal" data-whatever="@getbootstrap">Adicionar</button>
+
+            </div>
+            <hr>
+            <div class="container-corpo">
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome da categoria</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Gabriel</td>
+
+                            <td class="td-botoes-categoria">
+                                <div class="botoes-categoria">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#exampleModal" data-whatever="@mdo">Editar</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal"
+                                        data-target="#exampleModal" data-whatever="@fat">Visualizar</button>
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                        data-target="#exampleModal" data-whatever="@getbootstrap">Excluir</button>
+                                </div>
+                            </td>
+
+
+
+
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Isabela</td>
+
+                            <td class="td-botoes-categoria">
+                                <div class="botoes-categoria">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#exampleModal" data-whatever="@mdo">Editar</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal"
+                                        data-target="#exampleModal" data-whatever="@fat">Visualizar</button>
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                        data-target="#exampleModal" data-whatever="@getbootstrap">Excluir</button>
+                                </div>
+                            </td>
+
+
+
+
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>João Pedro</td>
+
+                            <td class="td-botoes-categoria">
+                                <div class="botoes-categoria">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#exampleModal" data-whatever="@mdo">Editar</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal"
+                                        data-target="#exampleModal" data-whatever="@fat">Visualizar</button>
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                        data-target="#exampleModal" data-whatever="@getbootstrap">Excluir</button>
+                                </div>
+                            </td>
+
+
+
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Lucas</td>
+
+                            <td class="td-botoes-categoria">
+                                <div class="botoes-categoria">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#exampleModal" data-whatever="@mdo">Editar</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal"
+                                        data-target="#exampleModal" data-whatever="@fat">Visualizar</button>
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                        data-target="#exampleModal" data-whatever="@getbootstrap">Excluir</button>
+                                </div>
+                            </td>
+
+
+
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Maycon</td>
+
+                            <td class="td-botoes-categoria">
+                                <div class="botoes-categoria">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#exampleModal" data-whatever="@mdo">Editar</button>
+                                    <button type="button" class="btn btn-secondary" data-toggle="modal"
+                                        data-target="#exampleModal" data-whatever="@fat">Visualizar</button>
+                                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                                        data-target="#exampleModal" data-whatever="@getbootstrap">Excluir</button>
+                                </div>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+
+
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Message:</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+<!-- Botao-adicionar -->
+            <div class="modal fade" id="adicionar-modal" tabindex="-1" aria-labelledby="adicionar usuario"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Adicionar Usuário</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="formulario">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Nome do Usuário</label>
+                                    <input class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Insira o nome completo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Email</label>
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="nome@exemplo.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Senha</label>
+                                    <input class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Insira sua senha" type="password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Confirmar Senha</label>
+                                    <input class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Insira novamente sua senha" type="password">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-principal">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+     <!-- Botao-editar -->
+            <div class="modal fade" id="editar-modal" tabindex="-1" aria-labelledby="editar categoria" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Editar Categoria</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="formulario-adm-categoria">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Nome da Categoria</label>
+                                    <input class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Insira o nome da categoria">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Status</label>
+                                    <input class="form-control" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Insira o Status">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Caracteristicas</label>
+                                    <input class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Insira as Caracteristicas">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-principal">Editar</button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+      <!-- Botao-excluir -->
+            <div class="modal fade" id="excluir-modal" tabindex="-1" aria-labelledby="excluir categoria"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Excluir Categoria</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h2>Deseja excluir a categoria?</h2>
+                            <br>
+                                <h5>Nome:</h5>
+                                <p>Gabriel</p>
+                                <h5>Status:</h5>
+                                <p>Trainee da CODE</p>
+                                <h5>Caracteristicas:</h5>
+                                <p>Alto</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-danger">Excluir</button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+          <!-- Botao-visualizar -->
+            <div class="modal fade" id="visualiza-modal" tabindex="-1" aria-labelledby="visualizar categoria"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Categoria</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h5>Nome:</h5>
+                            <p>Gabriel</p>
+                            <h5>Status:</h5>
+                            <p>Trainee da CODE</p>
+                            <h5>Caracteristicas:</h5>
+                            <p>Alto</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+
+
+        </div>
 
 
     </main>
