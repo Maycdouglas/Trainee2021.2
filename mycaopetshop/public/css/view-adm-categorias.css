@@ -55,3 +55,12 @@
     color: #F4A630 !important;
     text-align: center !important;
 }
+
+@media (max-width: 431px) {
+    .botoes-categorias {
+        margin-bottom: 2% !important;
+    }
+    .botao-de-adicionar {
+        margin-top: 2% !important;
+    }
+}
