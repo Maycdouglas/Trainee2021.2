@@ -12,6 +12,7 @@
     background: #11101d;
     z-index: 100;
     transition: all 0.5s ease;
+    font-family: 'Quicksand', sans-serif;
   }
   .sidebar.close{
     width: 78px;
@@ -208,7 +209,7 @@
   }
   .home-section{
     position: relative;
-    background: #E4E9F7;
+    background: #e1e8ff;
     height: 100vh;
     left: 260px;
     width: calc(100% - 260px);
@@ -222,7 +223,7 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #dbdbdb;
+    background-color: #d6defd;
   }
   .home-section .home-content .bx-menu,
   .home-section .home-content .text{
