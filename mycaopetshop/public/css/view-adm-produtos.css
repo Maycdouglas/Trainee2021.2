@@ -1,8 +1,39 @@
+body {
+    background-color: #f6f8ff;
+}
+
 .nav-search {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .bar-search {
     text-align: right !important;
 }
 
+
+
+.bottom-add {
+    margin-right: 40px !important;
+}
+
+
+
+
+.product-table {
+    background-color: white;
+    margin-top: 10px;
+}
+
+.bottom-opcoes {
+    display: inline-table;
+}
+
+
+
+
+@media(max-width: 760px) {
+
+    
+
+}

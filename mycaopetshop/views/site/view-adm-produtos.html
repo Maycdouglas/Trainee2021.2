@@ -3,13 +3,13 @@
 <html lang="en">
 
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View ADM Produtos</title>
-    <link rel="stylesheet" href="../../public/css/view-adm-produtos.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View ADM Produtos</title>
+  <link rel="stylesheet" href="../../public/css/view-adm-produtos.css">
 </head>
 
 
@@ -17,37 +17,111 @@
 
 <body>
 
-    <!--Espaço da barra de Pesquisa-->
-    <nav class="navbar navbar-light bg-light nav-search">
-        <div class="container-fluid">
-          <form class="d-flex justify-content-end bar-search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">lupa</button>
-          </form>
-        </div>
-      </nav>
-    <!--Fim do espaço da barra de Pesquisa-->
-
-
-    <!--Espaço do botão de Adicionar Produto-->
-    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button class="btn btn-primary me-md-2" type="button"><b>+Add</b></button>
-      </div>
-    <!--Fim do espaço para o acréscimo de novos produtos-->
-
-
-    <!--Tabela de Gerenciamento dos Produtos-->
-    <div class="d-flex justify-content-around flex-row bd-highlight mb-3">
-        <div class="p-2 bd-highlight"><b>Produtos</b></div>
-        <div class="p-2 bd-highlight"><b>Opções</b></div>
-        
+  <!--Espaço da barra de Pesquisa-->
+  <nav class="navbar navbar-light bg-light nav-search">
+    <div class="container-fluid">
+      <form class="d-flex justify-content-end bar-search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-secondary bottom-add" type="submit">lupa</button>
+      </form>
     </div>
-    <!--Fim da Tabela de Produtos-->
+  </nav>
+  <!--Fim do espaço da barra de Pesquisa-->
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+  <!--Espaço do botão de Adicionar Produto-->
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <button class="btn btn-success me-md-2" type="button"><b>+Add</b></button>
+  </div>
+  <!--Fim do espaço para o acréscimo de novos produtos-->
+
+
+  <!--Tabela de Gerenciamento dos Produtos-->
+  <div class="container">
+    <table class="table table-hover justify-content-center align-items-center product-table">
+
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col"><b>Produto</b></th>
+          <th scope="col"><b>Opções</b></th>
+        </tr>
+      </thead>
+
+
+
+      <tbody>
+
+        <tr>
+          <th scope="row justify-content-center align-items-center">1</th>
+          <td>Product Name</td>
+          <div class="bottom-options">
+            <td><button type="button" class="btn btn-primary">Ed</button></td>
+            <td><button type="button" class="btn btn-secondary">Vis</button></td>
+            <td><button type="button" class="btn btn-danger">Ex</button></td>
+          </div>
+        </tr>
+
+        <tr>
+          <th scope="row justify-content-center align-items-center">1</th>
+          <td>Product Name</td>
+          <div class="bottom-options">
+            <td><button type="button" class="btn btn-primary">Ed</button></td>
+            <td><button type="button" class="btn btn-secondary">Vis</button></td>
+            <td><button type="button" class="btn btn-danger">Ex</button></td>
+          </div>
+        </tr>
+
+        <tr>
+          <th scope="row justify-content-center align-items-center">1</th>
+          <td>Produtinho com Nome Grande para Teste</td>
+          <div class="bottom-options">
+            <td><button type="button" class="btn btn-primary">Ed</button></td>
+            <td><button type="button" class="btn btn-secondary">Vis</button></td>
+            <td><button type="button" class="btn btn-danger">Ex</button></td>
+          </div>
+        </tr>
+
+        <tr>
+          <th scope="row justify-content-center align-items-center">1</th>
+          <td>Product Name</td>
+          <div class="bottom-options">
+            <td><button type="button" class="btn btn-primary">Ed</button></td>
+            <td><button type="button" class="btn btn-secondary">Vis</button></td>
+            <td><button type="button" class="btn btn-danger">Ex</button></td>
+          </div>
+        </tr>
+
+        <tr>
+          <th scope="row justify-content-center align-items-center">1</th>
+          <td>Product Name</td>
+          <div class="bottom-options">
+            <td><button type="button" class="btn btn-primary">Ed</button></td>
+            <td><button type="button" class="btn btn-secondary">Vis</button></td>
+            <td><button type="button" class="btn btn-danger">Ex</button></td>
+          </div>
+        </tr>
+
+        <tr>
+          <th scope="row justify-content-center align-items-center">1</th>
+          <td>Product Name</td>
+          <div class="bottom-options">
+            <td><button type="button" class="btn btn-primary">Ed</button></td>
+            <td><button type="button" class="btn btn-secondary">Vis</button></td>
+            <td><button type="button" class="btn btn-danger">Ex</button></td>
+          </div>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+  <!--Fim da Tabela de Produtos-->
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
