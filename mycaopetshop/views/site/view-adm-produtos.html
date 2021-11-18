@@ -56,12 +56,76 @@
           <th scope="row justify-content-center align-items-center">1</th>
           <td>Product Name</td>
           <div class="bottom-options">
-            <td><button type="button" class="btn btn-primary">Ed</button></td>
+            <td>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Ed
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Editar Produto</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                      <form class="row g-3">
+                        <div class="col-md-6">
+                          <label for="inputEmail4" class="form-label">Nome do Produto</label>
+                          <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="inputPassword4" class="form-label">Preço</label>
+                          <input type="password" class="form-control" id="inputPassword4">
+                        </div>
+                        <div class="col-12">
+                          <label for="inputAddress" class="form-label">Descrição</label>
+                          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        </div>
+                        <div class="col-12">
+                          <label for="inputAddress2" class="form-label">Informações</label>
+                          <input type="text" class="form-control" id="inputAddress2"
+                            placeholder="Apartment, studio, or floor">
+                        </div>
+                        <div class="col-md-4">
+                          <label for="inputState" class="form-label">Categoria</label>
+                          <select id="inputState" class="form-select">
+                            <option selected>Escolha...</option>
+                            <option>Acessório</option>
+                            <option>Ração</option>
+                            <option>Casinha</option>
+                            <option>Higiene</option>
+                          </select>
+                        </div>
+                      </form>
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+
             <td><button type="button" class="btn btn-secondary">Vis</button></td>
             <td><button type="button" class="btn btn-danger">Ex</button></td>
+
           </div>
         </tr>
 
+
+
+
+
+
+
+        <!--Continuação da Tabela apenas para visualização-->
         <tr>
           <th scope="row justify-content-center align-items-center">1</th>
           <td>Product Name</td>
