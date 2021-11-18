@@ -25,15 +25,41 @@ body {
     margin-top: 10px;
 }
 
-.bottom-opcoes {
-    display: inline-table;
+.bottom-options {
+    margin-right: 5px;
 }
 
 
 
 
-@media(max-width: 760px) {
 
-    
+
+@media(max-width: 530px) {
+
+    .colum-bottons-table {
+        width: 40%;
+    }
+
+}
+
+
+@media(max-width: 420px) {
+
+    .colum-bottons-table {
+        width: 55%;
+    }
+
+}
+
+
+@media(max-width: 310px) {
+
+    .colum-bottons-table {
+        width: auto;
+    }
+
+    .bottom-options {
+        margin-bottom: 5px;
+    }
 
 }
