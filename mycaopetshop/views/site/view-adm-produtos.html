@@ -31,7 +31,12 @@
 
   <!--Espaço do botão de Adicionar Produto-->
   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-    <button class="btn btn-success me-md-2" type="button"><b>+Add</b></button>
+
+    <!-- Button modal adicionar produto-->
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AddProdut">
+      <b>+Add</b>
+    </button>
+
   </div>
   <!--Fim do espaço para o acréscimo de novos produtos-->
 
@@ -59,208 +64,22 @@
           <div class="d-grid gap-2 d-md-block">
             <td class="d-flex justify-content-end colum-bottons-table">
 
-              <!-- Button trigger modal -->
+              <!-- Button modal editar produto -->
               <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop">
+                data-bs-target="#EditarProd">
                 Ed
               </button>
 
-              <!-- Modal -->
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Editar Produto</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-
-                      <form class="row g-3">
-                        <div class="col-md-8">
-                          <label for="inputNameProdut" class="form-label">Nome</label>
-                          <input type="text" class="form-control" id="inputNameProdut"
-                            placeholder="Insira o nome do produto">
-                        </div>
-                        <div class="col-md-4">
-                          <label for="inputPrecoProdut" class="form-label">Preço</label>
-                          <input type="text" class="form-control" id="inputPrecoProdut" placeholder="R$99,99">
-                        </div>
-                        <div class="col-12">
-                          <label for="inputDescritionProdut" class="form-label">Descrição do Produto</label>
-                          <textarea class="form-control" id="inputDescritionProdut" rows="3"
-                            placeholder="O que é, o que faz..."></textarea>
-                        </div>
-                        <div class="col-12">
-                          <label for="inputInfoProdut" class="form-label">Informações sobre o Produto</label>
-                          <textarea class="form-control" id="inputInfoProdut" rows="3"
-                            placeholder="Composição do produto, rendimento..."></textarea>
-                        </div>
-                        <div class="col-md-4">
-                          <label for="inputCategoryProdut" class="form-label">Categoria</label>
-                          <select id="inputCategoryProdut" class="form-select">
-                            <option selected>Escolha...</option>
-                            <option>Categoria 1</option>
-                            <option>Categoria 2</option>
-                            <option>Categoria 3</option>
-                            <option>Categoria 4</option>
-                            <option>Categoria 5</option>
-                          </select>
-                        </div>
-                        <div class="col-12">
-                          <p>Insira o nome das imagens do produto nos espaços determinados:</p>
-
-                          <!-- Button Modal Image 1 -->
-                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                            Imagem 1
-                          </button>
-
-                          <!-- Modal 1.1-->
-                          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="staticBackdropLabel">Imagem 1</h5>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-
-                                  <div class="col-12">
-                                    <label for="inputImage1Produt" class="form-label">Nome da imagem</label>
-                                    <input type="text" class="form-control" id="inputImage1Produt"
-                                      placeholder="Insira o nome da imagem 1 do produto">
-                                  </div>
-
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary"
-                                    data-bs-dismiss="modal">Voltar</button>
-                                  <button type="button" class="btn btn-primary">Salvar</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-
-                          <!-- Button Modal Image 2 -->
-                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                            Imagem 2
-                          </button>
-
-                          <!-- Modal 1.2-->
-                          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="staticBackdropLabel">Imagem 2</h5>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-
-                                  <div class="col-12">
-                                    <label for="inputImage2Produt" class="form-label">Nome da imagem</label>
-                                    <input type="text" class="form-control" id="inputImage2Produt"
-                                      placeholder="Insira o nome da imagem 2 do produto">
-                                  </div>
-
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary"
-                                    data-bs-dismiss="modal">Voltar</button>
-                                  <button type="button" class="btn btn-primary">Salvar</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-
-                          <!-- Button Modal Image 3 -->
-                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                            Imagem 3
-                          </button>
-
-                          <!-- Modal 1.3-->
-                          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="staticBackdropLabel">Imagem 3</h5>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-
-                                  <div class="col-12">
-                                    <label for="inputImage3Produt" class="form-label">Nome da imagem</label>
-                                    <input type="text" class="form-control" id="inputImage3Produt"
-                                      placeholder="Insira o nome da imagem 3 do produto">
-                                  </div>
-
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary"
-                                    data-bs-dismiss="modal">Voltar</button>
-                                  <button type="button" class="btn btn-primary">Salvar</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                        </div>
-                      </form>
-
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
-                      <button type="button" class="btn btn-primary">Salvar</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--Fim do botão de editar-->
-
-
-
-              <!-- Button trigger modal -->
+              <!-- Button modal visualizar produto -->
               <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop">
+                data-bs-target="#VisualizarProd">
                 Vis
               </button>
 
-              <!-- Modal -->
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Visualizar</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                    <div class="modal-body">
-                      <iframe class="paginaVisualizarProd" src="https://codejr.com.br/"
-                        title="Página do Produto"></iframe>
-                    </div>
-
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              
-
-              <button type="button" class="btn btn-danger bottom-options">Ex</button>
+              <!-- Button modal exclui produto-->
+              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ExcluiProd">
+                Ex
+              </button>
             </td>
 
           </div>
@@ -275,70 +94,349 @@
 
         <!--Continuação da Tabela apenas para visualização-->
         <tr>
-          <th scope="row justify-content-center align-items-center">1</th>
+          <th scope="row justify-content-center align-items-center">2</th>
           <td>Product Name</td>
-          <div class="d-grid gap-2 d-md-block bottom-options">
+          <div class="d-grid gap-2 d-md-block">
             <td class="d-flex justify-content-end colum-bottons-table">
-              <button class="btn btn-primary" type="button">Ed</button>
-              <button class="btn btn-secondary" type="button">Vis</button>
-              <button class="btn btn-danger" type="button">Ex</button>
+
+              <!-- Button modal editar produto -->
+              <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
+                data-bs-target="#EditarProd">
+                Ed
+              </button>
+
+              <!-- Button modal visualizar produto -->
+              <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
+                data-bs-target="#VisualizarProd">
+                Vis
+              </button>
+
+              <!-- Button modal exclui produto-->
+              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ExcluiProd">
+                Ex
+              </button>
             </td>
+
           </div>
         </tr>
 
+
+
         <tr>
-          <th scope="row justify-content-center align-items-center">1</th>
+          <th scope="row justify-content-center align-items-center">3</th>
           <td>Produtinho com Nome Grande para Teste</td>
-          <div class="d-grid gap-2 d-md-block bottom-options">
+          <div class="d-grid gap-2 d-md-block">
             <td class="d-flex justify-content-end colum-bottons-table">
-              <button class="btn btn-primary" type="button">Ed</button>
-              <button class="btn btn-secondary" type="button">Vis</button>
-              <button class="btn btn-danger" type="button">Ex</button>
+
+              <!-- Button modal editar produto -->
+              <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
+                data-bs-target="#EditarProd">
+                Ed
+              </button>
+
+              <!-- Button modal visualizar produto -->
+              <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
+                data-bs-target="#VisualizarProd">
+                Vis
+              </button>
+
+              <!-- Button modal exclui produto-->
+              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ExcluiProd">
+                Ex
+              </button>
             </td>
+
           </div>
         </tr>
 
+        
+
         <tr>
-          <th scope="row justify-content-center align-items-center">1</th>
+          <th scope="row justify-content-center align-items-center">4</th>
           <td>Product Name</td>
-          <div class="d-grid gap-2 d-md-block bottom-options">
+          <div class="d-grid gap-2 d-md-block">
             <td class="d-flex justify-content-end colum-bottons-table">
-              <button class="btn btn-primary" type="button">Ed</button>
-              <button class="btn btn-secondary" type="button">Vis</button>
-              <button class="btn btn-danger" type="button">Ex</button>
+
+              <!-- Button modal editar produto -->
+              <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
+                data-bs-target="#EditarProd">
+                Ed
+              </button>
+
+              <!-- Button modal visualizar produto -->
+              <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
+                data-bs-target="#VisualizarProd">
+                Vis
+              </button>
+
+              <!-- Button modal exclui produto-->
+              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ExcluiProd">
+                Ex
+              </button>
             </td>
+
           </div>
         </tr>
 
+
+
+
         <tr>
-          <th scope="row justify-content-center align-items-center">1</th>
+          <th scope="row justify-content-center align-items-center">5</th>
           <td>Product Name</td>
-          <div class="d-grid gap-2 d-md-block bottom-options">
+          <div class="d-grid gap-2 d-md-block">
             <td class="d-flex justify-content-end colum-bottons-table">
-              <button class="btn btn-primary" type="button">Ed</button>
-              <button class="btn btn-secondary" type="button">Vis</button>
-              <button class="btn btn-danger" type="button">Ex</button>
+
+              <!-- Button modal editar produto -->
+              <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
+                data-bs-target="#EditarProd">
+                Ed
+              </button>
+
+              <!-- Button modal visualizar produto -->
+              <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
+                data-bs-target="#VisualizarProd">
+                Vis
+              </button>
+
+              <!-- Button modal exclui produto-->
+              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ExcluiProd">
+                Ex
+              </button>
             </td>
+
           </div>
         </tr>
 
+
+
+
         <tr>
-          <th scope="row justify-content-center align-items-center">1</th>
+          <th scope="row justify-content-center align-items-center">6</th>
           <td>Product Name</td>
-          <div class="d-grid gap-2 d-md-block bottom-options">
+          <div class="d-grid gap-2 d-md-block">
             <td class="d-flex justify-content-end colum-bottons-table">
-              <button class="btn btn-primary" type="button">Ed</button>
-              <button class="btn btn-secondary" type="button">Vis</button>
-              <button class="btn btn-danger" type="button">Ex</button>
+
+              <!-- Button modal editar produto -->
+              <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
+                data-bs-target="#EditarProd">
+                Ed
+              </button>
+
+              <!-- Button modal visualizar produto -->
+              <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
+                data-bs-target="#VisualizarProd">
+                Vis
+              </button>
+
+              <!-- Button modal exclui produto-->
+              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ExcluiProd">
+                Ex
+              </button>
             </td>
+
           </div>
         </tr>
+
+
+        
 
       </tbody>
     </table>
   </div>
   <!--Fim da Tabela de Produtos-->
 
+
+
+
+
+
+  <!---------------------------------------Modais----------------------------------------------->
+
+  <!-- Modal Adicionar Produto -->
+  <div class="modal fade" id="AddProdut" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Adicionar Produto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form class="row g-3">
+            <div class="col-md-8">
+              <label for="inputNameAddProdut" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="inputNameAddProdut" placeholder="Insira o nome do produto">
+            </div>
+            <div class="col-md-4">
+              <label for="inputPrecoAddProdut" class="form-label">Preço</label>
+              <input type="text" class="form-control" id="inputPrecoAddProdut" placeholder="R$99,99">
+            </div>
+            <div class="col-12">
+              <label for="inputDescritionAddProdut" class="form-label">Descrição do Produto</label>
+              <textarea class="form-control" id="inputDescritionAddProdut" rows="3"
+                placeholder="O que é, o que faz..."></textarea>
+            </div>
+            <div class="col-12">
+              <label for="inputInfoAddProdut" class="form-label">Informações sobre o Produto</label>
+              <textarea class="form-control" id="inputInfoAddProdut" rows="3"
+                placeholder="Composição do produto, rendimento..."></textarea>
+            </div>
+            <div class="col-12">
+              <label for="inputImage1AddProdut" class="form-label">Imagem 1</label>
+              <input type="text" class="form-control" id="inputImage1AddProdut"
+                placeholder="Insira o nome da imagem 1 do produto">
+            </div>
+            <div class="col-12">
+              <label for="inputImage2AddProdut" class="form-label">Imagem 2</label>
+              <input type="text" class="form-control" id="inputImage2AddProdut"
+                placeholder="Insira o nome da imagem 2 do produto">
+            </div>
+            <div class="col-12">
+              <label for="inputImage3AddProdut" class="form-label">Imagem 3</label>
+              <input type="text" class="form-control" id="inputImage3AddProdut"
+                placeholder="Insira o nome da imagem 3 do produto">
+            </div>
+            <div class="col-md-4">
+              <label for="inputCategoryAddProdut" class="form-label">Categoria</label>
+              <select id="inputCategoryAddProdut" class="form-select">
+                <option selected>Insira a categoria do produto...</option>
+                <option>Categoria 1</option>
+                <option>Categoria 2</option>
+                <option>Categoria 3</option>
+                <option>Categoria 4</option>
+                <option>Categoria 5</option>
+              </select>
+            </div>
+        </div>
+        </form>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+          <button type="button" class="btn btn-primary">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Fim do modal de adicionar-->
+
+
+  <!-- Modal Editar Produto -->
+  <div class="modal fade" id="EditarProd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Editar Produto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <form class="row g-3">
+            <div class="col-md-8">
+              <label for="inputNameProdut" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="inputNameProdut" placeholder="Insira o nome do produto">
+            </div>
+            <div class="col-md-4">
+              <label for="inputPrecoProdut" class="form-label">Preço</label>
+              <input type="text" class="form-control" id="inputPrecoProdut" placeholder="R$99,99">
+            </div>
+            <div class="col-12">
+              <label for="inputDescritionProdut" class="form-label">Descrição do Produto</label>
+              <textarea class="form-control" id="inputDescritionProdut" rows="3"
+                placeholder="O que é, o que faz..."></textarea>
+            </div>
+            <div class="col-12">
+              <label for="inputInfoProdut" class="form-label">Informações sobre o Produto</label>
+              <textarea class="form-control" id="inputInfoProdut" rows="3"
+                placeholder="Composição do produto, rendimento..."></textarea>
+            </div>
+            <div class="col-12">
+              <label for="inputImage1Produt" class="form-label">Imagem 1</label>
+              <input type="text" class="form-control" id="inputImage1Produt"
+                placeholder="Insira o nome da imagem 1 do produto">
+            </div>
+            <div class="col-12">
+              <label for="inputImage2Produt" class="form-label">Imagem 2</label>
+              <input type="text" class="form-control" id="inputImage2Produt"
+                placeholder="Insira o nome da imagem 2 do produto">
+            </div>
+            <div class="col-12">
+              <label for="inputImage3Produt" class="form-label">Imagem 3</label>
+              <input type="text" class="form-control" id="inputImage3Produt"
+                placeholder="Insira o nome da imagem 3 do produto">
+            </div>
+            <div class="col-md-4">
+              <label for="inputCategoryProdut" class="form-label">Categoria</label>
+              <select id="inputCategoryProdut" class="form-select">
+                <option selected>Insira a categoria do produto...</option>
+                <option>Categoria 1</option>
+                <option>Categoria 2</option>
+                <option>Categoria 3</option>
+                <option>Categoria 4</option>
+                <option>Categoria 5</option>
+              </select>
+            </div>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+          <button type="button" class="btn btn-primary">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Fim do modal de editar-->
+
+
+  <!-- Modal Visualizar Produto-->
+  <div class="modal fade" id="VisualizarProd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Visualizar</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <iframe class="paginaVisualizarProd" src="https://codejr.com.br/" title="Página do Produto"></iframe>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Fim do modal de visulizar-->
+
+
+  <!-- Modal excluir produto-->
+  <div class="modal fade" id="ExcluiProd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Excluir Produto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-center">Gostaria de excluir esse produto?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+          <button type="button" class="btn btn-primary">Excluir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Fim do modal de excluir-->
+
+
+  <!--------------------------------------------------------------------------------------------->
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
