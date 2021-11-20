@@ -21,23 +21,72 @@
 
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop">
+        data-bs-target="#VisualizarProd">
         Vis
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <div class="modal fade" id="VisualizarProd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Visualizar</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Visualizar Produto</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
                 <div class="modal-body">
-                    <iframe class="paginaVisualizarProd" src="https://codejr.com.br/"
-                        title="Página do Produto"></iframe>
+                    <fieldset disabled>
+                        <form class="row g-3">
+                            <div class="col-md-8">
+                                <label for="VisNameProdut" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="VisNameProdut"
+                                    placeholder="Nome do produto">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="VisPrecoProdut" class="form-label">Preço</label>
+                                <input type="text" class="form-control" id="VisPrecoProdut" placeholder="R$99,99">
+                            </div>
+                            <div class="col-12">
+                                <label for="VisDescritionProdut" class="form-label">Descrição do Produto</label>
+                                <textarea class="form-control" id="VisDescritionProdut" rows="3"
+                                    placeholder="É paranram paranram e faz pipipi popopo. Serve pra isso, isso e aquilo."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <label for="VisInfoProdut" class="form-label">Informações sobre o Produto</label>
+                                <textarea class="form-control" id="VisInfoProdut" rows="3"
+                                    placeholder="Fogo, Terra, Água, Ar.    
+                                    
+                                    -Feito com amor pelo Capitão Planeta"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <label for="VisImage1Produt" class="form-label">Imagem 1</label>
+                                <input type="text" class="form-control" id="VisImage1Produt"
+                                    placeholder="Nome da imagem 1">
+                            </div>
+                            <div class="col-12">
+                                <label for="VisImage2Produt" class="form-label">Imagem 2</label>
+                                <input type="text" class="form-control" id="VisImage2Produt"
+                                    placeholder="Nome da imagem 2">
+                            </div>
+                            <div class="col-12">
+                                <label for="VisImage3Produt" class="form-label">Imagem 3</label>
+                                <input type="text" class="form-control" id="VisImage3Produt"
+                                    placeholder="Nome da imagem 3">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="VisCategoryProdut" class="form-label">Categoria</label>
+                                <select id="VisCategoryProdut" class="form-select">
+                                    <option selected>Insira a categoria do produto...</option>
+                                    <option>Categoria 1</option>
+                                    <option>Categoria 2</option>
+                                    <option>Categoria 3</option>
+                                    <option>Categoria 4</option>
+                                    <option>Categoria 5</option>
+                                </select>
+                            </div>
+                        </form>
+                    </fieldset>
                 </div>
 
                 <div class="modal-footer">
