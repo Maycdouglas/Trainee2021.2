@@ -20,28 +20,29 @@
 
 <body>
 
-  <!--Espaço da barra de Pesquisa-->
-  <nav class="navbar navbar-light bg-light nav-search">
-    <div class="container-fluid">
-      <form class="d-flex justify-content-end bar-search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-secondary bottom-add" type="submit">lupa</button>
-      </form>
-    </div>
+  <div class="container">
+    <!--Espaço da barra de Pesquisa-->
+    <nav class="navbar navbar-light bg-light nav-search">
+      <div class="container-fluid">
+        <form class="d-flex justify-content-end bar-search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary bottom-search" type="submit">Pesquisar</button>
+        </form>
+        <!--Espaço do botão de Adicionar Produto-->
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+          <!-- Button modal adicionar produto-->
+          <button type="button" class="btn btn-success bottom-add" data-bs-toggle="modal" data-bs-target="#AddProdut">
+            <img alt="Adicionar" src="../../public/assets/plus-icon.svg">Adicionar
+          </button>
+
+        </div>
+        <!--Fim do espaço para o acréscimo de novos produtos-->
+      </div>
+  </div>
   </nav>
   <!--Fim do espaço da barra de Pesquisa-->
 
-
-  <!--Espaço do botão de Adicionar Produto-->
-  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-
-    <!-- Button modal adicionar produto-->
-    <button type="button" class="btn btn-success bottom-options" data-bs-toggle="modal" data-bs-target="#AddProdut">
-      <b>+Add</b>
-    </button>
-
-  </div>
-  <!--Fim do espaço para o acréscimo de novos produtos-->
 
 
   <!--Tabela de Gerenciamento dos Produtos-->
@@ -70,18 +71,18 @@
               <!-- Button modal editar produto -->
               <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
                 data-bs-target="#EditarProd">
-                Ed
+                <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
               </button>
 
               <!-- Button modal visualizar produto -->
               <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
                 data-bs-target="#VisualizarProd">
-                Vis
+                <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
               </button>
 
               <!-- Button modal exclui produto-->
               <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ExcluiProd">
-                Ex
+                <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
               </button>
             </td>
 
@@ -105,18 +106,18 @@
               <!-- Button modal editar produto -->
               <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
                 data-bs-target="#EditarProd">
-                Ed
+                <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
               </button>
 
               <!-- Button modal visualizar produto -->
               <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
                 data-bs-target="#VisualizarProd">
-                Vis
+                <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
               </button>
 
               <!-- Button modal exclui produto-->
               <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ExcluiProd">
-                Ex
+                <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
               </button>
             </td>
 
@@ -134,18 +135,18 @@
               <!-- Button modal editar produto -->
               <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
                 data-bs-target="#EditarProd">
-                Ed
+                <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
               </button>
 
               <!-- Button modal visualizar produto -->
               <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
                 data-bs-target="#VisualizarProd">
-                Vis
+                <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
               </button>
 
               <!-- Button modal exclui produto-->
               <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ExcluiProd">
-                Ex
+                <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
               </button>
             </td>
 
@@ -163,18 +164,18 @@
               <!-- Button modal editar produto -->
               <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
                 data-bs-target="#EditarProd">
-                Ed
+                <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
               </button>
 
               <!-- Button modal visualizar produto -->
               <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
                 data-bs-target="#VisualizarProd">
-                Vis
+                <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
               </button>
 
               <!-- Button modal exclui produto-->
               <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ExcluiProd">
-                Ex
+                <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
               </button>
             </td>
 
@@ -193,18 +194,18 @@
               <!-- Button modal editar produto -->
               <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
                 data-bs-target="#EditarProd">
-                Ed
+                <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
               </button>
 
               <!-- Button modal visualizar produto -->
               <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
                 data-bs-target="#VisualizarProd">
-                Vis
+                <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
               </button>
 
               <!-- Button modal exclui produto-->
               <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ExcluiProd">
-                Ex
+                <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
               </button>
             </td>
 
@@ -223,18 +224,18 @@
               <!-- Button modal editar produto -->
               <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
                 data-bs-target="#EditarProd">
-                Ed
+                <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
               </button>
 
               <!-- Button modal visualizar produto -->
               <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
                 data-bs-target="#VisualizarProd">
-                Vis
+                <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
               </button>
 
               <!-- Button modal exclui produto-->
               <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ExcluiProd">
-                Ex
+                <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
               </button>
             </td>
 
@@ -316,8 +317,8 @@
         </form>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary bottom-options" data-bs-dismiss="modal">Sair</button>
-          <button type="button" class="btn btn-primary bottom-options">Salvar</button>
+          <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Sair</button>
+          <button type="button" class="btn btn-primary bottom-finish">Salvar</button>
         </div>
       </div>
     </div>
@@ -385,8 +386,8 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary bottom-options" data-bs-dismiss="modal">Sair</button>
-          <button type="button" class="btn btn-primary bottom-options">Salvar</button>
+          <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Sair</button>
+          <button type="button" class="btn btn-primary bottom-finish">Salvar</button>
         </div>
       </div>
     </div>
@@ -400,7 +401,7 @@
     <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Visualize o Produto</h5>
+          <h5 class="modal-title" id="staticBackdropLabel">Visualizar Produto</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
@@ -418,7 +419,7 @@
               <div class="col-12">
                 <label for="VisDescritionProdut" class="form-label">Descrição do Produto</label>
                 <textarea class="form-control" id="VisDescritionProdut" rows="3"
-                  placeholder="É paranram paranram e faz pipipi popopo. Serve pra isso, isso e aquilo."></textarea>
+                  placeholder="É paranram paranram e faz pipipi popopo. Serve pra isso, isso e aquilo ali."></textarea>
               </div>
               <div class="col-12">
                 <label for="VisInfoProdut" class="form-label">Informações sobre o Produto</label>
@@ -454,7 +455,7 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary bottom-options" data-bs-dismiss="modal">Sair</button>
+          <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Sair</button>
         </div>
       </div>
     </div>
@@ -472,11 +473,11 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p class="text-center">Gostaria de excluir esse produto?</p>
+          <p class="text-center">Deseja excluir esse produto?</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary bottom-options" data-bs-dismiss="modal">Sair</button>
-          <button type="button" class="btn btn-primary bottom-options">Excluir</button>
+          <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Sair</button>
+          <button type="button" class="btn btn-primary bottom-finish">Excluir</button>
         </div>
       </div>
     </div>

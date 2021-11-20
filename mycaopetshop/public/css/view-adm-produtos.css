@@ -11,8 +11,8 @@ body h5 {
 
 
 .nav-search {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 }
 
 .bar-search {
@@ -23,7 +23,15 @@ body h5 {
 
 
 .bottom-add {
-    margin-right: 40px !important;
+    background-color: #022049;
+}
+
+.bottom-add:hover {
+    background-color: #022049;
+}
+
+.bottom-add:focus {
+    background-color: #022049 !important;
 }
 
 
@@ -41,7 +49,30 @@ body h5 {
     margin-right: 5px;
 }
 
+.bottom-finish {
+    background-color: #022049;
+}
+
+.bottom-finish:hover {
+    background-color: #022049;
+}
+
+.bottom-finish:focus {
+    background-color: #022049;
+}
+
+
+
 .paginaVisualizarProd {
     width: 100% !important;
     height: 27rem;
+}
+
+
+
+
+@media(max-width: 390px) {
+
+    
+
 }
