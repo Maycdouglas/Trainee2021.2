@@ -5,41 +5,72 @@
 }
 
 .logo-mycao-login{
-    max-width: 200px;
-    margin-top: 40px;
+    max-width: 280px;
+    margin-top: 3.5rem;
 }
 
 .formulario-login{
+    /* text-align: center; */
     padding-top: 60px;
-    width: 80%;
+    max-width: 80%;
     margin: auto;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     height: 400px;
     color:white;
-    border-color: black;
+    justify-content: center !important;
+    align-items: center;
     
 }
 
+.botao-submit{
+    text-align: center;
+}
+
+.corpo-login{
+  background-color : #AFCBFF;
+}
 .agrupamento-formulario{
   padding: 20px;
 }
 .botao-login{
-    margin-left: 20px;
-    border-color:#022049;
+    text-align: center;
+    border-color:#F4A630;
+    background-color: #F4A630;
+    color: white !important;
+    display: inline-block;
     
 }
 .label-login{
     padding-bottom: 5px;
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: Quicksand;
+    color :#022049;  
+  }
+
 .card-form-login{
+   
     border: 2px solid #eaedf3;
     border-radius: 20px;
     box-shadow: 0px 5px 15px rgb(122 121 121 / 25%);
     margin-bottom: 8%;
-    background-color:#022049;
+    margin-top: 8%;
+    background-color: #022049;
+    
 }
 
-.teste{
+.container-login-color{
     color: #022049;
+}
+
+
+.form-control-login{
+    background-color: #eaedf3;
+}
+
+@media(max-width : 768px){
+    .logo-mycao-login{
+        margin-top: 1rem;
+    }
 }
