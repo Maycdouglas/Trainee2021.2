@@ -23,9 +23,7 @@
    justify-content: end;
 
 }
-.botao-de-adicionar{
-    max-width: 100px;
-}
+
 
 .barra-pesquisa{
    max-width: 200px;
@@ -37,6 +35,9 @@
     flex-wrap: wrap;
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: 
+}
 
 .container-principal-categoria{
     border: 2px solid #eaedf3;
@@ -62,5 +63,7 @@
     }
     .botao-de-adicionar {
         margin-top: 2% !important;
+        justify-self: end;
     }
+
 }
