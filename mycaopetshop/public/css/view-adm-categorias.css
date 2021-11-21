@@ -36,7 +36,8 @@
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 
+    font-family: Quicksand;
+    color: #022049;
 }
 
 .container-principal-categoria{
@@ -57,7 +58,7 @@ h1, h2, h3, h4, h5 {
     text-align: center !important;
 }
 
-@media (max-width: 431px) {
+@media (max-width: 443px) {
     .botoes-categorias {
         margin-bottom: 2% !important;
     }
@@ -65,5 +66,7 @@ h1, h2, h3, h4, h5 {
         margin-top: 2% !important;
         justify-self: end;
     }
-
+    .pesquisa-container{
+        justify-content: end;
+    }
 }
