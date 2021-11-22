@@ -15,10 +15,11 @@ a:visited {
 }
 
 body {
-    background-color: #f6f8ff !important;
+    background-color: #e1e8ff !important;
 }
 
-h3 {
+h1, h2, h3, h4, h5 {
+    font-family: 'Quicksand', sans-serif; 
     color: var(--azul-escuro);
 }
 
