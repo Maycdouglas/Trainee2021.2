@@ -7,12 +7,20 @@ body h5 {
     color: #022049;
 }
 
+body h2 {
+    font-family: 'Quicksand', sans-serif !important;
+    color: #022049;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
 
 
 
 .nav-search {
     margin-top: 1rem;
     margin-bottom: 3rem;
+    background-color: white;
 }
 
 .bar-search {
@@ -22,57 +30,65 @@ body h5 {
 
 
 
-.bottom-add {
-    background-color: #022049;
-}
-
-.bottom-add:hover {
-    background-color: #022049;
-}
-
-.bottom-add:focus {
-    background-color: #022049 !important;
-}
-
-
-
-
 .product-table {
     background-color: white;
-    margin-top: 10px;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
     box-shadow: 0px 5px 15px rgb(122 121 121 / 25%);
     border-radius: 5px;
     border: 2px solid #eaedf3;
 }
 
+
 .bottom-options {
-    margin-right: 5px;
+    margin-left: 3px;
 }
 
-.bottom-finish {
+.bottom-exit {
     background-color: #022049;
 }
 
-.bottom-finish:hover {
+.bottom-exit:hover {
     background-color: #022049;
 }
 
-.bottom-finish:focus {
+.bottom-exit:focus {
     background-color: #022049;
 }
 
-
-
-.paginaVisualizarProd {
-    width: 100% !important;
-    height: 27rem;
+.bottom-add {
+    display: flex;
+    flex-wrap: wrap !important; 
+    justify-content: space-between !important;
 }
 
 
 
+@media(max-width: 495px) { /*Tamanho em que o botão add dá problema*/
 
-@media(max-width: 390px) {
+    .nav-search {
+        margin-bottom: 2rem;
+    }
 
-    
+    .bottom-add { /*Tentativa de arrumar o botão de Adicionar*/
+        flex-wrap: wrap;
+        justify-content: end !important;
+    }
+
+    .btn-adicionar {
+        justify-content: flex-end !important;
+        align-self: flex-end !important;
+        margin-top: 0.5rem !important;
+    }
+
+    .colum-bottons-table {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .bottom-options {
+        margin-bottom: 5px;
+    }
+
 
 }

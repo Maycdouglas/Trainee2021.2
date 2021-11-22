@@ -11,7 +11,7 @@
   <title>View ADM Produtos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../public/css/view-adm-produtos.css">
 </head>
 
@@ -20,50 +20,92 @@
 
 <body>
 
-  <div class="container">
-    <!--Espaço da barra de Pesquisa-->
-    <nav class="navbar navbar-light bg-light nav-search">
-      <div class="container-fluid">
-        <form class="d-flex justify-content-end bar-search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-secondary bottom-search" type="submit">Pesquisar</button>
-        </form>
-        <!--Espaço do botão de Adicionar Produto-->
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <div class="container product-table">
+
+    <div class="container">
+
+      <h2 class="text-center">Produtos MyCão</h2>
+
+      <!--Espaço da barra de Pesquisa-->
+      <nav class="navbar navbar-light bg-light nav-search">
+        <div class="container-fluid bottom-add d-flex">
+          <form class="d-flex justify-content-end bar-search">
+            <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
+            <button class="btn btn-primary bottom-search" type="submit">Pesquisar</button>
+          </form>
+          <!--Espaço do botão de Adicionar Produto-->
+          <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end"> -->
 
           <!-- Button modal adicionar produto-->
-          <button type="button" class="btn btn-success bottom-add" data-bs-toggle="modal" data-bs-target="#AddProdut">
+          <button type="button" class="btn btn-success btn-adicionar" data-bs-toggle="modal"
+            data-bs-target="#AddProdut">
             <img alt="Adicionar" src="../../public/assets/plus-icon.svg">Adicionar
           </button>
 
+          <!-- </div> -->
+          <!--Fim do espaço para o acréscimo de novos produtos-->
         </div>
-        <!--Fim do espaço para o acréscimo de novos produtos-->
-      </div>
-  </div>
-  </nav>
-  <!--Fim do espaço da barra de Pesquisa-->
+      </nav>
+    </div>
+    <!--Fim do espaço da barra de Pesquisa-->
+
+    <hr>
+
+
+    <!--Tabela de Gerenciamento dos Produtos-->
+    <div class="container">
+      <table class="table table-hover justify-content-center align-items-center">
+
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col"><b>Nome do Produto</b></th>
+            <th></th>
+          </tr>
+        </thead>
 
 
 
-  <!--Tabela de Gerenciamento dos Produtos-->
-  <div class="container">
-    <table class="table table-hover justify-content-center align-items-center product-table">
+        <tbody>
 
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col"><b>Nome do Produto</b></th>
-          <th></th>
-        </tr>
-      </thead>
+          <!--Início da parte que será cópia para as outras-->
+          <tr class="container">
+            <th scope="row justify-content-center align-items-center">1</th>
+            <td class="justify-content-start name-itens-table">Product Name</td>
+            <div class="d-grid gap-2 d-md-block">
+              <td class="d-flex justify-content-end colum-bottons-table">
+
+                <!-- Button modal editar produto -->
+                <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
+                  data-bs-target="#EditarProd">
+                  <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
+                </button>
+
+                <!-- Button modal visualizar produto -->
+                <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
+                  data-bs-target="#VisualizarProd">
+                  <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
+                </button>
+
+                <!-- Button modal exclui produto-->
+                <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
+                  data-bs-target="#ExcluiProd">
+                  <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
+                </button>
+              </td>
+
+            </div>
+          </tr>
+          <!--Fim da real parte que eu estou mexendo-->
 
 
 
-      <tbody>
 
-        <!--Início da parte que será cópia para as outras-->
-        <tr>
-          <th scope="row justify-content-center align-items-center">1</th>
+
+
+
+          <!--Continuação da Tabela apenas para visualização-->
+          <th scope="row justify-content-center align-items-center">2</th>
           <td class="justify-content-start name-itens-table">Product Name</td>
           <div class="d-grid gap-2 d-md-block">
             <td class="d-flex justify-content-end colum-bottons-table">
@@ -81,54 +123,19 @@
               </button>
 
               <!-- Button modal exclui produto-->
-              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ExcluiProd">
+              <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
+                data-bs-target="#ExcluiProd">
                 <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
               </button>
             </td>
 
           </div>
-        </tr>
-        <!--Fim da real parte que eu estou mexendo-->
+          </tr>
 
 
 
-
-
-
-
-        <!--Continuação da Tabela apenas para visualização-->
-        <tr>
-          <th scope="row justify-content-center align-items-center">2</th>
-          <td>Product Name</td>
-          <div class="d-grid gap-2 d-md-block">
-            <td class="d-flex justify-content-end colum-bottons-table">
-
-              <!-- Button modal editar produto -->
-              <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#EditarProd">
-                <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
-              </button>
-
-              <!-- Button modal visualizar produto -->
-              <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#VisualizarProd">
-                <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
-              </button>
-
-              <!-- Button modal exclui produto-->
-              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ExcluiProd">
-                <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
-              </button>
-            </td>
-
-          </div>
-        </tr>
-
-
-
-        <tr>
           <th scope="row justify-content-center align-items-center">3</th>
-          <td>Produtinho com Nome Grande para Teste</td>
+          <td class="justify-content-start name-itens-table">Product Name</td>
           <div class="d-grid gap-2 d-md-block">
             <td class="d-flex justify-content-end colum-bottons-table">
 
@@ -145,19 +152,19 @@
               </button>
 
               <!-- Button modal exclui produto-->
-              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ExcluiProd">
+              <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
+                data-bs-target="#ExcluiProd">
                 <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
               </button>
             </td>
 
           </div>
-        </tr>
+          </tr>
 
 
 
-        <tr>
           <th scope="row justify-content-center align-items-center">4</th>
-          <td>Product Name</td>
+          <td class="justify-content-start name-itens-table">Product Name</td>
           <div class="d-grid gap-2 d-md-block">
             <td class="d-flex justify-content-end colum-bottons-table">
 
@@ -174,20 +181,20 @@
               </button>
 
               <!-- Button modal exclui produto-->
-              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ExcluiProd">
+              <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
+                data-bs-target="#ExcluiProd">
                 <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
               </button>
             </td>
 
           </div>
-        </tr>
+          </tr>
 
 
 
 
-        <tr>
           <th scope="row justify-content-center align-items-center">5</th>
-          <td>Product Name</td>
+          <td class="justify-content-start name-itens-table">Product Name</td>
           <div class="d-grid gap-2 d-md-block">
             <td class="d-flex justify-content-end colum-bottons-table">
 
@@ -204,20 +211,20 @@
               </button>
 
               <!-- Button modal exclui produto-->
-              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ExcluiProd">
+              <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
+                data-bs-target="#ExcluiProd">
                 <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
               </button>
             </td>
 
           </div>
-        </tr>
+          </tr>
 
 
 
 
-        <tr>
           <th scope="row justify-content-center align-items-center">6</th>
-          <td>Product Name</td>
+          <td class="justify-content-start name-itens-table">Product Name</td>
           <div class="d-grid gap-2 d-md-block">
             <td class="d-flex justify-content-end colum-bottons-table">
 
@@ -234,21 +241,26 @@
               </button>
 
               <!-- Button modal exclui produto-->
-              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ExcluiProd">
+              <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
+                data-bs-target="#ExcluiProd">
                 <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
               </button>
             </td>
 
           </div>
-        </tr>
+          </tr>
 
 
 
 
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+    </div>
+    <!--Fim da Tabela de Produtos-->
+
   </div>
-  <!--Fim da Tabela de Produtos-->
+
+
 
 
 
@@ -317,8 +329,8 @@
         </form>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Sair</button>
-          <button type="button" class="btn btn-primary bottom-finish">Salvar</button>
+          <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success">Adicionar</button>
         </div>
       </div>
     </div>
@@ -386,8 +398,8 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Sair</button>
-          <button type="button" class="btn btn-primary bottom-finish">Salvar</button>
+          <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success">Editar</button>
         </div>
       </div>
     </div>
@@ -455,7 +467,7 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Sair</button>
+          <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>
     </div>
@@ -473,11 +485,11 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p class="text-center">Deseja excluir esse produto?</p>
+          <p class="text-center">Deseja mesmo excluir esse produto?</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Sair</button>
-          <button type="button" class="btn btn-primary bottom-finish">Excluir</button>
+          <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger">Excluir</button>
         </div>
       </div>
     </div>
