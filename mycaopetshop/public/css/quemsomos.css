@@ -1,0 +1,102 @@
+:root {
+    --azul-escuro: #022049;
+    --laranja: #F4A630;
+    --azul-claro: #AFCBFF;
+}
+
+.navbarT {
+    background-color: #022049 !important;
+    height: 50px !important;
+}
+
+.navbarT h2 {
+    color: #F4A630 !important;
+}
+
+.titulo-quem-somos{
+      display: flex;
+      text-align: center;
+      color: black ;
+      padding-top: 3rem;
+      padding-bottom: 1rem;
+      background-color: white;
+    
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Quicksand;
+    color: #022049 !important;
+}
+
+.corpo{
+    background-color: #f6f8ff;
+    color: black;
+}
+
+
+.img-principal{
+    border: transparent thin solid;
+    padding: 5px;
+    max-width: 600px;
+   
+}
+
+
+.icones-card-quemsomos{
+    font-size : 50px;
+    color: #022049;
+}
+
+.class-hr{
+    
+    color:black;
+    height: 20px;
+    max-width: 900px;
+
+}
+
+.texto-principal{
+    line-height: 25px;
+    display: block;
+    font-size: .83em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold
+}
+
+.corpo-conteudo{
+    display: flex;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgb(122 121 121 / 25%);
+    margin-top: 3rem;
+}
+
+
+.cards-quemsomos{
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgb(122 121 121 / 25%);
+    font-weight: 400;
+}
+
+.footer {
+    background-color: #022049 !important;
+    height: 120px !important;
+    object-position: bottom;
+    margin-top: 8rem;
+}
+
+.footer h2 {
+    color: #F4A630 !important;
+    text-align: center !important;
+}
+
+ .teste{
+    display: flex;
+    margin-top: 3rem;
+}
