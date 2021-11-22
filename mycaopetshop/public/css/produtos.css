@@ -10,6 +10,11 @@ a:visited {
     text-decoration: none;
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--azul-escuro);
+}
+
 .bg-principal {
     background-color: var(--laranja);
 }
@@ -100,10 +105,8 @@ h1 {
 }
 
 .btn-details:hover {
-    opacity: 0.8;
     background-color: var(--azul-escuro);
     color: white;
-    transition: 0.4s;
 }
 
 .pagination {
