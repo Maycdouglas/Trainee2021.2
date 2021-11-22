@@ -11,8 +11,19 @@
     list-style: none;
 }
 
-body {
-    background-color: white;
+h1, h2, h3, h4, h5 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+.username {
+    color: #F4A630;
+}
+    body {
+    background-color: #e1e8ff;
 }
 
 .texto-contato {
@@ -50,14 +61,26 @@ body {
     margin-bottom: 20px;
 }
 
-.btn {
-    background-color: #F4A630;
-    border-color: #F4A630;
+.form-group label{
+    color: black;
 }
 
-.btn:hover {
-    background-color: #022049;
-    border-color: #022049;
+.botao-enviar {
+    background-color: #022049 !important;
+    border-color: #022049 !important;
+}
+
+.botao-abrir {
+    background-color: #022049 !important;
+    border-color: #022049 !important;
+}
+
+.icone-card {
+    font-size: 50px;
+}
+
+.card-title {
+    font-size: 20px ;
 }
 
 .mapa {
