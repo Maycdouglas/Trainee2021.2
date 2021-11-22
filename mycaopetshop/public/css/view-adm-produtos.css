@@ -1,0 +1,95 @@
+body {
+    background-color: #f6f8ff;
+}
+
+body h5 {
+    font-family: 'Quicksand', sans-serif !important;
+    color: #022049;
+}
+
+body h2 {
+    font-family: 'Quicksand', sans-serif !important;
+    color: #022049;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+
+
+.nav-search {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    background-color: white !important;
+}
+
+.bar-search {
+    text-align: right !important;
+}
+
+
+
+
+.product-table {
+    background-color: white;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    box-shadow: 0px 5px 15px rgb(122 121 121 / 25%);
+    border-radius: 5px;
+    border: 2px solid #eaedf3;
+}
+
+
+.bottom-options {
+    margin-left: 3px;
+}
+
+.bottom-exit {
+    background-color: #022049;
+}
+
+.bottom-exit:hover {
+    background-color: #022049;
+}
+
+.bottom-exit:focus {
+    background-color: #022049;
+}
+
+.bottom-add {
+    display: flex;
+    flex-wrap: wrap !important; 
+    justify-content: space-between !important;
+    background-color: white;
+}
+
+
+
+@media(max-width: 495px) { /*Tamanho em que o botão add dá problema*/
+
+    .nav-search {
+        margin-bottom: 2rem;
+    }
+
+    .bottom-add { /*Tentativa de arrumar o botão de Adicionar*/
+        flex-wrap: wrap;
+        justify-content: end !important;
+    }
+
+    .btn-adicionar {
+        justify-content: flex-end !important;
+        align-self: flex-end !important;
+        margin-top: 0.5rem !important;
+    }
+
+    .colum-bottons-table {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .bottom-options {
+        margin-bottom: 5px;
+    }
+
+
+}

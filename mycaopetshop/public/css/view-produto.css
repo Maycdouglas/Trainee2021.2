@@ -1,0 +1,161 @@
+body {
+    background-color: #f6f8ff;
+}
+
+body h3 {
+    color: #022049;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+
+
+
+.navbarT {
+    background-color: #022049 !important;
+    height: 50px !important;
+}
+
+.navbarT h2 {
+    color: #F4A630 !important;
+}
+
+
+
+
+.caminho {
+    font-size: 24px;
+}
+
+.caminho  ul {
+    padding-left: 0px;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.caminho li {
+    display: inline-block;
+    color: #7a7a7a;
+    font-size: 0.8rem;
+}
+
+.caminho a {
+    color: #7a7a7a;
+}
+
+
+
+
+.carousel {
+    margin-bottom: 3rem;
+    overflow: no-content;
+}
+
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+.carousel-item {
+    height: 16rem;
+    overflow: hidden;
+}
+
+.carousel-item > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover !important;
+    padding: 0;
+    min-width: 100%;
+    height: 16rem;
+}
+
+
+
+
+.card-body {
+    text-align: center;
+}
+
+.card-body h5 {
+    color: #022049;
+}
+
+.card-body p {
+    color: #3d3d3d;
+}
+
+.card-body ul {
+    padding-left: 0px;
+}
+
+.card-body li {
+    color: white;
+    padding-top: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+    height: 2rem;
+    background-color: #dd1133;
+    margin-top: 6px;
+    cursor: default;
+    width: 8rem;
+    display: inline-block;
+    border-radius: 7px;
+}
+
+.card-body li:hover{
+    color: white;
+}
+
+
+
+
+.informacoes-produto h3 {
+    margin-top: 4rem;
+}
+
+.informacoes-produto hr {
+    margin-bottom: 2rem ;
+}
+
+
+
+
+@media(max-width: 1000px) {
+    
+    .informacoes-produto {
+        text-align: left;
+    }
+
+    .informacoes-produto p {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .caminho  ul {
+        padding-left: 0px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+    
+}
+
+
+
+
+
+
+.footer {
+    background-color: #022049 !important;
+    height: 120px !important;
+    object-position: bottom;
+    margin-top: 8rem;
+}
+
+.footer h2 {
+    color: #F4A630 !important;
+    text-align: center !important;
+}
