@@ -1,3 +1,16 @@
+body {
+    background-color: #f6f8ff;
+}
+
+body h3 {
+    color: #022049;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+
+
+
 .navbarT {
     background-color: #022049 !important;
     height: 50px !important;
@@ -101,7 +114,6 @@
 
 .informacoes-produto h3 {
     margin-top: 4rem;
-    color: black;
 }
 
 .informacoes-produto hr {
