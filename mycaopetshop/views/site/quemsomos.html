@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../../public/css/quemsomos.css">
+    <link rel="stylesheet" href="../../public/css/navbarft.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,10 +21,31 @@
 
 <body class="corpo">
 
-    <div class="navbarT">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark shadow bg-blue">
+            <div class="container">
 
-        <h2 class="d-flex justify-content-center">NAVBAR</h2>
-    </div>
+                <a href="#" class="d-flex align-items-center mb-0 text-decoration-none">
+                    <img class="logo-navbar p-0 m-0" src="../../public/assets/Logo escrita.png">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Alterna navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="home.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="produtos.html">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="contato.html">Contato</a></li>
+                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="quemsomos.html">Quem Somos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
    
    
     <main class="container mt-5">
@@ -95,10 +117,60 @@
 
     </main>
     
-    <div class="footer">
+    <footer class="py-4 mt-4 bg-blue">
+        <div class="container">
+            <div class="row border-bottom justify-content-center align-items-center m-0 mb-4">
+                <ul class="nav justify-content-center mb-4">
+                    <li class="nav-item"><a href="home.html" class="nav-link px-2 links-footer">Início</a></li>
+                    <li class="nav-item"><a href="quemsomos.html" class="nav-link px-2 links-footer">Sobre Nós</a></li>
+                    <li class="nav-item"><a href="produtos.html" class="nav-link px-2 links-footer">Nossos Produtos</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link px-2 links-footer">Fale Conosco</a></li>
+                </ul>
+            </div>
 
-        <h2>FOOTER</h2>
-    </div>
+
+            <div class="row justify-content-center align-items-center m-0 mb-2">
+                <div class="col-md-8 col-12">
+                    <p class="text-center my-2 texto-footer">Sed ut perspiciatis unde omnis iste natus error sit
+                        voluptatem
+                        accusantium doloremque laudantium, totam rem
+                        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                        explicabo.
+                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                        consequuntur.</p>
+                </div>
+            </div>
+
+
+            <div class="row justify-content-center align-items-center m-0 mb-2">
+                <div class="col-md-8 col-12">
+                    <div class="row justify-content-center align-items-center m-0 mb-2">
+
+                        <ul class="nav justify-content-center m-0 p-0">
+                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i
+                                        class="fas fa-envelope redes-sociais"></i></a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i
+                                        class="fab fa-instagram redes-sociais"></i></a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i
+                                        class="fab fa-twitter redes-sociais"></i></a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i
+                                        class="fab fa-whatsapp redes-sociais"></i></a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i
+                                        class="fab fa-facebook redes-sociais"></i></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row justify-content-center align-items-center m-0">
+                <p class="text-center text-muted m-0 p-0 mt-2">© 2021 Code Jr</p>
+            </div>
+
+
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
