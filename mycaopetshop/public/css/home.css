@@ -215,6 +215,14 @@ a:visited {
     }
 }
 
+@media (max-width: 769px) {
+    .card-principal {
+        margin-right: 0px;
+    }
+}
+
+/* ================================== */
+
 .bg-blue {
     background-color: #022049 !important;
 }
