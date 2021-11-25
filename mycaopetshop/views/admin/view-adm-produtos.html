@@ -9,16 +9,79 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>View ADM Produtos</title>
+  <script src="https://kit.fontawesome.com/c11bde093d.js" crossorigin="anonymous"></script>
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../public/css/view-adm-produtos.css">
+  <link rel="stylesheet" href="../../public/css/sidebar-adm.css">
 </head>
 
 
 
 
 <body>
+
+  <header>
+    <div class="sidebar close">
+      <div class="logo-details">
+        <img class="d-flex" src="../../public/assets/Icone com borda amarela.png">
+        <span class="logo_name">MyCao</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="usuarios.html">
+            <i class='fas fa-users-cog'></i>
+            <span class="link_name">Usuários</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="usuarios.html">Usuários</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="view-adm-categorias.html">
+              <i class='fas fa-clipboard-list'></i>
+              <span class="link_name">Categorias</span>
+            </a>
+          </div>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="view-adm-categorias.html">Categorias</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="view-adm-produtos.html">
+              <i class='fas fa-boxes'></i>
+              <span class="link_name">Produtos</span>
+            </a>
+          </div>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="view-adm-produtos.html">Produtos</a></li>
+          </ul>
+        </li>
+
+
+        <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <img class="d-flex" src="../../public/assets/Icone com borda azul claro.png">
+            </div>
+            <div class="name-job">
+              <div class="profile_name">Usuário</div>
+            </div>
+            <i class='fas fa-sign-out-alt'></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <div class="home-content">
+        <i class='bx bx-menu'></i>
+      </div>
+    </section>
+  </header>
 
   <div class="container product-table">
 
@@ -503,6 +566,24 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script>
+    let arrow = document.querySelectorAll(".arrow");
+    for (var i = 0; i < arrow.length; i++) {
+      arrow[i].addEventListener("click", (e) => {
+        let arrowParent = e.target.parentElement.parentElement;
+        arrowParent.classList.toggle("showMenu");
+      });
+    }
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    console.log(sidebarBtn);
+    sidebarBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("close");
+    });
+  </script>
 </body>
 
 </html>

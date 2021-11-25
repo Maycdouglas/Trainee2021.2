@@ -8,20 +8,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c11bde093d.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <title>Visão Administrativa das categorias</title>
     <link rel="stylesheet" href="../../public/css/view-adm-categorias.css">
     <link rel="stylesheet" href="../../public/css/usuarios.css">
+    <link rel="stylesheet" href="../../public/css/sidebar-adm.css">
 
 </head>
 
 
 <body class="corpo-adm-categoria">
     <header class="cabeca-pagina">
-        <div class="navbarT">
+        <div class="sidebar close">
+            <div class="logo-details">
+                <img class="d-flex" src="../../public/assets/Icone com borda amarela.png">
+                <span class="logo_name">MyCao</span>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="usuarios.html">
+                        <i class='fas fa-users-cog'></i>
+                        <span class="link_name">Usuários</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="usuarios.html">Usuários</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="iocn-link">
+                        <a href="view-adm-categorias.html">
+                            <i class='fas fa-clipboard-list'></i>
+                            <span class="link_name">Categorias</span>
+                        </a>
+                    </div>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="view-adm-categorias.html">Categorias</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="iocn-link">
+                        <a href="view-adm-produtos.html">
+                            <i class='fas fa-boxes'></i>
+                            <span class="link_name">Produtos</span>
+                        </a>
+                    </div>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="view-adm-produtos.html">Produtos</a></li>
+                    </ul>
+                </li>
 
-            <h2 class="d-flex justify-content-center">NAVBAR</h2>
+
+                <li>
+                    <div class="profile-details">
+                        <div class="profile-content">
+                            <img class="d-flex" src="../../public/assets/Icone com borda azul claro.png">
+                        </div>
+                        <div class="name-job">
+                            <div class="profile_name">Usuário</div>
+                        </div>
+                        <i class='fas fa-sign-out-alt'></i>
+                    </div>
+                </li>
+            </ul>
         </div>
-        
+        <section class="home-section">
+            <div class="home-content">
+                <i class='bx bx-menu'></i>
+            </div>
+        </section>
     </header>
 
     <main class="container container-principal-categoria justify-content-center align-content-center mt-5">
@@ -301,15 +356,29 @@
 
 
 
-    <div class="footer">
-
-        <h2>FOOTER</h2>
-    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e) => {
+                let arrowParent = e.target.parentElement.parentElement;
+                arrowParent.classList.toggle("showMenu");
+            });
+        }
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
 
 
 </body>
