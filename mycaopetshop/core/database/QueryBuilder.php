@@ -11,12 +11,12 @@ class QueryBuilder
 
     public function __construct()
     {
-    
+
     }
 
     public function selectAll()
     {
-      
+
     }
 
     public function select()
@@ -26,7 +26,7 @@ class QueryBuilder
 
     public function insert()
     {
-      
+
     }
 
     public function edit()
