@@ -2,6 +2,7 @@
 
 namespace App\Core\Database;
 
+use Exception;
 use PDO;
 
 class QueryBuilder
@@ -9,24 +10,45 @@ class QueryBuilder
     protected $pdo;
 
 
-    public function __construct()
+    public function __construct(PDO $pdo)
     {
-
+        $this->pdo = $pdo;
     }
 
-    public function selectAll()
+    public function selectAll($table)
     {
+        $query = "SELECT * FROM {$table}";
 
+        try {
+            $stmt = $this->pdo->prepare($query);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
-    public function select()
+    public function select($table, $id)
     {
+        $query = "SELECT FROM {$table} WHERE id = {$id}";
 
+        try {
+            $stmt = $this->pdo->prepare($query);
+            $stmt->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
-    public function insert()
+    public function insertProdutos($table, $parameters)
     {
-
+        $query = "INSERT INTO {$table} (nome, descricao, categoria, preco, foto) VALUES ('{$parameters['nome']}', '{$parameters['descricao']}', '{$parameters['categorias']}', '{$parameters['preco']}', '{$parameters['foto']}')";
+        try {
+            $stmt = $this->pdo->prepare($query);
+            $stmt->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     public function edit()
@@ -34,9 +56,16 @@ class QueryBuilder
          
     }
 
-    public function delete()
+    public function delete($table, $id)
     {
-      
+        $query = "DELETE FROM {$table} WHERE id = {$id}";
+
+        try {
+            $stmt = $this->pdo->prepare($query);
+            $stmt->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     public function read()

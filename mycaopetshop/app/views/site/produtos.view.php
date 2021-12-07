@@ -65,91 +65,20 @@
                         <a href="view-produto.html" class="btn btn-details">Ver Detalhes</a>
                     </div>
                 </div><!-- card1 -->
-                <div class="card cards" style="width: 18rem;">
-                    <a href="view-produto.html"><img src="../../public/img/macacode.svg" class="card-img-top" alt="..."></a>
-                    <div class="card-body">
-                        <div class="categorias">
-                            <button class="btn btn-categoria racao">Ração</button>
-                            <button class="btn btn-categoria cachorro">Cachorro</button>
+                <?php foreach ($produtos as $produto) :?>
+                    <div class="card cards" style="width: 18rem;">
+                        <a href="view-produto.html"><img src="../../public/img/macacode.svg" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <div class="categorias">
+                                <button class="btn btn-categoria racao">Ração</button>
+                                <button class="btn btn-categoria cachorro">Cachorro</button>
+                            </div>
+                            <h5 class="card-title"><?= $produto->nome ?></h5>
+                            <p class="card-text"><?= $produto->preco ?></p>
+                            <a href="view-produto.html" class="btn btn-details">Ver Detalhes</a>
                         </div>
-                        <h5 class="card-title">MyRação Raças Pequenas</h5>
-                        <p class="card-text">R$19,90</p>
-                        <a href="view-produto.html" class="btn btn-details">Ver Detalhes</a>
-                    </div>
-                </div><!-- card2 -->
-                <div class="card cards" style="width: 18rem;">
-                    <a href="view-produto.html"><img src="../../public/img/macacode.svg" class="card-img-top" alt="..."></a>
-                    <div class="card-body">
-                        <div class="categorias">
-                            <button class="btn btn-categoria racao">Ração</button>
-                            <button class="btn btn-categoria cachorro">Cachorro</button>
-                        </div>
-                        <h5 class="card-title">MyRação Raças Pequenas</h5>
-                        <p class="card-text">R$19,90</p>
-                        <a href="view-produto.html" class="btn btn-details">Ver Detalhes</a>
-                    </div>
-                </div><!-- card3 -->
-                <div class="card cards" style="width: 18rem;">
-                    <a href="view-produto.html"><img src="../../public/img/macacode.svg" class="card-img-top" alt="..."></a>
-                    <div class="card-body">
-                        <div class="categorias">
-                            <button class="btn btn-categoria racao">Ração</button>
-                            <button class="btn btn-categoria cachorro">Cachorro</button>
-                        </div>
-                        <h5 class="card-title">MyRação Raças Pequenas</h5>
-                        <p class="card-text">R$19,90</p>
-                        <a href="view-produto.html" class="btn btn-details">Ver Detalhes</a>
-                    </div>
-                </div><!-- card4 -->
-                <div class="card cards" style="width: 18rem;">
-                    <a href="view-produto.html"><img src="../../public/img/macacode.svg" class="card-img-top" alt="..."></a>
-                    <div class="card-body">
-                        <div class="categorias">
-                            <button class="btn btn-categoria racao">Ração</button>
-                            <button class="btn btn-categoria cachorro">Cachorro</button>
-                        </div>
-                        <h5 class="card-title">MyRação Raças Pequenas</h5>
-                        <p class="card-text">R$19,90</p>
-                        <a href="view-produto.html" class="btn btn-details">Ver Detalhes</a>
-                    </div>
-                </div><!-- card5 -->
-                <div class="card cards" style="width: 18rem;">
-                    <a href="view-produto.html"><img src="../../public/img/macacode.svg" class="card-img-top" alt="..."></a>
-                    <div class="card-body">
-                        <div class="categorias">
-                            <button class="btn btn-categoria racao">Ração</button>
-                            <button class="btn btn-categoria cachorro">Cachorro</button>
-                        </div>
-                        <h5 class="card-title">MyRação Raças Pequenas</h5>
-                        <p class="card-text">R$19,90</p>
-                        <a href="view-produto.html" class="btn btn-details">Ver Detalhes</a>
-                    </div>
-                </div><!-- card6 -->
-                <div class="card cards" style="width: 18rem;">
-                    <a href="view-produto.html"><img src="../../public/img/macacode.svg" class="card-img-top" alt="..."></a>
-                    <div class="card-body">
-                        <div class="categorias">
-                            <button class="btn btn-categoria racao">Ração</button>
-                            <button class="btn btn-categoria cachorro">Cachorro</button>
-                        </div>
-                        <h5 class="card-title">MyRação Raças Pequenas</h5>
-                        <p class="card-text">R$19,90</p>
-                        <a href="view-produto.html" class="btn btn-details">Ver Detalhes</a>
-                    </div>
-                </div><!-- card7 -->
-                <div class="card cards" style="width: 18rem;">
-                    <a href="view-produto.html"><img src="../../public/img/macacode.svg" class="card-img-top" alt="..."></a>
-                    <div class="card-body">
-                        <div class="categorias">
-                            <button class="btn btn-categoria racao">Ração</button>
-                            <button class="btn btn-categoria cachorro">Cachorro</button>
-                        </div>
-                        <h5 class="card-title">MyRação Raças Pequenas</h5>
-                        <p class="card-text">R$19,90</p>
-                        <a href="view-produto.html" class="btn btn-details">Ver Detalhes</a>
-                    </div>
-                </div><!-- card8 -->
-            </div>
+                    </div><!-- card1 -->
+                <?php endforeach; ?>
             <div class="pagination">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination">

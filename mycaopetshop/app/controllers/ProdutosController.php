@@ -8,6 +8,7 @@ class ProdutosController
 {
     public function index()
     {
+
     }
 
     public function show()
@@ -17,6 +18,12 @@ class ProdutosController
 
     public function view()
     {
-        return view("produtos");
+        $produtos = App::get('database')->selectAll("produtos");
+
+        $tabela = [
+            "produtos" => $produtos
+        ];
+
+        return view("produtos", $tabela);
     }
 }
