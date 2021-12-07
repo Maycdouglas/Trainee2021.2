@@ -67,7 +67,7 @@
                 </div><!-- card1 -->
                 <?php foreach ($produtos as $produto) :?>
                     <div class="card cards" style="width: 18rem;">
-                        <a href="view-produto.html"><img src="../../public/img/macacode.svg" class="card-img-top" alt="..."></a>
+                        <a href="view-produto.html"><img src="<?= $produto->foto ?>" class="card-img-top" alt="..."></a>
                         <div class="card-body">
                             <div class="categorias">
                                 <button class="btn btn-categoria racao">Ração</button>

@@ -56,6 +56,18 @@ class QueryBuilder
          
     }
 
+    public function updateProdutos($table, $id, $params)
+    {
+        $query = "UPDATE {$table} SET nome='{$params['nome']}', descricao='{$params['descricao']}', preco='{$params['preco']}', categoria='{$params['categoria']}', foto='{$params['foto']}' WHERE id= {$id}";
+
+        try {
+            $stmt = $this->pdo->prepare($query);
+            $stmt->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function delete($table, $id)
     {
         $query = "DELETE FROM {$table} WHERE id = {$id}";

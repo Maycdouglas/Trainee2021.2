@@ -168,151 +168,36 @@
 
 
           <!--Continuação da Tabela apenas para visualização-->
-          <th scope="row justify-content-center align-items-center">2</th>
-          <td class="justify-content-start name-itens-table">Product Name</td>
-          <div class="d-grid gap-2 d-md-block">
-            <td class="d-flex justify-content-end colum-bottons-table">
+          <?php foreach ($produtos as $produto) :?>
+              <tr class="container">
+                  <th scope="row justify-content-center align-items-center"><?= $produto->id ?></th>
+                  <td class="justify-content-start name-itens-table"><?= $produto->nome ?></td>
+                  <div class="d-grid gap-2 d-md-block">
+                      <td class="d-flex justify-content-end colum-bottons-table">
 
-              <!-- Button modal editar produto -->
-              <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#EditarProd">
-                <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
-              </button>
+                          <!-- Button modal editar produto -->
+                          <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
+                                  data-bs-target="#EditarProd">
+                              <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
+                          </button>
 
-              <!-- Button modal visualizar produto -->
-              <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#VisualizarProd">
-                <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
-              </button>
+                          <!-- Button modal visualizar produto -->
+                          <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
+                                  data-bs-target="#VisualizarProd">
+                              <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
+                          </button>
 
-              <!-- Button modal exclui produto-->
-              <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
-                data-bs-target="#ExcluiProd">
-                <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
-              </button>
-            </td>
+                          <!-- Button modal exclui produto-->
+                          <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
+                                  data-bs-target="#ExcluiProd">
+                              <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
+                          </button>
+                      </td>
 
-          </div>
-          </tr>
+                  </div>
+              </tr>
 
-
-
-          <th scope="row justify-content-center align-items-center">3</th>
-          <td class="justify-content-start name-itens-table">Product Name</td>
-          <div class="d-grid gap-2 d-md-block">
-            <td class="d-flex justify-content-end colum-bottons-table">
-
-              <!-- Button modal editar produto -->
-              <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#EditarProd">
-                <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
-              </button>
-
-              <!-- Button modal visualizar produto -->
-              <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#VisualizarProd">
-                <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
-              </button>
-
-              <!-- Button modal exclui produto-->
-              <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
-                data-bs-target="#ExcluiProd">
-                <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
-              </button>
-            </td>
-
-          </div>
-          </tr>
-
-
-
-          <th scope="row justify-content-center align-items-center">4</th>
-          <td class="justify-content-start name-itens-table">Product Name</td>
-          <div class="d-grid gap-2 d-md-block">
-            <td class="d-flex justify-content-end colum-bottons-table">
-
-              <!-- Button modal editar produto -->
-              <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#EditarProd">
-                <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
-              </button>
-
-              <!-- Button modal visualizar produto -->
-              <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#VisualizarProd">
-                <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
-              </button>
-
-              <!-- Button modal exclui produto-->
-              <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
-                data-bs-target="#ExcluiProd">
-                <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
-              </button>
-            </td>
-
-          </div>
-          </tr>
-
-
-
-
-          <th scope="row justify-content-center align-items-center">5</th>
-          <td class="justify-content-start name-itens-table">Product Name</td>
-          <div class="d-grid gap-2 d-md-block">
-            <td class="d-flex justify-content-end colum-bottons-table">
-
-              <!-- Button modal editar produto -->
-              <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#EditarProd">
-                <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
-              </button>
-
-              <!-- Button modal visualizar produto -->
-              <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#VisualizarProd">
-                <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
-              </button>
-
-              <!-- Button modal exclui produto-->
-              <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
-                data-bs-target="#ExcluiProd">
-                <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
-              </button>
-            </td>
-
-          </div>
-          </tr>
-
-
-
-
-          <th scope="row justify-content-center align-items-center">6</th>
-          <td class="justify-content-start name-itens-table">Product Name</td>
-          <div class="d-grid gap-2 d-md-block">
-            <td class="d-flex justify-content-end colum-bottons-table">
-
-              <!-- Button modal editar produto -->
-              <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#EditarProd">
-                <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
-              </button>
-
-              <!-- Button modal visualizar produto -->
-              <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#VisualizarProd">
-                <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
-              </button>
-
-              <!-- Button modal exclui produto-->
-              <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
-                data-bs-target="#ExcluiProd">
-                <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
-              </button>
-            </td>
-
-          </div>
-          </tr>
-
+            <?php endforeach; ?>
 
 
 
@@ -343,18 +228,18 @@
         </div>
         <div class="modal-body">
 
-          <form class="row g-3">
+          <form action="create" method="post" class="row g-3">
             <div class="col-md-8">
               <label for="inputNameAddProdut" class="form-label">Nome</label>
-              <input type="text" class="form-control" id="inputNameAddProdut" placeholder="Insira o nome do produto">
+              <input type="text" name="nome" class="form-control" id="inputNameAddProdut" placeholder="Insira o nome do produto">
             </div>
             <div class="col-md-4">
               <label for="inputPrecoAddProdut" class="form-label">Preço</label>
-              <input type="text" class="form-control" id="inputPrecoAddProdut" placeholder="R$99,99">
+              <input type="text" name="preco" class="form-control" id="inputPrecoAddProdut" placeholder="R$99,99">
             </div>
             <div class="col-12">
               <label for="inputDescritionAddProdut" class="form-label">Descrição do Produto</label>
-              <textarea class="form-control" id="inputDescritionAddProdut" rows="3"
+              <textarea class="form-control" name="descricao" id="inputDescritionAddProdut" rows="3"
                 placeholder="O que é, o que faz..."></textarea>
             </div>
             <div class="col-12">
@@ -364,7 +249,7 @@
             </div>
             <div class="col-12">
               <label for="inputImage1AddProdut" class="form-label">Imagem 1</label>
-              <input type="text" class="form-control" id="inputImage1AddProdut"
+              <input type="text" name="foto" class="form-control" id="inputImage1AddProdut"
                 placeholder="Insira o nome da imagem 1 do produto">
             </div>
             <div class="col-12">
@@ -389,12 +274,13 @@
               </select>
             </div>
         </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-success">Adicionar</button>
+          </div>
         </form>
 
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-success">Adicionar</button>
-        </div>
+
       </div>
     </div>
   </div>
@@ -414,16 +300,17 @@
 
           <form class="row g-3">
             <div class="col-md-8">
+                <input type="hidden" name="id" value="<?= $produto->id ?>">
               <label for="inputNameProdut" class="form-label">Nome</label>
-              <input type="text" class="form-control" id="inputNameProdut" placeholder="Insira o nome do produto">
+              <input type="text" class="form-control" name="nome" id="inputNameProdut" placeholder="Insira o nome do produto">
             </div>
             <div class="col-md-4">
               <label for="inputPrecoProdut" class="form-label">Preço</label>
-              <input type="text" class="form-control" id="inputPrecoProdut" placeholder="R$99,99">
+              <input type="text" class="form-control" name="preco" id="inputPrecoProdut" placeholder="R$99,99">
             </div>
             <div class="col-12">
               <label for="inputDescritionProdut" class="form-label">Descrição do Produto</label>
-              <textarea class="form-control" id="inputDescritionProdut" rows="3"
+              <textarea class="form-control" name="descricao" id="inputDescritionProdut" rows="3"
                 placeholder="O que é, o que faz..."></textarea>
             </div>
             <div class="col-12">
@@ -433,7 +320,7 @@
             </div>
             <div class="col-12">
               <label for="inputImage1Produt" class="form-label">Imagem 1</label>
-              <input type="text" class="form-control" id="inputImage1Produt"
+              <input type="text" class="form-control" name="foto" id="inputImage1Produt"
                 placeholder="Insira o nome da imagem 1 do produto">
             </div>
             <div class="col-12">
@@ -457,12 +344,12 @@
                 <option>Categoria 5</option>
               </select>
             </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-success">Editar</button>
+              </div>
           </form>
 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-success">Editar</button>
         </div>
       </div>
     </div>
@@ -485,16 +372,16 @@
             <form class="row g-3">
               <div class="col-md-8">
                 <label for="VisNameProdut" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="VisNameProdut" placeholder="Nome do produto">
+                <input type="text" class="form-control" id="VisNameProdut" placeholder="<?= $produto->nome ?>">
               </div>
               <div class="col-md-4">
                 <label for="VisPrecoProdut" class="form-label">Preço</label>
-                <input type="text" class="form-control" id="VisPrecoProdut" placeholder="R$99,99">
+                <input type="text" class="form-control" id="VisPrecoProdut" placeholder="R$<?= $produto->preco ?>">
               </div>
               <div class="col-12">
                 <label for="VisDescritionProdut" class="form-label">Descrição do Produto</label>
                 <textarea class="form-control" id="VisDescritionProdut" rows="3"
-                  placeholder="É paranram paranram e faz pipipi popopo. Serve pra isso, isso e aquilo ali."></textarea>
+                  placeholder="<?= $produto->descricao ?>"></textarea>
               </div>
               <div class="col-12">
                 <label for="VisInfoProdut" class="form-label">Informações sobre o Produto</label>
@@ -504,7 +391,7 @@
               </div>
               <div class="col-12">
                 <label for="VisImage1Produt" class="form-label">Imagem 1</label>
-                <input type="text" class="form-control" id="VisImage1Produt" placeholder="Nome da imagem 1">
+                <input type="text" class="form-control" id="VisImage1Produt" placeholder="<?= $produto->foto ?>">
               </div>
               <div class="col-12">
                 <label for="VisImage2Produt" class="form-label">Imagem 2</label>
