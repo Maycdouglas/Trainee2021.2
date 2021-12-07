@@ -5,8 +5,15 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class ExampleController
+class UsuariosController
 {
+    public function view()
+    {
+        $usuarios = App::get('database')->selectAll('usuarios');
+
+        return viewAdm('usuarios', compact('usuarios'));
+    }
+    
     public function create()
     {
  

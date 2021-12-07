@@ -97,11 +97,12 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php foreach ($usuarios as $usuario) : ?>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Lucas de Oliveira Varino</td>
-                            <td class="email">lucasvarino@email.com</td>
-                            <td class="senha">123456</td>
+                            <th scope="row"><?=$usuario->id?></th>
+                            <td><?=$usuario->nome?></td>
+                            <td class="email"><?=$usuario->email?></td>
+                            <td class="senha"><?=$usuario->senha?></td>
                             <td class="td-button">
                                 <div class="botoes">
                                     <button class="btn btn-primary"><img src="../../public/assets/bx_bxs-edit.svg"
@@ -114,75 +115,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Lucas de Oliveira Varino</td>
-                            <td class="email">lucasvarino@email.com</td>
-                            <td class="senha">123456</td>
-                            <td class="td-button">
-                                <div class="botoes">
-                                    <button class="btn btn-primary"><img src="../../public/assets/bx_bxs-edit.svg"
-                                            alt="Editar" data-bs-toggle="modal" data-bs-target="#editar-modal"></button>
-                                    <button class="btn btn-danger" data-bs-toggle="modal"
-                                        data-bs-target="#excluir-modal"><img src="../../public/assets/bx_bx-trash.svg"
-                                            alt="Excluir"></button><button class="btn btn-success detalhes"
-                                        data-bs-toggle="modal" data-bs-target="#detalhes-modal" data-bs-toggle="modal"
-                                        data-bs-target="#detalhes-modal"><img
-                                            src="../../public/assets/akar-icons_eye.svg" alt="Detalhes"></button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Lucas de Oliveira Varino</td>
-                            <td class="email">lucasvarino@email.com</td>
-                            <td class="senha">123456</td>
-                            <td class="td-button">
-                                <div class="botoes">
-                                    <button class="btn btn-primary"><img src="../../public/assets/bx_bxs-edit.svg"
-                                            alt="Editar" data-bs-toggle="modal" data-bs-target="#editar-modal"></button>
-                                    <button class="btn btn-danger" data-bs-toggle="modal"
-                                        data-bs-target="#excluir-modal"><img src="../../public/assets/bx_bx-trash.svg"
-                                            alt="Excluir"></button><button class="btn btn-success detalhes"
-                                        data-bs-toggle="modal" data-bs-target="#detalhes-modal"><img
-                                            src="../../public/assets/akar-icons_eye.svg" alt="Detalhes"></button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>Lucas de Oliveira Varino</td>
-                            <td class="email">lucasvarino@email.com</td>
-                            <td class="senha">123456</td>
-                            <td class="td-button">
-                                <div class="botoes">
-                                    <button class="btn btn-primary"><img src="../../public/assets/bx_bxs-edit.svg"
-                                            alt="Editar" data-bs-toggle="modal" data-bs-target="#editar-modal"></button>
-                                    <button class="btn btn-danger" data-bs-toggle="modal"
-                                        data-bs-target="#excluir-modal"><img src="../../public/assets/bx_bx-trash.svg"
-                                            alt="Excluir"></button><button class="btn btn-success detalhes"
-                                        data-bs-toggle="modal" data-bs-target="#detalhes-modal"><img
-                                            src="../../public/assets/akar-icons_eye.svg" alt="Detalhes"></button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td>Lucas de Oliveira Varino</td>
-                            <td class="email">lucasvarino@email.com</td>
-                            <td class="senha">12345616549845</td>
-                            <td class="td-button">
-                                <div class="botoes">
-                                    <button class="btn btn-primary"><img src="../../public/assets/bx_bxs-edit.svg"
-                                            alt="Editar" data-bs-toggle="modal" data-bs-target="#editar-modal"></button>
-                                    <button class="btn btn-danger" data-bs-toggle="modal"
-                                        data-bs-target="#excluir-modal"><img src="../../public/assets/bx_bx-trash.svg"
-                                            alt="Excluir"></button><button class="btn btn-success detalhes"
-                                        data-bs-toggle="modal" data-bs-target="#detalhes-modal"><img
-                                            src="../../public/assets/akar-icons_eye.svg" alt="Detalhes"></button>
-                                </div>
-                            </td>
-                        </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div> <!-- tabela-usuarios -->
