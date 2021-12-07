@@ -228,7 +228,7 @@
         </div>
         <div class="modal-body">
 
-          <form action="create" method="post" class="row g-3">
+          <form action="produtos/create" method="post" class="row g-3">
             <div class="col-md-8">
               <label for="inputNameAddProdut" class="form-label">Nome</label>
               <input type="text" name="nome" class="form-control" id="inputNameAddProdut" placeholder="Insira o nome do produto">
@@ -298,20 +298,20 @@
         </div>
         <div class="modal-body">
 
-          <form class="row g-3">
+          <form action="produtos/update" method="post" class="row g-3">
             <div class="col-md-8">
                 <input type="hidden" name="id" value="<?= $produto->id ?>">
               <label for="inputNameProdut" class="form-label">Nome</label>
-              <input type="text" class="form-control" name="nome" id="inputNameProdut" placeholder="Insira o nome do produto">
+              <input type="text" class="form-control" name="nome" id="inputNameProdut"value="<?= $produto->nome ?>">
             </div>
             <div class="col-md-4">
               <label for="inputPrecoProdut" class="form-label">Preço</label>
-              <input type="text" class="form-control" name="preco" id="inputPrecoProdut" placeholder="R$99,99">
+              <input type="text" class="form-control" name="preco" id="inputPrecoProdut" value="<?= $produto->preco ?>">
             </div>
             <div class="col-12">
               <label for="inputDescritionProdut" class="form-label">Descrição do Produto</label>
               <textarea class="form-control" name="descricao" id="inputDescritionProdut" rows="3"
-                placeholder="O que é, o que faz..."></textarea>
+                > <?= $produto->descricao ?></textarea>
             </div>
             <div class="col-12">
               <label for="inputInfoProdut" class="form-label">Informações sobre o Produto</label>
@@ -321,7 +321,7 @@
             <div class="col-12">
               <label for="inputImage1Produt" class="form-label">Imagem 1</label>
               <input type="text" class="form-control" name="foto" id="inputImage1Produt"
-                placeholder="Insira o nome da imagem 1 do produto">
+                value="<?= $produto->foto ?>">
             </div>
             <div class="col-12">
               <label for="inputImage2Produt" class="form-label">Imagem 2</label>
@@ -346,7 +346,7 @@
             </div>
               <div class="modal-footer">
                   <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
-                  <button type="button" class="btn btn-success">Editar</button>
+                  <button type="submit" class="btn btn-success">Editar</button>
               </div>
           </form>
 
@@ -438,8 +438,11 @@
           <p class="text-center">Deseja mesmo excluir esse produto?</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-danger">Excluir</button>
+            <form action="produtos/delete" method="post">
+                <input type="hidden" value="<?= $produto->id ?>" name="id">
+                <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-danger">Excluir</button>
+            </form>
         </div>
       </div>
     </div>

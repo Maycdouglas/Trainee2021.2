@@ -70,7 +70,7 @@ class QueryBuilder
 
     public function delete($table, $id)
     {
-        $query = "DELETE FROM {$table} WHERE id = {$id}";
+        $query = "DELETE FROM {$table} WHERE id={$id}";
 
         try {
             $stmt = $this->pdo->prepare($query);
