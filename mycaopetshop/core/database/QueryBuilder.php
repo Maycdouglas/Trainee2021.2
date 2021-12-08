@@ -36,9 +36,17 @@ class QueryBuilder
 
     }
 
-    public function insert()
+    public function insert($table, $parametros)
     {
-      
+        $sql = "INSERT INTO `usuarios` (nome, email, senha) VALUES ('{$parametros['nome']}', '{$parametros['email']}', '{$parametros['senha']}')";
+        // die(var_dump($parametros));
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     public function edit()
@@ -46,13 +54,50 @@ class QueryBuilder
          
     }
 
-    public function delete()
+    public function delete($table, $idusuario)
     {
-      
+
+      $sql = "DELETE FROM `usuarios` WHERE id = {$idusuario}";
+
+      try 
+      {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+
+      }
+
+      catch (Exception $e)
+      {
+
+         die($e->getMessage());
+
+      }
+
     }
 
     public function read()
     {
       
+    }
+
+    public function update($table, $parametros, $idusuario)
+    {
+
+      $sql = "UPDATE `usuarios` SET `nome`='{$parametros['nome']}', `email`='{$parametros['email']}', `senha`='{$parametros['senha']}' WHERE `id` = '{$idusuario}'";
+
+      try 
+      {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+
+      }
+
+      catch (Exception $e)
+      {
+
+         die($e->getMessage());
+
+      }
+
     }
 }

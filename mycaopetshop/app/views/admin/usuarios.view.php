@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/c11bde093d.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../../public/css/usuarios.css">
@@ -81,9 +80,7 @@
                     <img src="../../public/assets/options.svg" alt="Options">
                     <h3>Usuários</h3>
                 </div>
-                <button class="btn btn-outline btn-principal" type="submit" data-bs-toggle="modal"
-                    data-bs-target="#adicionar-modal"><img src="../../public/assets/plus-icon.svg"
-                        alt="plus">Adicionar</button>
+                <button class="btn btn-outline btn-principal" type="submit" data-bs-toggle="modal" data-bs-target="#adicionar-modal"><img src="../../public/assets/plus-icon.svg" alt="plus">Adicionar</button>
             </div>
             <hr>
             <div class="tabela">
@@ -98,31 +95,63 @@
                     </thead>
                     <tbody>
                         <?php foreach ($usuarios as $usuario) : ?>
-                        <tr>
-                            <th scope="row"><?=$usuario->id?></th>
-                            <td><?=$usuario->nome?></td>
-                            <td class="email"><?=$usuario->email?></td>
-                            <td class="senha"><?=$usuario->senha?></td>
-                            <td class="td-button">
-                                <div class="botoes">
-                                    <button class="btn btn-primary"><img src="../../public/assets/bx_bxs-edit.svg"
-                                            alt="Editar" data-bs-toggle="modal" data-bs-target="#editar-modal"></button>
-                                    <button class="btn btn-danger" data-bs-toggle="modal"
-                                        data-bs-target="#excluir-modal"><img src="../../public/assets/bx_bx-trash.svg"
-                                            alt="Excluir"></button><button class="btn btn-success detalhes"
-                                        data-bs-toggle="modal" data-bs-target="#detalhes-modal"><img
-                                            src="../../public/assets/akar-icons_eye.svg" alt="Detalhes"></button>
+                            <div class="modal fade" id="editar-modal-<?= $usuario->id ?>" tabindex="-1" aria-labelledby="editar usuario" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Editar Usuário</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <form action="/usuarios/update" method="POST" class="formulario">
+                                                <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput1">Nome do Usuário</label>
+                                                    <input type="hidden" value="<?= $usuario->nome ?>" name="nome">
+                                                    <input class="form-control" id="exampleFormControlInput1" placeholder="Insira o nome completo">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput1">Email</label>
+                                                    <input type="hidden" value="<?= $usuario->email ?>" name="email">
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput1">Senha</label>
+                                                    <input type="hidden" value="<?= $usuario->senha ?>" name="senha">
+                                                    <input class="form-control" id="exampleFormControlInput1" placeholder="Insira sua senha" type="password">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput1">Confirmar Senha</label>
+                                                    <input class="form-control" id="exampleFormControlInput1" placeholder="Insira novamente sua senha" type="password">
+                                                </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                            <input type="hidden" value="<?= $usuario->id ?>" name="id">
+                                            <button type="input" class="btn btn-principal">Editar</button>
+                                        </div>
+                                        </form>
+                                    </div>
                                 </div>
-                            </td>
-                        </tr>
+                            </div> <!-- modal-editar -->
+                            <tr>
+                                <th scope="row"><?= $usuario->id ?></th>
+                                <td><?= $usuario->nome ?></td>
+                                <td class="email"><?= $usuario->email ?></td>
+                                <td class="senha"><?= $usuario->senha ?></td>
+                                <td class="td-button">
+                                    <div class="botoes">
+                                        <button class="btn btn-primary"><img src="../../public/assets/bx_bxs-edit.svg" alt="Editar" data-bs-toggle="modal" data-bs-target="#editar-modal-<?= $usuario->id ?>"></button>
+                                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluir-modal-<?= $usuario->id ?>"><img src="../../public/assets/bx_bx-trash.svg" alt="Excluir"></button><button class="btn btn-success detalhes" data-bs-toggle="modal" data-bs-target="#detalhes-modal"><img src="../../public/assets/akar-icons_eye.svg" alt="Detalhes"></button>
+                                    </div>
+                                </td>
+                            </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
             </div> <!-- tabela-usuarios -->
 
 
-            <div class="modal fade" id="adicionar-modal" tabindex="-1" aria-labelledby="adicionar usuario"
-                aria-hidden="true">
+            <div class="modal fade" id="adicionar-modal" tabindex="-1" aria-labelledby="adicionar usuario" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -130,39 +159,34 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form class="formulario">
+                            <form action="/usuarios/create" method="POST" class="formulario">
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Nome do Usuário</label>
-                                    <input class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Insira o nome completo">
+                                    <input class="form-control" id="exampleFormControlInput1" name="nome" placeholder="Insira o nome completo">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Email</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="nome@exemplo.com">
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="nome@exemplo.com">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Senha</label>
-                                    <input class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Insira sua senha" type="password">
+                                    <input class="form-control" id="exampleFormControlInput1" name="senha" placeholder="Insira sua senha" type="password">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Confirmar Senha</label>
-                                    <input class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Insira novamente sua senha" type="password">
+                                    <input class="form-control" id="exampleFormControlInput1" placeholder="Insira novamente sua senha" type="password">
                                 </div>
-                            </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-principal">Adicionar</button>
+                            <button type="submit" class="btn btn-principal">Adicionar</button>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div><!-- modal-adicionar -->
 
-            <div class="modal fade" id="detalhes-modal" tabindex="-1" aria-labelledby="detalhar usuario"
-                aria-hidden="true">
+            <div class="modal fade" id="detalhes-modal" tabindex="-1" aria-labelledby="detalhar usuario" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -185,7 +209,7 @@
             </div> <!-- modal-detalhes -->
 
 
-            <div class="modal fade" id="editar-modal" tabindex="-1" aria-labelledby="editar usuario" aria-hidden="true">
+            <div class="modal fade" id="editar-modal-<?= $usuario->id ?>" tabindex="-1" aria-labelledby="editar usuario" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -193,39 +217,37 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form class="formulario">
+                            <form action="/usuarios/update" method="POST" class="formulario">
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Nome do Usuário</label>
-                                    <input class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Insira o nome completo">
+                                    <input type="hidden" value="<?= $usuario->nome ?>" name="nome">
+                                    <input class="form-control" id="exampleFormControlInput1" placeholder="Insira o nome completo">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Email</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="nome@exemplo.com">
+                                    <input type="hidden" value="<?= $usuario->email ?>" name="email">
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Senha</label>
-                                    <input class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Insira sua senha" type="password">
+                                    <input type="hidden" value="<?= $usuario->senha ?>" name="senha">
+                                    <input class="form-control" id="exampleFormControlInput1" placeholder="Insira sua senha" type="password">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Confirmar Senha</label>
-                                    <input class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Insira novamente sua senha" type="password">
+                                    <input class="form-control" id="exampleFormControlInput1" placeholder="Insira novamente sua senha" type="password">
                                 </div>
-                            </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-principal">Editar</button>
+                            <button type="input" class="btn btn-principal">Editar</button>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div> <!-- modal-editar -->
 
-            <div class="modal fade" id="excluir-modal" tabindex="-1" aria-labelledby="excluir usuario"
-                aria-hidden="true">
+            <div class="modal fade" id="excluir-modal-<?= $usuario->id ?>" tabindex="-1" aria-labelledby="excluir usuario" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -236,15 +258,18 @@
                             <h2>Você tem certeza que quer excluir o seguinte usuáiro?</h2>
                             <br>
                             <h5>Nome:</h5>
-                            <p>Lucas de Oliveira Varino</p>
+                            <p><?= $usuario->nome ?></p>
                             <h5>Email:</h5>
-                            <p>lucasvarino@email.com</p>
+                            <p><?= $usuario->email ?></p>
                             <h5>Senha:</h5>
-                            <p>1234546</p>
+                            <p><?= $usuario->senha ?></p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-danger">Excluir</button>
+                            <form action="/usuarios/delete" method="POST">
+                                <input type="hidden" value="<?= $usuario->id ?>" name="id">
+                                <button type="submit" class="btn btn-danger">Excluir</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -253,15 +278,9 @@
         </div>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script>
         let arrow = document.querySelectorAll(".arrow");
         for (var i = 0; i < arrow.length; i++) {
