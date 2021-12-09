@@ -119,10 +119,6 @@
                                                     <input type="hidden" value="<?= $usuario->senha ?>" name="senha">
                                                     <input class="form-control" id="exampleFormControlInput1" placeholder="Insira sua senha" type="password">
                                                 </div>
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlInput1">Confirmar Senha</label>
-                                                    <input class="form-control" id="exampleFormControlInput1" placeholder="Insira novamente sua senha" type="password">
-                                                </div>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
@@ -171,10 +167,6 @@
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Senha</label>
                                     <input class="form-control" id="exampleFormControlInput1" name="senha" placeholder="Insira sua senha" type="password">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Confirmar Senha</label>
-                                    <input class="form-control" id="exampleFormControlInput1" placeholder="Insira novamente sua senha" type="password">
                                 </div>
                         </div>
                         <div class="modal-footer">
@@ -232,10 +224,6 @@
                                     <label for="exampleFormControlInput1">Senha</label>
                                     <input type="hidden" value="<?= $usuario->senha ?>" name="senha">
                                     <input class="form-control" id="exampleFormControlInput1" placeholder="Insira sua senha" type="password">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Confirmar Senha</label>
-                                    <input class="form-control" id="exampleFormControlInput1" placeholder="Insira novamente sua senha" type="password">
                                 </div>
                         </div>
                         <div class="modal-footer">
