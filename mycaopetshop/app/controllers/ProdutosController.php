@@ -38,6 +38,20 @@ class ProdutosController
         return viewAdm("view-adm-produtos", $tabela);
     }
 
+    public function pesquisaProdutos()
+    {
+        $pesquisa = $_GET["pesquisa"];
+
+        $result = App::get('database')->selectPesquisa("produtos", $pesquisa);
+
+        $tabela = [
+            "produtos" => $result
+        ];
+
+        return viewAdm("produtos", $tabela);
+    }
+
+
     public function postProdutos()
     {
         $params = [

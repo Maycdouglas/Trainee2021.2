@@ -40,6 +40,21 @@ class QueryBuilder
         }
     }
 
+    public function selectPesquisa($table, $pesquisa)
+    {
+        $query = "SELECT * FROM {$table} WHERE nome LIKE '%{$pesquisa}%'";
+
+        try {
+            $stmt = $this->pdo->prepare($query);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+
     public function insertProdutos($table, $parameters)
     {
         $query = "INSERT INTO {$table} (nome, descricao, categoria, preco, foto) VALUES ('{$parameters['nome']}', '{$parameters['descricao']}', '{$parameters['categorias']}', '{$parameters['preco']}', '{$parameters['foto']}')";
