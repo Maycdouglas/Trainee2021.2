@@ -30,12 +30,11 @@ class UsuariosController
     public function update()
     {
         $parameters = [
-            
+
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha' => $_POST['senha']
         ];
-
         app::get('database')->update('usuarios', $parameters, $_POST['id']);
         header('Location: /usuarios'); 
     }
