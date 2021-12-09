@@ -84,7 +84,7 @@ class QueryBuilder
     {
 
       $sql = "UPDATE `usuarios` SET `nome`='{$parametros['nome']}', `email`='{$parametros['email']}', `senha`='{$parametros['senha']}' WHERE `id` = '{$idusuario}'";
-
+      // die(var_dump($parametros));
       try 
       {
         $stmt = $this->pdo->prepare($sql);

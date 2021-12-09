@@ -136,7 +136,7 @@
                                 <td class="senha"><?= $usuario->senha ?></td>
                                 <td class="td-button">
                                     <div class="botoes">
-                                        <button class="btn btn-primary"><img src="../../public/assets/bx_bxs-edit.svg" alt="Editar" data-bs-toggle="modal" data-bs-target="#editar-modal-<?= $usuario->id ?>"></button>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar-modal-<?= $usuario->id ?>"><img src="../../public/assets/bx_bxs-edit.svg" alt="Editar"></button>
                                         <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluir-modal-<?= $usuario->id ?>"><img src="../../public/assets/bx_bx-trash.svg" alt="Excluir"></button><button class="btn btn-success detalhes" data-bs-toggle="modal" data-bs-target="#detalhes-modal"><img src="../../public/assets/akar-icons_eye.svg" alt="Detalhes"></button>
                                     </div>
                                 </td>
@@ -213,22 +213,22 @@
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Nome do Usuário</label>
                                     <input type="hidden" value="<?= $usuario->nome ?>" name="nome">
-                                    <input class="form-control" id="exampleFormControlInput1" placeholder="Insira o nome completo">
+                                    <input class="form-control" id="exampleFormControlInput1" placeholder="Insira o nome completo" name="nome">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Email</label>
                                     <input type="hidden" value="<?= $usuario->email ?>" name="email">
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com" name="email">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Senha</label>
                                     <input type="hidden" value="<?= $usuario->senha ?>" name="senha">
-                                    <input class="form-control" id="exampleFormControlInput1" placeholder="Insira sua senha" type="password">
+                                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Insira sua senha" name="senha">
                                 </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="input" class="btn btn-principal">Editar</button>
+                            <button type="submit" class="btn btn-principal">Editar</button>
                         </div>
                         </form>
                     </div>

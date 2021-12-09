@@ -30,6 +30,7 @@ class UsuariosController
     public function update()
     {
         $parameters = [
+            
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha' => $_POST['senha']
