@@ -1,7 +1,13 @@
 <?php
-use App\Core\Router;
 
-$router = new Router();
 
-$router->get("produtos", "ProdutosController@view");
+$router->get("usuarios", "UsuariosController@view");
+
+$router->post("usuarios/create", "UsuariosController@create");
+
+$router->post("usuarios/delete", "UsuariosController@delete");
+
+$router->post("usuarios/update", "UsuariosController@update");
+
+
 ?>

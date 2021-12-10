@@ -20,13 +20,6 @@ function viewAdm($name, $data = [])
     return require "app/views/admin/{$name}.view.php";
 }
 
-function viewIncludes($name, $data = [])
-{
-    extract($data);
-
-    return require "app/views/includes/{$name}.view.php";
-}
-
 /**
  * Redirect to a new page.
  *
