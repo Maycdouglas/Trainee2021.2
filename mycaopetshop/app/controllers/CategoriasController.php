@@ -34,4 +34,14 @@ class CategoriasController
        header('Location:/categorias');
    }
 
+   public function editCategoria(){
+      $dados = [
+      "nome" => $_POST['nome']
+      ];
+     $id = $_POST['id'];
+     App::get('database')->updateCategoria('categorias', $id, $dados);
+     header('Location:/categorias');
+   
+    }
+
 }

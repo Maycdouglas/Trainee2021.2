@@ -168,17 +168,20 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form class="formulario-adm-categoria">
+                                <form class="formulario-adm-categoria" action="categorias/edit" method="post">
                                     <div class="form-group">
                                         <label for="exampleFormControlInput1">Nome da Categoria</label>
-                                        <input class="form-control" id="exampleFormControlInput1" value="<?= $categoria->nome ?>">
+                                        <input class="form-control" id="exampleFormControlInput1" value="<?= $categoria->nome ?>" name="nome">
                                     </div>
+                                    <div class="modal-footer">
+                                        <input type="hidden" value="<?= $categoria->id ?>" name="id">
+                                    <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="submit" class="btn btn-success">Editar</button>
+                                    </div>
+
                                 </form>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="button" class="btn btn-success">Editar</button>
-                            </div>
+
                         </div>
                     </div>
                 </div>
