@@ -28,4 +28,10 @@ class CategoriasController
 
     }
 
+   public function deleteCategoria(){
+       $id = $_POST['id'];
+       App::get('database')->deleteCategoria('categorias', $id);
+       header('Location:/categorias');
+   }
+
 }

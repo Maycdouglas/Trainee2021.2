@@ -108,18 +108,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Gabriel</td>
-
-                            <td class="d-flex td-botoes-categoria justify-content-end">
-                                <div class="botoes-categoria justify-content-end">
-                                    <button class="btn btn-primary botoes-categorias" data-bs-toggle="modal" data-bs-target="#editar-modal"><img src="../../public/assets/bx_bxs-edit.svg"></button>
-                                    <button class="btn btn-secondary botoes-categorias" data-bs-toggle="modal" data-bs-target="#visualiza-modal"><img src="../../public/assets/akar-icons_eye.svg"></button>
-                                    <button class="btn btn-danger botoes-categorias" data-bs-toggle="modal" data-bs-target="#excluir-modal"><img src="../../public/assets/bx_bx-trash.svg"></button>
-                                </div>
-                            </td>
-                        </tr>
                         <?php foreach ($categorias as $categoria) : ?>
                             <tr>
                                 <th scope="row"><?= $categoria->id ?></th>
@@ -127,9 +115,9 @@
 
                                 <td class="d-flex td-botoes-categoria justify-content-end">
                                     <div class="botoes-categoria justify-content-end">
-                                        <button class="btn btn-primary botoes-categorias" data-bs-toggle="modal" data-bs-target="#editar-modal"><img src="../../public/assets/bx_bxs-edit.svg"></button>
-                                        <button class="btn btn-secondary botoes-categorias" data-bs-toggle="modal" data-bs-target="#visualiza-modal"><img src="../../public/assets/akar-icons_eye.svg"></button>
-                                        <button class="btn btn-danger botoes-categorias" data-bs-toggle="modal" data-bs-target="#excluir-modal"><img src="../../public/assets/bx_bx-trash.svg"></button>
+                                        <button class="btn btn-primary botoes-categorias" data-bs-toggle="modal" data-bs-target="#editar-modal-<?= $categoria->id ?>"><img src="../../public/assets/bx_bxs-edit.svg"></button>
+                                        <button class="btn btn-secondary botoes-categorias" data-bs-toggle="modal" data-bs-target="#visualiza-modal-<?= $categoria->id ?>"><img src="../../public/assets/akar-icons_eye.svg"></button>
+                                        <button class="btn btn-danger botoes-categorias" data-bs-toggle="modal" data-bs-target="#excluir-modal-<?= $categoria->id ?>"><img src="../../public/assets/bx_bx-trash.svg"></button>
                                     </div>
                                 </td>
 
@@ -171,86 +159,81 @@
             </div>
 
             <!-- Botao-editar -->
-            <div class="modal fade" id="editar-modal" tabindex="-1" aria-labelledby="editar categoria" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Editar Categoria</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form class="formulario-adm-categoria">
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Nome da Categoria</label>
-                                    <input class="form-control" id="exampleFormControlInput1" placeholder="Insira o nome da categoria">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Status</label>
-                                    <input class="form-control" class="form-control" id="exampleFormControlInput1" placeholder="Insira o Status">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Caracteristicas</label>
-                                    <input class="form-control" id="exampleFormControlInput1" placeholder="Insira as Caracteristicas">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-success">Editar</button>
+            <?php foreach ($categorias as $categoria) : ?>
+                <div class="modal fade" id="editar-modal-<?= $categoria->id ?>" tabindex="-1" aria-labelledby="editar categoria" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Editar Categoria</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="formulario-adm-categoria">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Nome da Categoria</label>
+                                        <input class="form-control" id="exampleFormControlInput1" value="<?= $categoria->nome ?>">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-success">Editar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
+            <?php endforeach; ?>
             <!-- Botao-excluir -->
-            <div class="modal fade" id="excluir-modal" tabindex="-1" aria-labelledby="excluir categoria" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Excluir Categoria</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <h2>Deseja excluir a categoria?</h2>
-                            <br>
-                            <h5>Nome:</h5>
-                            <p>Gabriel</p>
-                            <h5>Status:</h5>
-                            <p>Trainee da CODE</p>
-                            <h5>Caracteristicas:</h5>
-                            <p>Alto</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-danger">Excluir</button>
+            <?php foreach ($categorias as $categoria) : ?>
+                <div class="modal fade" id="excluir-modal-<?= $categoria->id ?>" tabindex="-1" aria-labelledby="excluir categoria" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Excluir Categoria</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2>Deseja excluir a categoria?</h2>
+                                <br>
+                                <h5>Nome:</h5>
+                                <p><?= $categoria->nome ?></p>
+                            </div>
+                            <div class="modal-footer">
+                                <form action="categorias/delete" method="post">
+                                    <input type="hidden" value="<?= $categoria->id ?>" name="id">
+                                    <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn btn-danger">Excluir</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
+            <?php endforeach; ?>
 
             <!-- Botao-visualizar -->
-            <div class="modal fade" id="visualiza-modal" tabindex="-1" aria-labelledby="visualizar categoria" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Categoria</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <h5>Nome:</h5>
-                            <p>Gabriel</p>
-                            <h5>Status:</h5>
-                            <p>Trainee da CODE</p>
-                            <h5>Caracteristicas:</h5>
-                            <p>Alto</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
+
+            <?php foreach ($categorias as $categoria) : ?>
+
+
+                <div class="modal fade" id="visualiza-modal-<?= $categoria->id ?>" tabindex="-1" aria-labelledby="visualizar categoria" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Categoria</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Nome:</h5>
+                                <p><?= $categoria->nome ?></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
+            <?php endforeach; ?>
 
 
         </div>
