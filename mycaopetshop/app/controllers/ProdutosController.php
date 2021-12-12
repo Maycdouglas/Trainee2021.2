@@ -60,7 +60,10 @@ class ProdutosController
             "preco" => $_POST['preco'],
             "categoria" => $_POST["categoria"],
             "descricao" => $_POST["descricao"],
-            "foto" => $_POST["foto"]
+            "informacoes-uteis" => $_POST["informacoes-uteis"],
+            "imagem-1" => $_POST["imagem-1"],
+            "imagem-2" => $_POST["imagem-2"],
+            "imagem-3" => $_POST["imagem-3"]
         ];
 
         App::get('database')->insertProdutos("produtos", $params);

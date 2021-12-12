@@ -249,25 +249,25 @@
             </div>
             <div class="col-12">
               <label for="inputImage1AddProdut" class="form-label">Imagem 1</label>
-              <input type="text" name="imagem1" class="form-control" id="inputImage1AddProdut"
+              <input type="text" name="imagem-1" class="form-control" id="inputImage1AddProdut"
                 placeholder="Insira o nome da imagem 1 do produto">
             </div>
             <div class="col-12">
               <label for="inputImage2AddProdut" class="form-label">Imagem 2</label>
               <input type="text" class="form-control" id="inputImage2AddProdut"
-                placeholder="Insira o nome da imagem 2 do produto" name="imagem2">
+                placeholder="Insira o nome da imagem 2 do produto" name="imagem-2">
             </div>
             <div class="col-12">
               <label for="inputImage3AddProdut" class="form-label">Imagem 3</label>
               <input type="text" class="form-control" id="inputImage3AddProdut"
-                placeholder="Insira o nome da imagem 3 do produto" name="imagem3">
+                placeholder="Insira o nome da imagem 3 do produto" name="imagem-3">
             </div>
             <div class="col-md-4">
               <label for="inputCategoryAddProdut" class="form-label">Categoria</label>
-              <select id="inputCategoryAddProdut" class="form-select">
+              <select id="inputCategoryAddProdut" class="form-select" name="categoria">
                 <option selected>Insira a categoria do produto...</option>
                   <?php foreach ($categorias as $categoria) :?>
-                    <option><?= $categoria->nome ?></option>
+                    <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
                   <?php endforeach; ?>
               </select>
             </div>
@@ -429,7 +429,7 @@
 
   <!-- Modal excluir produto-->
   <?php foreach ($produtos as $produto) :?>
-  <div class="modal fade" id="ExcluiProd<?= $produto->id ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  <div class="modal fade" id="ExcluiProd-<?= $produto->id ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
