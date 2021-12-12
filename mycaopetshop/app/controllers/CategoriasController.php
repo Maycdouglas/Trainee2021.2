@@ -7,9 +7,9 @@ use App\Core\App;
 class CategoriasController
 {
 
-    public function index()
+    public function view()
     {
 
-        return view('categoria');
+        return viewAdm('categorias');
     }
 }
