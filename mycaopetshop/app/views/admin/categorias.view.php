@@ -3,8 +3,7 @@
 
 <head>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,16 +87,13 @@
                 <div class="pesquisa-container">
                     <div class="row justify-content-end">
                         <form class="d-flex justify-content-end">
-                            <input class="form-control barra-pesquisa me-2" type="search" placeholder="Pesquisar..."
-                                aria-label="Search">
+                            <input class="form-control barra-pesquisa me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
                             <button type="button" class="btn btn-primary btn-sm">Pesquisar</button>
 
                         </form>
                     </div>
 
-                    <button class="btn btn-outline btn-success botao-de-adicionar" type="submit" data-bs-toggle="modal"
-                        data-bs-target="#adicionar-modal"><img src="../../public/assets/plus-icon.svg"
-                            alt="plus">Adicionar</button>
+                    <button class="btn btn-outline btn-success botao-de-adicionar" type="submit" data-bs-toggle="modal" data-bs-target="#adicionar-modal"><img src="../../public/assets/plus-icon.svg" alt="plus">Adicionar</button>
                 </div>
             </div>
             <hr>
@@ -118,114 +114,39 @@
 
                             <td class="d-flex td-botoes-categoria justify-content-end">
                                 <div class="botoes-categoria justify-content-end">
-                                    <button class="btn btn-primary botoes-categorias" data-bs-toggle="modal"
-                                        data-bs-target="#editar-modal"><img
-                                            src="../../public/assets/bx_bxs-edit.svg"></button>
-                                    <button class="btn btn-secondary botoes-categorias" data-bs-toggle="modal"
-                                        data-bs-target="#visualiza-modal"><img
-                                            src="../../public/assets/akar-icons_eye.svg"></button>
-                                    <button class="btn btn-danger botoes-categorias" data-bs-toggle="modal"
-                                        data-bs-target="#excluir-modal"><img
-                                            src="../../public/assets/bx_bx-trash.svg"></button>
+                                    <button class="btn btn-primary botoes-categorias" data-bs-toggle="modal" data-bs-target="#editar-modal"><img src="../../public/assets/bx_bxs-edit.svg"></button>
+                                    <button class="btn btn-secondary botoes-categorias" data-bs-toggle="modal" data-bs-target="#visualiza-modal"><img src="../../public/assets/akar-icons_eye.svg"></button>
+                                    <button class="btn btn-danger botoes-categorias" data-bs-toggle="modal" data-bs-target="#excluir-modal"><img src="../../public/assets/bx_bx-trash.svg"></button>
                                 </div>
                             </td>
-
-
-
-
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Gabriel</td>
+                        <?php foreach ($categorias as $categoria) : ?>
+                            <tr>
+                                <th scope="row"><?= $categoria->id ?></th>
+                                <td><?= $categoria->nome ?></td>
 
-                            <td class="d-flex td-botoes-categoria justify-content-end">
-                                <div class="botoes-categoria">
-                                    <button class="btn btn-primary botoes-categorias" data-bs-toggle="modal"
-                                        data-bs-target="#editar-modal"><img
-                                            src="../../public/assets/bx_bxs-edit.svg"></button>
-                                    <button class="btn btn-secondary botoes-categorias" data-bs-toggle="modal"
-                                        data-bs-target="#visualiza-modal"><img
-                                            src="../../public/assets/akar-icons_eye.svg"></button>
-                                    <button class="btn btn-danger botoes-categorias" data-bs-toggle="modal"
-                                        data-bs-target="#excluir-modal"><img
-                                            src="../../public/assets/bx_bx-trash.svg"></button>
-                                </div>
-
-                            </td>
+                                <td class="d-flex td-botoes-categoria justify-content-end">
+                                    <div class="botoes-categoria justify-content-end">
+                                        <button class="btn btn-primary botoes-categorias" data-bs-toggle="modal" data-bs-target="#editar-modal"><img src="../../public/assets/bx_bxs-edit.svg"></button>
+                                        <button class="btn btn-secondary botoes-categorias" data-bs-toggle="modal" data-bs-target="#visualiza-modal"><img src="../../public/assets/akar-icons_eye.svg"></button>
+                                        <button class="btn btn-danger botoes-categorias" data-bs-toggle="modal" data-bs-target="#excluir-modal"><img src="../../public/assets/bx_bx-trash.svg"></button>
+                                    </div>
+                                </td>
 
 
 
 
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Gabriel</td>
+                            </tr>
 
-                            <td class="d-flex td-botoes-categoria justify-content-end">
-                                <div class="botoes-categoria">
-                                    <button class="btn btn-primary botoes-categorias" data-bs-toggle="modal"
-                                        data-bs-target="#editar-modal"><img
-                                            src="../../public/assets/bx_bxs-edit.svg"></button>
-                                    <button class="btn btn-secondary botoes-categorias" data-bs-toggle="modal"
-                                        data-bs-target="#visualiza-modal"><img
-                                            src="../../public/assets/akar-icons_eye.svg"></button>
-                                    <button class="btn btn-danger botoes-categorias" data-bs-toggle="modal"
-                                        data-bs-target="#excluir-modal"><img
-                                            src="../../public/assets/bx_bx-trash.svg"></button>
-                                </div>
-                            </td>
+                        <?php endforeach; ?>
 
-
-
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>Gabriel</td>
-
-                            <td class="d-flex td-botoes-categoria justify-content-end">
-                                <div class="botoes-categoria">
-                                    <button class="btn btn-primary botoes-categorias" data-bs-toggle="modal"
-                                        data-bs-target="#editar-modal"><img
-                                            src="../../public/assets/bx_bxs-edit.svg"></button>
-                                    <button class="btn btn-secondary botoes-categorias" data-bs-toggle="modal"
-                                        data-bs-target="#visualiza-modal"><img
-                                            src="../../public/assets/akar-icons_eye.svg"></button>
-                                    <button class="btn btn-danger botoes-categorias" data-bs-toggle="modal"
-                                        data-bs-target="#excluir-modal"><img
-                                            src="../../public/assets/bx_bx-trash.svg"></button>
-                                </div>
-                            </td>
-
-
-
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td>Gabriel</td>
-
-                            <td class="d-flex td-botoes-categoria justify-content-end">
-                                <div class="botoes-categoria">
-                                    <button class="btn btn-primary botoes-categorias" data-bs-toggle="modal"
-                                        data-bs-target="#editar-modal"><img
-                                            src="../../public/assets/bx_bxs-edit.svg"></button>
-                                    <button class="btn btn-secondary botoes-categorias" data-bs-toggle="modal"
-                                        data-bs-target="#visualiza-modal"><img
-                                            src="../../public/assets/akar-icons_eye.svg"></button>
-                                    <button class="btn btn-danger botoes-categorias" data-bs-toggle="modal"
-                                        data-bs-target="#excluir-modal"><img
-                                            src="../../public/assets/bx_bx-trash.svg"></button>
-                                </div>
-                            </td>
-
-                        </tr>
                     </tbody>
                 </table>
             </div>
 
 
             <!-- Botao-adicionar -->
-            <div class="modal fade" id="adicionar-modal" tabindex="-1" aria-labelledby="adicionar categoria"
-                aria-hidden="true">
+            <div class="modal fade" id="adicionar-modal" tabindex="-1" aria-labelledby="adicionar categoria" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -233,35 +154,24 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form class="formulario-adm-categoria">
+                            <form class="formulario-adm-categoria" action="categorias/create" method="post">
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Nome da Categoria</label>
-                                    <input class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Insira o nome da Categoria">
+                                    <input class="form-control" id="exampleFormControlInput1" placeholder="Insira o nome da Categoria" name="nome">
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Status</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Insira o Status">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Caracteristicas</label>
-                                    <input class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Insira as caracteristicas">
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn btn-success">Adicionar</button>
                                 </div>
                             </form>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-success">Adicionar</button>
-                        </div>
+
                     </div>
                 </div>
             </div>
 
             <!-- Botao-editar -->
-            <div class="modal fade" id="editar-modal" tabindex="-1" aria-labelledby="editar categoria"
-                aria-hidden="true">
+            <div class="modal fade" id="editar-modal" tabindex="-1" aria-labelledby="editar categoria" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -272,18 +182,15 @@
                             <form class="formulario-adm-categoria">
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Nome da Categoria</label>
-                                    <input class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Insira o nome da categoria">
+                                    <input class="form-control" id="exampleFormControlInput1" placeholder="Insira o nome da categoria">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Status</label>
-                                    <input class="form-control" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Insira o Status">
+                                    <input class="form-control" class="form-control" id="exampleFormControlInput1" placeholder="Insira o Status">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Caracteristicas</label>
-                                    <input class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Insira as Caracteristicas">
+                                    <input class="form-control" id="exampleFormControlInput1" placeholder="Insira as Caracteristicas">
                                 </div>
                             </form>
                         </div>
@@ -296,8 +203,7 @@
             </div>
 
             <!-- Botao-excluir -->
-            <div class="modal fade" id="excluir-modal" tabindex="-1" aria-labelledby="excluir categoria"
-                aria-hidden="true">
+            <div class="modal fade" id="excluir-modal" tabindex="-1" aria-labelledby="excluir categoria" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -323,8 +229,7 @@
             </div>
 
             <!-- Botao-visualizar -->
-            <div class="modal fade" id="visualiza-modal" tabindex="-1" aria-labelledby="visualizar categoria"
-                aria-hidden="true">
+            <div class="modal fade" id="visualiza-modal" tabindex="-1" aria-labelledby="visualizar categoria" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -358,12 +263,8 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script>
         let arrow = document.querySelectorAll(".arrow");
         for (var i = 0; i < arrow.length; i++) {

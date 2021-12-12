@@ -9,7 +9,23 @@ class CategoriasController
 
     public function view()
     {
+       $categorias = App::get('database')->selectAll('categorias');
+       $table = [
+           "categorias" => $categorias
+       ];
+       
 
-        return viewAdm('categorias');
+       return viewAdm('categorias', $table);
     }
+
+    public function createCategoria(){
+     $dados = [
+      "nome" => $_POST['nome']
+     ];
+    
+     App::get('database')->insertCategoria('categorias',$dados);
+     header('Location:/categorias');
+
+    }
+
 }

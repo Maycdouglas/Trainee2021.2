@@ -38,7 +38,7 @@ class QueryBuilder
         }
     }
 
-    public function insert($table, $dados)
+    public function insertCategoria($table, $dados)
     {
         $query = "insert into {$table} (nome) values ('{$dados['nome']}')";
         try {
