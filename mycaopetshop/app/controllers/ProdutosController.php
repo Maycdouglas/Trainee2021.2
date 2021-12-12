@@ -29,10 +29,11 @@ class ProdutosController
 
     public function viewAdmin()
     {
-        $produtos = App::get('database')->selectAll("produtos");
+        $produtos = App::get('database')->selectAllWithfk("produtos", "categorias");
 
         $tabela = [
-            "produtos" => $produtos
+            "produtos" => $produtos["produtos"],
+            "categorias" => $produtos["categorias"]
         ];
 
         return viewAdm("produtos", $tabela);

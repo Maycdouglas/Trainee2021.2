@@ -28,6 +28,34 @@ class QueryBuilder
         }
     }
 
+    public function selectAllWithFk($table, $table2)
+    {
+        $queryProdutos = "SELECT * FROM {$table}";
+        $queryCategorias = "SELECT * FROM {$table2}";
+
+        try {
+            $stmt = $this->pdo->prepare($queryProdutos);
+            $stmt2 = $this->pdo->prepare($queryCategorias);
+
+            $stmt->execute();
+            $stmt2->execute();
+
+            $produtos = $stmt->fetchAll(PDO::FETCH_CLASS);
+            $categorias = $stmt2->fetchAll(PDO::FETCH_CLASS);
+
+
+            $result = [
+                "produtos" => $produtos,
+                "categorias" => $categorias
+            ];
+
+            return $result;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+    }
+
     public function select($table, $id)
     {
         $query = "SELECT FROM {$table} WHERE id = {$id}";

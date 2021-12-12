@@ -245,32 +245,30 @@
             <div class="col-12">
               <label for="inputInfoAddProdut" class="form-label">Informações sobre o Produto</label>
               <textarea class="form-control" id="inputInfoAddProdut" rows="3"
-                placeholder="Composição do produto, rendimento..."></textarea>
+                placeholder="Composição do produto, rendimento..." name="informacoes-uteis"></textarea>
             </div>
             <div class="col-12">
               <label for="inputImage1AddProdut" class="form-label">Imagem 1</label>
-              <input type="text" name="foto" class="form-control" id="inputImage1AddProdut"
+              <input type="text" name="imagem1" class="form-control" id="inputImage1AddProdut"
                 placeholder="Insira o nome da imagem 1 do produto">
             </div>
             <div class="col-12">
               <label for="inputImage2AddProdut" class="form-label">Imagem 2</label>
               <input type="text" class="form-control" id="inputImage2AddProdut"
-                placeholder="Insira o nome da imagem 2 do produto">
+                placeholder="Insira o nome da imagem 2 do produto" name="imagem2">
             </div>
             <div class="col-12">
               <label for="inputImage3AddProdut" class="form-label">Imagem 3</label>
               <input type="text" class="form-control" id="inputImage3AddProdut"
-                placeholder="Insira o nome da imagem 3 do produto">
+                placeholder="Insira o nome da imagem 3 do produto" name="imagem3">
             </div>
             <div class="col-md-4">
               <label for="inputCategoryAddProdut" class="form-label">Categoria</label>
               <select id="inputCategoryAddProdut" class="form-select">
                 <option selected>Insira a categoria do produto...</option>
-                <option>Categoria 1</option>
-                <option>Categoria 2</option>
-                <option>Categoria 3</option>
-                <option>Categoria 4</option>
-                <option>Categoria 5</option>
+                  <?php foreach ($categorias as $categoria) :?>
+                    <option><?= $categoria->nome ?></option>
+                  <?php endforeach; ?>
               </select>
             </div>
         </div>
@@ -322,7 +320,7 @@
             <div class="col-12">
               <label for="inputImage1Produt" class="form-label">Imagem 1</label>
               <input type="text" class="form-control" name="foto" id="inputImage1Produt"
-                value="<?= $produto->foto ?>">
+                value="<?= $produto->imagem1 ?>">
             </div>
             <div class="col-12">
               <label for="inputImage2Produt" class="form-label">Imagem 2</label>
