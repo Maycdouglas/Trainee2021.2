@@ -60,19 +60,19 @@ class QueryBuilder
         }
     }
 
-    public function deleteCategoria($table, $id)
+    public function delete($table, $id)
     {
-        $query = "delete from {$table} where id= {$id}";
+        $query = "DELETE FROM {$table} WHERE id={$id}";
+
         try {
             $stmt = $this->pdo->prepare($query);
             $stmt->execute();
-        } catch (Exception $error) {
-            die($error->getMessage());
+        } catch (Exception $e) {
+            die($e->getMessage());
         }
     }
 
     public function read()
     {
-
     }
 }
