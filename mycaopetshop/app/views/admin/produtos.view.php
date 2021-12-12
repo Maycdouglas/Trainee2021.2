@@ -92,7 +92,7 @@
       <!--Espaço da barra de Pesquisa-->
       <nav class="navbar navbar-light bg-light nav-search">
         <div class="container-fluid bottom-add d-flex">
-          <form class="d-flex justify-content-end bar-search" method="get" action="produtos/">
+              <form class="d-flex justify-content-end bar-search" method="get" action="produtos/result">
             <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search" name="pesquisa">
             <button class="btn btn-primary bottom-search" type="submit">Pesquisar</button>
           </form>
@@ -177,19 +177,19 @@
 
                           <!-- Button modal editar produto -->
                           <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
-                                  data-bs-target="#EditarProd">
+                                  data-bs-target="#EditarProd-<?= $produto->id ?>">
                               <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
                           </button>
 
                           <!-- Button modal visualizar produto -->
                           <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
-                                  data-bs-target="#VisualizarProd">
+                                  data-bs-target="#VisualizarProd-<?= $produto->id ?>">
                               <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
                           </button>
 
                           <!-- Button modal exclui produto-->
                           <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
-                                  data-bs-target="#ExcluiProd">
+                                  data-bs-target="#ExcluiProd-<?= $produto->id ?>">
                               <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
                           </button>
                       </td>
@@ -288,7 +288,8 @@
 
 
   <!-- Modal Editar Produto -->
-  <div class="modal fade" id="EditarProd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  <?php foreach($produtos as $produto) :?>
+  <div class="modal fade" id="EditarProd-<?= $produto->id ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content">
@@ -354,11 +355,13 @@
       </div>
     </div>
   </div>
+  <?php endforeach; ?>
   <!--Fim do modal de editar-->
 
 
   <!-- Modal Visualizar Produto-->
-  <div class="modal fade" id="VisualizarProd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  <?php foreach($produtos as $produto) : ?>
+  <div class="modal fade" id="VisualizarProd-<?= $produto->id ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content">
@@ -422,11 +425,13 @@
       </div>
     </div>
   </div>
+  <?php endforeach; ?>
   <!--Fim do modal de visulizar-->
 
 
   <!-- Modal excluir produto-->
-  <div class="modal fade" id="ExcluiProd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  <?php foreach ($produtos as $produto) :?>
+  <div class="modal fade" id="ExcluiProd<?= $produto->id ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -447,6 +452,7 @@
       </div>
     </div>
   </div>
+  <?php endforeach; ?>
   <!--Fim do modal de excluir-->
 
 

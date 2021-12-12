@@ -35,7 +35,7 @@ class ProdutosController
             "produtos" => $produtos
         ];
 
-        return viewAdm("view-adm-produtos", $tabela);
+        return viewAdm("produtos", $tabela);
     }
 
     public function pesquisaProdutos()
