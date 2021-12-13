@@ -87,7 +87,10 @@ class ProdutosController
             "preco" => $_POST['preco'],
             "categoria" => $_POST["categoria"],
             "descricao" => $_POST["descricao"],
-            "foto" => $_POST["foto"]
+            "informacoes_uteis" => $_POST["informacoes-uteis"],
+            "imagem_1" => $_POST["imagem-1"],
+            "imagem_2" => $_POST["imagem-2"],
+            "imagem_3" => $_POST["imagem-3"]
         ];
 
         $id = $_POST["id"];

@@ -281,32 +281,30 @@
             <div class="col-12">
               <label for="inputInfoProdut" class="form-label">Informações sobre o Produto</label>
               <textarea class="form-control" id="inputInfoProdut" rows="3"
-                placeholder="Composição do produto, rendimento..."><?= $produto->informacoes_uteis ?></textarea>
+                placeholder="Composição do produto, rendimento..." name="informacoes-uteis"><?= $produto->informacoes_uteis ?></textarea>
             </div>
             <div class="col-12">
               <label for="inputImage1Produt" class="form-label">Imagem 1</label>
-              <input type="text" class="form-control" name="foto" id="inputImage1Produt"
+              <input type="text" class="form-control" name="imagem-1" id="inputImage1Produt"
                 value="<?= $produto->imagem_1 ?>">
             </div>
             <div class="col-12">
               <label for="inputImage2Produt" class="form-label">Imagem 2</label>
               <input type="text" class="form-control" id="inputImage2Produt"
-                placeholder="Insira o nome da imagem 2 do produto" value="<?= $produto->imagem_2 ?>">
+                placeholder="Insira o nome da imagem 2 do produto" value="<?= $produto->imagem_2 ?>" name="imagem-2">
             </div>
             <div class="col-12">
               <label for="inputImage3Produt" class="form-label">Imagem 3</label>
               <input type="text" class="form-control" id="inputImage3Produt"
-                placeholder="Insira o nome da imagem 3 do produto" value="<?= $produto->imagem_3 ?>">
+                placeholder="Insira o nome da imagem 3 do produto" value="<?= $produto->imagem_3 ?>" name="imagem-3">
             </div>
             <div class="col-md-4">
               <label for="inputCategoryProdut" class="form-label">Categoria</label>
-              <select id="inputCategoryProdut" class="form-select">
+              <select id="inputCategoryProdut" class="form-select" name="categoria">
                 <option selected>Insira a categoria do produto...</option>
-                <option>Categoria 1</option>
-                <option>Categoria 2</option>
-                <option>Categoria 3</option>
-                <option>Categoria 4</option>
-                <option>Categoria 5</option>
+                  <?php foreach ($categorias as $categoria) :?>
+                      <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
+                  <?php endforeach; ?>
               </select>
             </div>
               <div class="modal-footer">

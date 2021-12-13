@@ -101,7 +101,8 @@ class QueryBuilder
 
     public function updateProdutos($table, $id, $params)
     {
-        $query = "UPDATE {$table} SET nome='{$params['nome']}', descricao='{$params['descricao']}', preco='{$params['preco']}', categoria='{$params['categoria']}', foto='{$params['foto']}' WHERE id= {$id}";
+        var_dump($params["categoria"]);
+        $query = "UPDATE {$table} SET nome='{$params['nome']}', descricao='{$params['descricao']}', preco='{$params['preco']}', categoria='{$params['categoria']}', informacoes_uteis='{$params['informacoes_uteis']}', imagem_1='{$params['imagem_1']}', imagem_2='{$params['imagem_2']}', imagem_3='{$params['imagem_3']}' WHERE id= {$id}";
 
         try {
             $stmt = $this->pdo->prepare($query);
