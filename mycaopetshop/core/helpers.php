@@ -13,9 +13,11 @@
 //     return require "app/views/site/{$name}.view.php";
 // }
 
-function view($name)
+function view($name, $data = [])
 {
-    return require "app/views/site/{$name}.php";
+    extract($data);
+
+    return require "app/views/site/{$name}.view.php";
 }
 
 function viewAdm($name, $data = [])

@@ -20,14 +20,14 @@ if($row == 1)
 {
     $_SESSION['email'] = $email;
     $_SESSION['senha'] = $senha;
-    header('Location:home.php');
+    header('Location: /dashboard');
 }
 else
 {
     $_SESSION['nao_autenticado'] = true;
     unset ($_SESSION['email']);
     unset ($_SESSION['senha']);
-    header('Location:login.php');
+    header('Location: /login');
 }
 
 ?>

@@ -10,71 +10,74 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../../public/css/usuarios.css">
     <link rel="stylesheet" href="../../public/css/sidebar-adm.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <title>Admin - Usuários</title>
 </head>
 
 <body>
-    <header>
-        <div class="sidebar close">
-            <div class="logo-details">
-                <img class="d-flex" src="../../public/assets/Icone com borda amarela.png">
-                <span class="logo_name">MyCao</span>
-            </div>
-            <ul class="nav-links">
-                <li>
-                    <a href="usuarios.html">
-                        <i class='fas fa-users-cog'></i>
-                        <span class="link_name">Usuários</span>
-                    </a>
-                    <ul class="sub-menu blank">
-                        <li><a class="link_name" href="usuarios.html">Usuários</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="iocn-link">
-                        <a href="view-adm-categorias.html">
-                            <i class='fas fa-clipboard-list'></i>
-                            <span class="link_name">Categorias</span>
+    <div class="side-top-bars">
+        <header>
+            <div class="sidebar close">
+                <div class="logo-details">
+                    <img class="d-flex" src="../../public/assets/Icone com borda amarela.png">
+                    <span class="logo_name">MyCao</span>
+                </div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="usuarios.html">
+                            <i class='fas fa-users-cog'></i>
+                            <span class="link_name">Usuários</span>
                         </a>
-                    </div>
-                    <ul class="sub-menu blank">
-                        <li><a class="link_name" href="view-adm-categorias.html">Categorias</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="iocn-link">
-                        <a href="view-adm-produtos.html">
-                            <i class='fas fa-boxes'></i>
-                            <span class="link_name">Produtos</span>
-                        </a>
-                    </div>
-                    <ul class="sub-menu blank">
-                        <li><a class="link_name" href="view-adm-produtos.html">Produtos</a></li>
-                    </ul>
-                </li>
+                        <ul class="sub-menu blank">
+                            <li><a class="link_name" href="usuarios.html">Usuários</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="iocn-link">
+                            <a href="view-adm-categorias.html">
+                                <i class='fas fa-clipboard-list'></i>
+                                <span class="link_name">Categorias</span>
+                            </a>
+                        </div>
+                        <ul class="sub-menu blank">
+                            <li><a class="link_name" href="view-adm-categorias.html">Categorias</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="iocn-link">
+                            <a href="view-adm-produtos.html">
+                                <i class='fas fa-boxes'></i>
+                                <span class="link_name">Produtos</span>
+                            </a>
+                        </div>
+                        <ul class="sub-menu blank">
+                            <li><a class="link_name" href="view-adm-produtos.html">Produtos</a></li>
+                        </ul>
+                    </li>
 
 
-                <li>
-                    <div class="profile-details">
-                        <div class="profile-content">
-                            <img class="d-flex" src="../../public/assets/Icone com borda azul claro.png">
+                    <li>
+                        <div class="profile-details">
+                            <div class="profile-content">
+                                <img class="d-flex" src="../../public/assets/Icone com borda azul claro.png">
+                            </div>
+                            <div class="name-job">
+                                <div class="profile_name">Usuário</div>
+                            </div>
+                            <i class='fas fa-sign-out-alt'></i>
                         </div>
-                        <div class="name-job">
-                            <div class="profile_name">Usuário</div>
-                        </div>
-                        <i class='fas fa-sign-out-alt'></i>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <section class="home-section">
-            <div class="home-content">
-                <i class='bx bx-menu'></i>
+                    </li>
+                </ul>
             </div>
-        </section>
-    </header>
+            <section class="home-section">
+                <div class="home-content">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </section>
+        </header>
+    </div>
     <main class="container principal">
-        <div class="main">
+        <div class="main mx-auto px-auto">
             <div class="header-container">
                 <div class="title-section">
                     <img src="../../public/assets/options.svg" alt="Options">
@@ -176,29 +179,29 @@
                 </div>
             </div><!-- modal-adicionar -->
 
-        <?php foreach ($usuarios as $usuario) : ?>
-            <div class="modal fade" id="detalhes-modal-<?=$usuario->id?>" tabindex="-1" aria-labelledby="detalhar usuario" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Usuário</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <h5>Nome:</h5>
-                            <p><?=$usuario->nome?></p>
-                            <h5>Email:</h5>
-                            <p><?=$usuario->email?></p>
-                            <h5>Senha:</h5>
-                            <p><?=$usuario->senha?></p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+            <?php foreach ($usuarios as $usuario) : ?>
+                <div class="modal fade" id="detalhes-modal-<?= $usuario->id ?>" tabindex="-1" aria-labelledby="detalhar usuario" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Usuário</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Nome:</h5>
+                                <p><?= $usuario->nome ?></p>
+                                <h5>Email:</h5>
+                                <p><?= $usuario->email ?></p>
+                                <h5>Senha:</h5>
+                                <p><?= $usuario->senha ?></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div> <!-- modal-detalhes -->
-        <?php endforeach; ?>
+                </div> <!-- modal-detalhes -->
+            <?php endforeach; ?>
 
 
 

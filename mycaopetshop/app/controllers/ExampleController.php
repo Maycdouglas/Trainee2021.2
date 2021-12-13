@@ -17,6 +17,13 @@ class ExampleController
         return view('home'); 
     }
 
+    public function viewDashboard()
+    {
+        $usuario = App::get('database')->selectAll('usuarios');
+
+        return viewAdm('dashboard', compact('usuario')); 
+    }
+
     public function redirectHome()
     {
         return redirect('home'); 
