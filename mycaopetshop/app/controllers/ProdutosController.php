@@ -31,9 +31,18 @@ class ProdutosController
     {
         $produtos = App::get('database')->selectAllWithfk("produtos", "categorias");
 
+        $cat = array();
+        foreach ($produtos["categorias"] as $categoria)
+        {
+            $cat += [
+                "{$categoria->id}" => $categoria->nome
+            ];
+        }
+
         $tabela = [
             "produtos" => $produtos["produtos"],
-            "categorias" => $produtos["categorias"]
+            "categorias" => $produtos["categorias"],
+            "catProdutos" => $cat
         ];
 
         return viewAdm("produtos", $tabela);

@@ -368,7 +368,7 @@
               <div class="col-md-4">
                 <label for="VisCategoryProdut" class="form-label">Categoria</label>
                 <select id="VisCategoryProdut" class="form-select">
-                    <option selected>a</option>
+                    <option selected><?= $catProdutos[$produto->categoria]?></option>
                 </select>
               </div>
             </form>
