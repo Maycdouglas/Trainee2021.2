@@ -85,7 +85,7 @@ class QueryBuilder
 
     public function insertProdutos($table, $parameters)
     {
-        $query = "INSERT INTO {$table} (nome, descricao, categoria, informacoes_uteis ,preco, imagem_1, imagem_2, imagem_3) VALUES ('{$parameters['nome']}', '{$parameters['descricao']}', '{$parameters['categoria']}', '{$parameters['informacoes-uteis']}' ,'{$parameters['preco']}', '{$parameters['imagem-1']}', '{$parameters['imagem-2']}', '{$parameters['imagem-3']}')";
+        $query = "INSERT INTO {$table} (nome, descricao, categoria, informacoes_uteis ,preco, imagem_1, imagem_2, imagem_3) VALUES ('{$parameters['nome']}', '{$parameters['descricao']}', '{$parameters['categoria']}', '{$parameters['informacoes_uteis']}' ,'{$parameters['preco']}', '{$parameters['imagem_1']}', '{$parameters['imagem_2']}', '{$parameters['imagem_3']}')";
         try {
             $stmt = $this->pdo->prepare($query);
             $stmt->execute();
