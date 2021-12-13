@@ -2,6 +2,25 @@
 <html lang="pt-br">
 
 <head>
+    <?php
+
+    /* esse bloco de código em php verifica se existe a sessão, pois o usuário pode
+    simplesmente não fazer o login e digitar na barra de endereço do seu navegador
+    o caminho para a página principal do site (sistema), burlando assim a obrigação de
+    fazer um login, com isso se ele não estiver feito o login não será criado a session,
+    então ao verificar que a session não existe a página redireciona o mesmo
+    para a index.php.*/
+    
+    session_start();
+    if((!isset ($_SESSION['email']) == true) and (!isset ($_SESSION['senha']) == true))
+    {
+        header('Location:login');
+    }
+
+    $logado = $_SESSION['email'];
+
+    ?>
+
     <meta charset="UTF-8">
     <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
         name="viewport">
@@ -45,11 +64,11 @@
 
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="home.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="home.php">Home</a></li>
                         <li class="nav-item"><a class="nav-item nav-link links-navbar" href="produtos.html">Produtos</a></li>
                         <li class="nav-item"><a class="nav-item nav-link links-navbar" href="contato.html">Contato</a></li>
                         <li class="nav-item"><a class="nav-item nav-link links-navbar" href="quemsomos.html">Quem Somos</a></li>
-                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="login.html">Login</a></li>
+                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="login.php">Login</a></li>
                     </ul>
                 </div>
             </div>

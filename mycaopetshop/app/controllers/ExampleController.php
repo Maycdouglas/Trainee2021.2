@@ -7,18 +7,18 @@ use Exception;
 
 class ExampleController
 {
-    public function create()
+    public function viewLogin()
     {
- 
+        return view('login'); 
+    }
+    
+    public function viewHome()
+    {
+        return view('home'); 
     }
 
-    public function update()
+    public function redirectHome()
     {
-        
-    }
-
-    public function delete()
-    {
- 
+        return redirect('home'); 
     }
 }

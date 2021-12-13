@@ -6,11 +6,16 @@
  * @param  string $name
  * @param  array  $data
  */
-function view($name, $data = [])
-{
-    extract($data);
+// function view($name, $data = [])
+// {
+//     extract($data);
 
-    return require "app/views/site/{$name}.view.php";
+//     return require "app/views/site/{$name}.view.php";
+// }
+
+function view($name)
+{
+    return require "app/views/site/{$name}.php";
 }
 
 function viewAdm($name, $data = [])
@@ -27,5 +32,5 @@ function viewAdm($name, $data = [])
  */
 function redirect($path)
 {
-    header("Location: /{$path}");
+    header("Location: /{$path}.php");
 }
