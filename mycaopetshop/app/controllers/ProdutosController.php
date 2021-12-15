@@ -31,10 +31,10 @@ class ProdutosController
     {
         $produtos = App::get('database')->selectAllWithfk("produtos", "categorias");
 
-        $cat = array();
+        $categoriaUsuario = array();
         foreach ($produtos["categorias"] as $categoria)
         {
-            $cat += [
+            $categoriaUsuario += [
                 "{$categoria->id}" => $categoria->nome
             ];
         }
@@ -42,7 +42,7 @@ class ProdutosController
         $tabela = [
             "produtos" => $produtos["produtos"],
             "categorias" => $produtos["categorias"],
-            "catProdutos" => $cat
+            "catProdutos" => $categoriaUsuario
         ];
 
         return viewAdm("produtos", $tabela);

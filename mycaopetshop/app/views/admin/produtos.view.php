@@ -92,7 +92,7 @@
       <!--Espaço da barra de Pesquisa-->
       <nav class="navbar navbar-light bg-light nav-search">
         <div class="container-fluid bottom-add d-flex">
-              <form class="d-flex justify-content-end bar-search" method="get" action="produtos/result">
+              <form class="d-flex justify-content-end bar-search" method="get" action="/admin/produtos/result">
             <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search" name="pesquisa">
             <button class="btn btn-primary bottom-search" type="submit">Pesquisar</button>
           </form>
