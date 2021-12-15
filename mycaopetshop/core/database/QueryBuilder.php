@@ -93,9 +93,38 @@ class QueryBuilder
         }
     }
 
-    public function edit()
+
+    public function selectCategoria($table, $id)
     {
-         
+        $query = "select from {$table} where id={$id}";
+        try {
+            $stmt = $this->pdo->prepare($query);
+            $stmt->execute();
+        } catch (Exception $error) {
+            die($error->getMessage());
+        }
+    }
+
+    public function insertCategoria($table, $dados)
+    {
+        $query = "insert into {$table} (nome) values ('{$dados['nome']}')";
+        try {
+            $stmt = $this->pdo->prepare($query);
+            $stmt->execute();
+        } catch (Exception $error) {
+            die($error->getMessage());
+        }
+    }
+
+    public function updateCategoria($table, $id, $dados)
+    {
+        $query = "update {$table} set nome = '{$dados['nome']}' where id= {$id}";
+        try {
+            $stmt = $this->pdo->prepare($query);
+            $stmt->execute();
+        } catch (Exception $error) {
+            die($error->getMessage());
+        }
     }
 
     public function updateProdutos($table, $id, $params)
@@ -123,8 +152,4 @@ class QueryBuilder
         }
     }
 
-    public function read()
-    {
-      
-    }
 }
