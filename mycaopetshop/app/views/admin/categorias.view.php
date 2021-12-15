@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/c11bde093d.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <title>Visão Administrativa das categorias</title>
+    <title>Admin Categorias</title>
     <link rel="stylesheet" href="../../public/css/view-adm-categorias.css">
     <link rel="stylesheet" href="../../public/css/usuarios.css">
     <link rel="stylesheet" href="../../public/css/sidebar-adm.css">
