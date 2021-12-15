@@ -33,7 +33,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-item nav-link links-navbar" href="home.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="produtos.html">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="produtos.view.php">Produtos</a></li>
                         <li class="nav-item"><a class="nav-item nav-link links-navbar" href="contato.html">Contato</a></li>
                         <li class="nav-item"><a class="nav-item nav-link links-navbar" href="quemsomos.html">Quem Somos</a></li>
                         <li class="nav-item"><a class="nav-item nav-link links-navbar" href="login.html">Login</a></li>
@@ -177,7 +177,7 @@
                 <ul class="nav justify-content-center mb-4">
                     <li class="nav-item"><a href="home.html" class="nav-link px-2 links-footer">Início</a></li>
                     <li class="nav-item"><a href="quemsomos.html" class="nav-link px-2 links-footer">Sobre Nós</a></li>
-                    <li class="nav-item"><a href="produtos.html" class="nav-link px-2 links-footer">Nossos Produtos</a></li>
+                    <li class="nav-item"><a href="produtos.view.php" class="nav-link px-2 links-footer">Nossos Produtos</a></li>
                     <li class="nav-item"><a href="contato.html" class="nav-link px-2 links-footer">Fale Conosco</a></li>
                 </ul>
             </div>

@@ -15,9 +15,9 @@ class QueryBuilder
     $this->pdo = $pdo;
   }
 
+
   public function selectAll($table)
   {
-
     $sql = "select * from {$table}";
 
     try {
@@ -31,25 +31,10 @@ class QueryBuilder
     }
   }
 
-  // public function selectByEmail($table, $email)
-  // {
-  //   $sql = "SELECT FROM $table WHERE email = '{$email}'";
-
-  //   try {
-  //     $stmt = $this->pdo->prepare($sql);
-
-  //     $stmt->execute();
-
-  //     return $stmt->fetchAll(PDO::FETCH_CLASS);
-  //   } catch (Exception $e) {
-  //     die($e->getMessage());
-  //   }
-  // }
-
   public function insertUsuarios($table, $parametros)
   {
-    $sql = "INSERT INTO `usuarios` (nome, email, senha) VALUES ('{$parametros['nome']}', '{$parametros['email']}', '{$parametros['senha']}')";
-    // die(var_dump($parametros));
+    $sql = "INSERT INTO `{$table}` (nome, email, senha) VALUES ('{$parametros['nome']}', '{$parametros['email']}', '{$parametros['senha']}')";
+
     try {
       $stmt = $this->pdo->prepare($sql);
 
@@ -59,26 +44,17 @@ class QueryBuilder
     }
   }
 
-  public function edit()
+  public function delete($table, $id)
   {
-  }
-
-  public function delete($table, $idusuario)
-  {
-
-    $sql = "DELETE FROM $table WHERE id = {$idusuario}";
+    $sql = "DELETE FROM `{$table}` WHERE id = {$id}";
 
     try {
       $stmt = $this->pdo->prepare($sql);
+
       $stmt->execute();
     } catch (Exception $e) {
-
       die($e->getMessage());
     }
-  }
-
-  public function read()
-  {
   }
 
   public function updateUsuarios($table, $parametros, $idusuario)

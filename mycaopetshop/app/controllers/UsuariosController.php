@@ -13,7 +13,7 @@ class UsuariosController
 
         return viewAdm('usuarios', compact('usuarios'));
     }
-    
+
     public function create()
     {
         $parameters = [
@@ -22,7 +22,8 @@ class UsuariosController
             'email' => $_POST['email'],
             'senha' => $_POST['senha']
         ];
-        app::get('database')->insert('usuarios', $parameters);
+
+        app::get('database')->insertUsuarios('usuarios', $parameters);
 
         header('Location: /usuarios');
     }
@@ -35,15 +36,16 @@ class UsuariosController
             'email' => $_POST['email'],
             'senha' => $_POST['senha']
         ];
-        app::get('database')->update('usuarios', $parameters, $_POST['id']);
-        header('Location: /usuarios'); 
+
+        app::get('database')->updateUsuarios('usuarios', $parameters, $_POST['id']);
+
+        header('Location: /usuarios');
     }
 
     public function delete()
     {
-
         app::get('database')->delete('usuarios', $_POST['id']);
-        header('location: /usuarios');
- 
+
+        header('Location: /usuarios');
     }
 }
