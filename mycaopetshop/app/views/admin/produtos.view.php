@@ -92,8 +92,8 @@
       <!--Espaço da barra de Pesquisa-->
       <nav class="navbar navbar-light bg-light nav-search">
         <div class="container-fluid bottom-add d-flex">
-          <form class="d-flex justify-content-end bar-search">
-            <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
+              <form class="d-flex justify-content-end bar-search" method="get" action="/admin/produtos/result">
+            <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search" name="pesquisa">
             <button class="btn btn-primary bottom-search" type="submit">Pesquisar</button>
           </form>
           <!--Espaço do botão de Adicionar Produto-->
@@ -132,187 +132,38 @@
         <tbody>
 
           <!--Início da parte que será cópia para as outras-->
-          <tr class="container">
-            <th scope="row justify-content-center align-items-center">1</th>
-            <td class="justify-content-start name-itens-table">Product Name</td>
-            <div class="d-grid gap-2 d-md-block">
-              <td class="d-flex justify-content-end colum-bottons-table">
-
-                <!-- Button modal editar produto -->
-                <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
-                  data-bs-target="#EditarProd">
-                  <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
-                </button>
-
-                <!-- Button modal visualizar produto -->
-                <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
-                  data-bs-target="#VisualizarProd">
-                  <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
-                </button>
-
-                <!-- Button modal exclui produto-->
-                <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
-                  data-bs-target="#ExcluiProd">
-                  <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
-                </button>
-              </td>
-
-            </div>
-          </tr>
-          <!--Fim da real parte que eu estou mexendo-->
-
-
-
-
-
-
 
           <!--Continuação da Tabela apenas para visualização-->
-          <th scope="row justify-content-center align-items-center">2</th>
-          <td class="justify-content-start name-itens-table">Product Name</td>
-          <div class="d-grid gap-2 d-md-block">
-            <td class="d-flex justify-content-end colum-bottons-table">
+          <?php foreach ($produtos as $produto) :?>
+              <tr class="container">
+                  <th scope="row justify-content-center align-items-center"><?= $produto->id ?></th>
+                  <td class="justify-content-start name-itens-table"><?= $produto->nome ?></td>
+                  <div class="d-grid gap-2 d-md-block">
+                      <td class="d-flex justify-content-end colum-bottons-table">
 
-              <!-- Button modal editar produto -->
-              <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#EditarProd">
-                <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
-              </button>
+                          <!-- Button modal editar produto -->
+                          <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
+                                  data-bs-target="#EditarProd-<?= $produto->id ?>">
+                              <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
+                          </button>
 
-              <!-- Button modal visualizar produto -->
-              <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#VisualizarProd">
-                <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
-              </button>
+                          <!-- Button modal visualizar produto -->
+                          <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
+                                  data-bs-target="#VisualizarProd-<?= $produto->id ?>">
+                              <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
+                          </button>
 
-              <!-- Button modal exclui produto-->
-              <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
-                data-bs-target="#ExcluiProd">
-                <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
-              </button>
-            </td>
+                          <!-- Button modal exclui produto-->
+                          <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
+                                  data-bs-target="#ExcluiProd-<?= $produto->id ?>">
+                              <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
+                          </button>
+                      </td>
 
-          </div>
-          </tr>
+                  </div>
+              </tr>
 
-
-
-          <th scope="row justify-content-center align-items-center">3</th>
-          <td class="justify-content-start name-itens-table">Product Name</td>
-          <div class="d-grid gap-2 d-md-block">
-            <td class="d-flex justify-content-end colum-bottons-table">
-
-              <!-- Button modal editar produto -->
-              <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#EditarProd">
-                <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
-              </button>
-
-              <!-- Button modal visualizar produto -->
-              <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#VisualizarProd">
-                <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
-              </button>
-
-              <!-- Button modal exclui produto-->
-              <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
-                data-bs-target="#ExcluiProd">
-                <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
-              </button>
-            </td>
-
-          </div>
-          </tr>
-
-
-
-          <th scope="row justify-content-center align-items-center">4</th>
-          <td class="justify-content-start name-itens-table">Product Name</td>
-          <div class="d-grid gap-2 d-md-block">
-            <td class="d-flex justify-content-end colum-bottons-table">
-
-              <!-- Button modal editar produto -->
-              <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#EditarProd">
-                <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
-              </button>
-
-              <!-- Button modal visualizar produto -->
-              <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#VisualizarProd">
-                <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
-              </button>
-
-              <!-- Button modal exclui produto-->
-              <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
-                data-bs-target="#ExcluiProd">
-                <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
-              </button>
-            </td>
-
-          </div>
-          </tr>
-
-
-
-
-          <th scope="row justify-content-center align-items-center">5</th>
-          <td class="justify-content-start name-itens-table">Product Name</td>
-          <div class="d-grid gap-2 d-md-block">
-            <td class="d-flex justify-content-end colum-bottons-table">
-
-              <!-- Button modal editar produto -->
-              <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#EditarProd">
-                <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
-              </button>
-
-              <!-- Button modal visualizar produto -->
-              <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#VisualizarProd">
-                <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
-              </button>
-
-              <!-- Button modal exclui produto-->
-              <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
-                data-bs-target="#ExcluiProd">
-                <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
-              </button>
-            </td>
-
-          </div>
-          </tr>
-
-
-
-
-          <th scope="row justify-content-center align-items-center">6</th>
-          <td class="justify-content-start name-itens-table">Product Name</td>
-          <div class="d-grid gap-2 d-md-block">
-            <td class="d-flex justify-content-end colum-bottons-table">
-
-              <!-- Button modal editar produto -->
-              <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#EditarProd">
-                <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
-              </button>
-
-              <!-- Button modal visualizar produto -->
-              <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal"
-                data-bs-target="#VisualizarProd">
-                <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
-              </button>
-
-              <!-- Button modal exclui produto-->
-              <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal"
-                data-bs-target="#ExcluiProd">
-                <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
-              </button>
-            </td>
-
-          </div>
-          </tr>
-
+            <?php endforeach; ?>
 
 
 
@@ -343,58 +194,57 @@
         </div>
         <div class="modal-body">
 
-          <form class="row g-3">
+          <form action="produtos/create" method="post" class="row g-3">
             <div class="col-md-8">
               <label for="inputNameAddProdut" class="form-label">Nome</label>
-              <input type="text" class="form-control" id="inputNameAddProdut" placeholder="Insira o nome do produto">
+              <input type="text" name="nome" class="form-control" id="inputNameAddProdut" placeholder="Insira o nome do produto">
             </div>
             <div class="col-md-4">
               <label for="inputPrecoAddProdut" class="form-label">Preço</label>
-              <input type="text" class="form-control" id="inputPrecoAddProdut" placeholder="R$99,99">
+              <input type="text" name="preco" class="form-control" id="inputPrecoAddProdut" placeholder="R$99,99">
             </div>
             <div class="col-12">
               <label for="inputDescritionAddProdut" class="form-label">Descrição do Produto</label>
-              <textarea class="form-control" id="inputDescritionAddProdut" rows="3"
+              <textarea class="form-control" name="descricao" id="inputDescritionAddProdut" rows="3"
                 placeholder="O que é, o que faz..."></textarea>
             </div>
             <div class="col-12">
               <label for="inputInfoAddProdut" class="form-label">Informações sobre o Produto</label>
               <textarea class="form-control" id="inputInfoAddProdut" rows="3"
-                placeholder="Composição do produto, rendimento..."></textarea>
+                placeholder="Composição do produto, rendimento..." name="informacoes-uteis"></textarea>
             </div>
             <div class="col-12">
               <label for="inputImage1AddProdut" class="form-label">Imagem 1</label>
-              <input type="text" class="form-control" id="inputImage1AddProdut"
+              <input type="text" name="imagem-1" class="form-control" id="inputImage1AddProdut"
                 placeholder="Insira o nome da imagem 1 do produto">
             </div>
             <div class="col-12">
               <label for="inputImage2AddProdut" class="form-label">Imagem 2</label>
               <input type="text" class="form-control" id="inputImage2AddProdut"
-                placeholder="Insira o nome da imagem 2 do produto">
+                placeholder="Insira o nome da imagem 2 do produto" name="imagem-2">
             </div>
             <div class="col-12">
               <label for="inputImage3AddProdut" class="form-label">Imagem 3</label>
               <input type="text" class="form-control" id="inputImage3AddProdut"
-                placeholder="Insira o nome da imagem 3 do produto">
+                placeholder="Insira o nome da imagem 3 do produto" name="imagem-3">
             </div>
             <div class="col-md-4">
               <label for="inputCategoryAddProdut" class="form-label">Categoria</label>
-              <select id="inputCategoryAddProdut" class="form-select">
+              <select id="inputCategoryAddProdut" class="form-select" name="categoria">
                 <option selected>Insira a categoria do produto...</option>
-                <option>Categoria 1</option>
-                <option>Categoria 2</option>
-                <option>Categoria 3</option>
-                <option>Categoria 4</option>
-                <option>Categoria 5</option>
+                  <?php foreach ($categorias as $categoria) :?>
+                    <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
+                  <?php endforeach; ?>
               </select>
             </div>
         </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-success">Adicionar</button>
+          </div>
         </form>
 
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-success">Adicionar</button>
-        </div>
+
       </div>
     </div>
   </div>
@@ -402,7 +252,8 @@
 
 
   <!-- Modal Editar Produto -->
-  <div class="modal fade" id="EditarProd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  <?php foreach($produtos as $produto) : ?>
+  <div class="modal fade" id="EditarProd-<?= $produto->id ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content">
@@ -412,66 +263,66 @@
         </div>
         <div class="modal-body">
 
-          <form class="row g-3">
+          <form action="produtos/update" method="post" class="row g-3">
             <div class="col-md-8">
+                <input type="hidden" name="id" value="<?= $produto->id ?>">
               <label for="inputNameProdut" class="form-label">Nome</label>
-              <input type="text" class="form-control" id="inputNameProdut" placeholder="Insira o nome do produto">
+              <input type="text" class="form-control" name="nome" id="inputNameProdut"value="<?= $produto->nome ?>">
             </div>
             <div class="col-md-4">
               <label for="inputPrecoProdut" class="form-label">Preço</label>
-              <input type="text" class="form-control" id="inputPrecoProdut" placeholder="R$99,99">
+              <input type="text" class="form-control" name="preco" id="inputPrecoProdut" value="<?= $produto->preco ?>">
             </div>
             <div class="col-12">
               <label for="inputDescritionProdut" class="form-label">Descrição do Produto</label>
-              <textarea class="form-control" id="inputDescritionProdut" rows="3"
-                placeholder="O que é, o que faz..."></textarea>
+              <textarea class="form-control" name="descricao" id="inputDescritionProdut" rows="3"
+                > <?= $produto->descricao ?></textarea>
             </div>
             <div class="col-12">
               <label for="inputInfoProdut" class="form-label">Informações sobre o Produto</label>
               <textarea class="form-control" id="inputInfoProdut" rows="3"
-                placeholder="Composição do produto, rendimento..."></textarea>
+                placeholder="Composição do produto, rendimento..." name="informacoes-uteis"><?= $produto->informacoes_uteis ?></textarea>
             </div>
             <div class="col-12">
               <label for="inputImage1Produt" class="form-label">Imagem 1</label>
-              <input type="text" class="form-control" id="inputImage1Produt"
-                placeholder="Insira o nome da imagem 1 do produto">
+              <input type="text" class="form-control" name="imagem-1" id="inputImage1Produt"
+                value="<?= $produto->imagem_1 ?>">
             </div>
             <div class="col-12">
               <label for="inputImage2Produt" class="form-label">Imagem 2</label>
               <input type="text" class="form-control" id="inputImage2Produt"
-                placeholder="Insira o nome da imagem 2 do produto">
+                placeholder="Insira o nome da imagem 2 do produto" value="<?= $produto->imagem_2 ?>" name="imagem-2">
             </div>
             <div class="col-12">
               <label for="inputImage3Produt" class="form-label">Imagem 3</label>
               <input type="text" class="form-control" id="inputImage3Produt"
-                placeholder="Insira o nome da imagem 3 do produto">
+                placeholder="Insira o nome da imagem 3 do produto" value="<?= $produto->imagem_3 ?>" name="imagem-3">
             </div>
             <div class="col-md-4">
               <label for="inputCategoryProdut" class="form-label">Categoria</label>
-              <select id="inputCategoryProdut" class="form-select">
+              <select id="inputCategoryProdut" class="form-select" name="categoria">
                 <option selected>Insira a categoria do produto...</option>
-                <option>Categoria 1</option>
-                <option>Categoria 2</option>
-                <option>Categoria 3</option>
-                <option>Categoria 4</option>
-                <option>Categoria 5</option>
+                  <?php foreach ($categorias as $categoria) :?>
+                      <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
+                  <?php endforeach; ?>
               </select>
             </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="submit" class="btn btn-success">Editar</button>
+              </div>
           </form>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-success">Editar</button>
         </div>
       </div>
     </div>
   </div>
+  <?php endforeach; ?>
   <!--Fim do modal de editar-->
 
 
   <!-- Modal Visualizar Produto-->
-  <div class="modal fade" id="VisualizarProd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  <?php foreach ($produtos as $produto) : ?>
+  <div class="modal fade" id="VisualizarProd-<?= $produto->id ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content">
@@ -485,61 +336,55 @@
             <form class="row g-3">
               <div class="col-md-8">
                 <label for="VisNameProdut" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="VisNameProdut" placeholder="Nome do produto">
+                <input type="text" class="form-control" id="VisNameProdut" placeholder="<?= $produto->nome ?>">
               </div>
               <div class="col-md-4">
                 <label for="VisPrecoProdut" class="form-label">Preço</label>
-                <input type="text" class="form-control" id="VisPrecoProdut" placeholder="R$99,99">
+                <input type="text" class="form-control" id="VisPrecoProdut" placeholder="R$<?= $produto->preco ?>">
               </div>
               <div class="col-12">
                 <label for="VisDescritionProdut" class="form-label">Descrição do Produto</label>
                 <textarea class="form-control" id="VisDescritionProdut" rows="3"
-                  placeholder="É paranram paranram e faz pipipi popopo. Serve pra isso, isso e aquilo ali."></textarea>
+                  placeholder="<?= $produto->descricao ?>"></textarea>
               </div>
               <div class="col-12">
                 <label for="VisInfoProdut" class="form-label">Informações sobre o Produto</label>
-                <textarea class="form-control" id="VisInfoProdut" rows="3" placeholder="Fogo, Terra, Água, Ar.    
-                        
-                -Feito com amor pelo Capitão Planeta"></textarea>
+                <textarea class="form-control" id="VisInfoProdut" rows="3" placeholder="<?= $produto->informacoes_uteis ?>"></textarea>
               </div>
               <div class="col-12">
                 <label for="VisImage1Produt" class="form-label">Imagem 1</label>
-                <input type="text" class="form-control" id="VisImage1Produt" placeholder="Nome da imagem 1">
+                <input type="text" class="form-control" id="VisImage1Produt" placeholder="<?= $produto->imagem_1 ?>">
               </div>
               <div class="col-12">
                 <label for="VisImage2Produt" class="form-label">Imagem 2</label>
-                <input type="text" class="form-control" id="VisImage2Produt" placeholder="Nome da imagem 2">
+                <input type="text" class="form-control" id="VisImage2Produt" placeholder="<?= $produto->imagem_2 ?>">
               </div>
               <div class="col-12">
                 <label for="VisImage3Produt" class="form-label">Imagem 3</label>
-                <input type="text" class="form-control" id="VisImage3Produt" placeholder="Nome da imagem 3">
+                <input type="text" class="form-control" id="VisImage3Produt" placeholder="<?= $produto->imagem_3 ?>">
               </div>
               <div class="col-md-4">
                 <label for="VisCategoryProdut" class="form-label">Categoria</label>
                 <select id="VisCategoryProdut" class="form-select">
-                  <option selected>Insira a categoria do produto...</option>
-                  <option>Categoria 1</option>
-                  <option>Categoria 2</option>
-                  <option>Categoria 3</option>
-                  <option>Categoria 4</option>
-                  <option>Categoria 5</option>
+                    <option selected><?= $catProdutos[$produto->categoria]?></option>
                 </select>
               </div>
             </form>
           </fieldset>
         </div>
-
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>
     </div>
   </div>
+  <?php endforeach; ?>
   <!--Fim do modal de visulizar-->
 
 
   <!-- Modal excluir produto-->
-  <div class="modal fade" id="ExcluiProd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  <?php foreach ($produtos as $produto) :?>
+  <div class="modal fade" id="ExcluiProd-<?= $produto->id ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -551,12 +396,16 @@
           <p class="text-center">Deseja mesmo excluir esse produto?</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-danger">Excluir</button>
+            <form action="produtos/delete" method="post">
+                <input type="hidden" value="<?= $produto->id ?>" name="id">
+                <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-danger">Excluir</button>
+            </form>
         </div>
       </div>
     </div>
   </div>
+  <?php endforeach; ?>
   <!--Fim do modal de excluir-->
 
 
