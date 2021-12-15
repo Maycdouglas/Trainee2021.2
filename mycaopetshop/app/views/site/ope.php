@@ -5,7 +5,7 @@ $con = mysqli_connect("127.0.0.1", "root", "", "mycaopetshop") or die ("Sem cone
 
 if (empty($_POST['email']) || empty($_POST['senha'])) 
 {
-    header('Location: login.php');
+    header('Location: /login');
     exit();
 }
 
@@ -20,6 +20,9 @@ if($row == 1)
 {
     $_SESSION['email'] = $email;
     $_SESSION['senha'] = $senha;
+    $usuario = $result->fetch_object();
+    $nome = $usuario->nome;
+    $_SESSION['nome'] = $nome;
     header('Location: /dashboard');
 }
 else

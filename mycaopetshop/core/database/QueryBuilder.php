@@ -31,22 +31,22 @@ class QueryBuilder
     }
   }
 
-  public function selectById()
-  {
-    
+  // public function selectByEmail($table, $email)
+  // {
+  //   $sql = "SELECT FROM $table WHERE email = '{$email}'";
 
-    try {
-      $stmt = $this->pdo->prepare($sql);
+  //   try {
+  //     $stmt = $this->pdo->prepare($sql);
 
-      $stmt->execute();
+  //     $stmt->execute();
 
-      return $stmt->fetchAll(PDO::FETCH_CLASS);
-    } catch (Exception $e) {
-      die($e->getMessage());
-    }
-  }
+  //     return $stmt->fetchAll(PDO::FETCH_CLASS);
+  //   } catch (Exception $e) {
+  //     die($e->getMessage());
+  //   }
+  // }
 
-  public function insert($table, $parametros)
+  public function insertUsuarios($table, $parametros)
   {
     $sql = "INSERT INTO `usuarios` (nome, email, senha) VALUES ('{$parametros['nome']}', '{$parametros['email']}', '{$parametros['senha']}')";
     // die(var_dump($parametros));
@@ -66,7 +66,7 @@ class QueryBuilder
   public function delete($table, $idusuario)
   {
 
-    $sql = "DELETE FROM `usuarios` WHERE id = {$idusuario}";
+    $sql = "DELETE FROM $table WHERE id = {$idusuario}";
 
     try {
       $stmt = $this->pdo->prepare($sql);
@@ -81,7 +81,7 @@ class QueryBuilder
   {
   }
 
-  public function update($table, $parametros, $idusuario)
+  public function updateUsuarios($table, $parametros, $idusuario)
   {
     $sql = "UPDATE `usuarios` SET `nome`='{$parametros['nome']}', `email`='{$parametros['email']}', `senha`='{$parametros['senha']}' WHERE `id` = '{$idusuario}'";
 

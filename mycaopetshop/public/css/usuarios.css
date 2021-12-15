@@ -164,4 +164,20 @@ hr {
     .botoes {
         flex-wrap: wrap;
     }
+
+    .btn-success {
+        margin-right: 2px !important;
+    }
+
+    .btn-primary {
+        margin-right: 2px !important;
+    }
+
+    .btn-danger {
+        margin-right: 2px !important;
+    }
+
+    .td-button {
+        padding: 2px !important;
+    }
 }

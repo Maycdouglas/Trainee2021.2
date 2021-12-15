@@ -13,10 +13,8 @@ para a index.php.*/
 
     session_start();
     if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)) {
-        header('Location:login');
+        header('Location: /login');
     }
-
-    $logado = $_SESSION['email'];
 
     ?>
 
@@ -45,12 +43,12 @@ para a index.php.*/
             </div>
             <ul class="nav-links">
                 <li>
-                    <a href="usuarios.html">
+                    <a href="/usuarios">
                         <i class='fas fa-users-cog'></i>
                         <span class="link_name">Usuários</span>
                     </a>
                     <ul class="sub-menu blank">
-                        <li><a class="link_name" href="usuarios.html">Usuários</a></li>
+                        <li><a class="link_name" href="/usuarios">Usuários</a></li>
                     </ul>
                 </li>
                 <li>
@@ -83,9 +81,9 @@ para a index.php.*/
                             <img class="d-flex" src="../../public/assets/Icone com borda azul claro.png">
                         </div>
                         <div class="name-job">
-                            <div class="profile_name">Usuário</div>
+                            <div class="profile_name"><?= $_SESSION['nome']?></div>
                         </div>
-                        <i class='fas fa-sign-out-alt'></i>
+                        <a href="/app/views/site/logout.php"><i class='fas fa-sign-out-alt'></i></a>
                     </div>
                 </li>
             </ul>
@@ -100,7 +98,7 @@ para a index.php.*/
     <div class="container">
 
         <div class="welcome text-center mt-4">
-            <h1 class="d-flex flex-column m-0">Seja bem-vindo(a), <span class="username">NOME DO USUÁRIO!</span></h1>
+            <h1 class="d-flex flex-column m-0">Seja bem-vindo(a), <span class="username"><?= $_SESSION['nome']?>!</span></h1>
 
             <div class="row mt-5 justify-content-center align-items-center">
                 <div class="col-lg-4 col-sm-12 col-md-6 my-3 p-0">
@@ -108,7 +106,7 @@ para a index.php.*/
                         <i class="icone-card fas fa-users-cog pt-4"></i>
                         <div class="card-body">
                             <h5 class="card-title pb-3">Gerenciar Usuários</h5>
-                            <a href="usuarios.html" class="botao-abrir btn btn-primary">Abrir</a>
+                            <a href="/usuarios" class="botao-abrir btn btn-primary">Abrir</a>
                         </div>
                     </div>
                 </div>
@@ -117,7 +115,7 @@ para a index.php.*/
                         <i class="icone-card fas fa-clipboard-list pt-4"></i>
                         <div class="card-body">
                             <h5 class="card-title pb-3">Gerenciar Categorias</h5>
-                            <a href="view-adm-categorias.html" class="botao-abrir btn btn-primary">Abrir</a>
+                            <a href="#" class="botao-abrir btn btn-primary">Abrir</a>
                         </div>
                     </div>
                 </div>
@@ -126,7 +124,7 @@ para a index.php.*/
                         <i class="icone-card fas fa-boxes pt-4"></i>
                         <div class="card-body">
                             <h5 class="card-title pb-3">Gerenciar Produtos</h5>
-                            <a href="view-adm-produtos.html" class="botao-abrir btn btn-primary">Abrir</a>
+                            <a href="#" class="botao-abrir btn btn-primary">Abrir</a>
                         </div>
                     </div>
 
@@ -137,7 +135,7 @@ para a index.php.*/
                         <i class="icone-card fas fa-sign-out-alt pt-4"></i>
                         <div class="card-body">
                             <h5 class="card-title pb-3">Logout</h5>
-                            <a href="#" class="botao-abrir btn btn-primary">Abrir</a>
+                            <a href="/app/views/site/logout.php" class="botao-abrir btn btn-primary">Abrir</a>
                         </div>
                     </div>
 
