@@ -301,9 +301,11 @@
             <div class="col-md-4">
               <label for="inputCategoryProdut" class="form-label">Categoria</label>
               <select id="inputCategoryProdut" class="form-select" name="categoria">
-                <option selected>Insira a categoria do produto...</option>
                   <?php foreach ($categorias as $categoria) :?>
-                      <option value="<?= $categoria->id ?>"><?= $categoria->nome ?></option>
+                      <option value="<?= $categoria->id ?>"  <?php if($categoria->id == $produto->categoria) :?>
+                        selected
+                      <?php endif ?>
+                      ><?= $categoria->nome ?></option>
                   <?php endforeach; ?>
               </select>
             </div>
