@@ -34,6 +34,7 @@ $router->post("admin/produtos/update","ProdutosController@updateProdutos");
 $router->post("admin/produtos/delete", "ProdutosController@deleteProdutos");
 
 $router->get("categorias", "CategoriasController@view");
+$router->get("categorias/result", "CategoriasController@pesquisaCategorias");
 $router->post("categorias/create", "CategoriasController@createCategoria");
 $router->post("categorias/delete", "CategoriasController@delete");
 $router->post("categorias/edit", "CategoriasController@editCategoria");

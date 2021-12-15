@@ -86,10 +86,9 @@
                 <h3 class="titulo-adm-categoria text-center">Categorias</h3>
                 <div class="pesquisa-container">
                     <div class="row justify-content-end">
-                        <form class="d-flex justify-content-end">
-                            <input class="form-control barra-pesquisa me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
-                            <button type="button" class="btn btn-primary btn-sm">Pesquisar</button>
-
+                        <form class="d-flex justify-content-end" action="/categorias/result" method="get">
+                            <input class="form-control barra-pesquisa me-2" type="search" placeholder="Pesquisar..." aria-label="Search" name="pesquisa">
+                            <button type="submit" class="btn btn-primary btn-sm">Pesquisar</button>
                         </form>
                     </div>
 
@@ -142,7 +141,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form class="formulario-adm-categoria" action="categorias/create" method="post">
+                            <form class="formulario-adm-categoria" action="/categorias/create" method="post">
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Nome da Categoria</label>
                                     <input class="form-control" id="exampleFormControlInput1" placeholder="Insira o nome da Categoria" name="nome">
@@ -168,7 +167,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form class="formulario-adm-categoria" action="categorias/edit" method="post">
+                                <form class="formulario-adm-categoria" action="/categorias/edit" method="post">
                                     <div class="form-group">
                                         <label for="exampleFormControlInput1">Nome da Categoria</label>
                                         <input class="form-control" id="exampleFormControlInput1" value="<?= $categoria->nome ?>" name="nome">
@@ -202,7 +201,7 @@
                                 <p><?= $categoria->nome ?></p>
                             </div>
                             <div class="modal-footer">
-                                <form action="categorias/delete" method="post">
+                                <form action="/categorias/delete" method="post">
                                     <input type="hidden" value="<?= $categoria->id ?>" name="id">
                                     <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
                                     <button type="submit" class="btn btn-danger">Excluir</button>

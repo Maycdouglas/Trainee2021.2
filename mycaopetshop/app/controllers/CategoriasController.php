@@ -44,4 +44,17 @@ class CategoriasController
    
     }
 
+    public function pesquisaCategorias()
+    {
+        $pesquisa = $_GET["pesquisa"];
+
+        $result = App::get('database')->selectPesquisa("categorias", $pesquisa);
+
+        $tabela = [
+            "categorias" => $result
+        ];
+
+        return viewAdm("categorias", $tabela);
+    }
+
 }
