@@ -187,24 +187,25 @@ class QueryBuilder
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'tls';
-        $mail->Username = //'exemplo@gmail.com';
-        $mail->Password = //'senha';
+        $mail->Username = //'E-mail do MyCão';
+        $mail->Password = //'Senha de segurança do e-mail';
         $mail->Port = 587;
 
-        $mail->setFrom('remetente@email.com.br'); //e-mail do remetente
-        $mail->addReplyTo('no-reply@email.com.br'); //e-mail para o qual serão enviadas as respostas
-        $mail->addAddress('email@email.com.br', 'Nome'); //Adicionamos um destinatário
+        $mail->setFrom($parametros->email, $parametros->nome); //e-mail do remetente
+        $mail->addAddress('email@email.com.br', 'MyCão'); //Adicionamos um destinatário
 
         $mail->isHTML(true); //Indicamos o uso do HTML
-        $mail->Subject = 'Assunto do email'; //título para a mensagem
-        $mail->Body    = 'Este é o conteúdo da mensagem em <b>HTML!</b>'; //conteúdo do e-mail
-        $mail->AltBody = 'Para visualizar essa mensagem acesse http://site.com.br/mail'; //texto opcional para clientes que não suportem HTML
+        $mail->Subject = $parametros->assunto; //título para a mensagem
+        $mail->Body    = "<div>Mensagem: {$parametros->mensagem}</div>"; //conteúdo do e-mail
+        //"<div>Nome: {$parametros->nome}</div>" .
+        //"<div>Email: {$parametros->email}</div>" .
+        //$mail->AltBody = 'Para visualizar essa mensagem acesse http://site.com.br/mail'; //texto opcional para clientes que não suportem HTML
 
-        if(!$mail->send()) {
+        if (!$mail->send()) {
             echo 'Não foi possível enviar a mensagem.<br>';
             echo 'Erro: ' . $mail->ErrorInfo;
         } else {
-            echo 'Mensagem enviada.';
+            echo 'Mensagem enviada!';
         }
     }
 }
