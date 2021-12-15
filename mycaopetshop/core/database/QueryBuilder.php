@@ -4,10 +4,11 @@ namespace App\Core\Database;
 
 use Exception;
 use PDO;
+use PHPMailer\PHPMailer\PHPMailer;
 
 class QueryBuilder
 {
-  protected $pdo;
+    protected $pdo;
 
 
     public function __construct(PDO $pdo)
@@ -52,7 +53,7 @@ class QueryBuilder
         } catch (Exception $e) {
             die($e->getMessage());
         }
-      }
+    }
 
     public function select($table, $id)
     {
@@ -64,21 +65,20 @@ class QueryBuilder
         } catch (Exception $e) {
             die($e->getMessage());
         }
-      }
-
-  public function insertUsuarios($table, $parametros)
-  {
-    $sql = "INSERT INTO `{$table}` (nome, email, senha) VALUES ('{$parametros['nome']}', '{$parametros['email']}', '{$parametros['senha']}')";
-
-    try {
-      $stmt = $this->pdo->prepare($sql);
-
-      $stmt->execute();
-    } catch (Exception $e) {
-      die($e->getMessage());
-
     }
-  }
+
+    public function insertUsuarios($table, $parametros)
+    {
+        $sql = "INSERT INTO `{$table}` (nome, email, senha) VALUES ('{$parametros['nome']}', '{$parametros['email']}', '{$parametros['senha']}')";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
     public function selectPesquisa($table, $pesquisa)
     {
         $query = "SELECT * FROM {$table} WHERE nome LIKE '%{$pesquisa}%'";
@@ -116,18 +116,19 @@ class QueryBuilder
         }
     }
 
-  public function updateUsuarios($table, $parametros, $idusuario)
-  {
-    $sql = "UPDATE `usuarios` SET `nome`='{$parametros['nome']}', `email`='{$parametros['email']}', `senha`='{$parametros['senha']}' WHERE `id` = '{$idusuario}'";
+    public function updateUsuarios($table, $parametros, $idusuario)
+    {
+        $sql = "UPDATE `usuarios` SET `nome`='{$parametros['nome']}', `email`='{$parametros['email']}', `senha`='{$parametros['senha']}' WHERE `id` = '{$idusuario}'";
 
-    try {
-      $stmt = $this->pdo->prepare($sql);
-      $stmt->execute();
-    } catch (Exception $e) {
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+        } catch (Exception $e) {
 
-      die($e->getMessage());
+            die($e->getMessage());
+        }
     }
-  }
+
     public function insertCategoria($table, $dados)
     {
         $query = "insert into {$table} (nome) values ('{$dados['nome']}')";
@@ -164,16 +165,46 @@ class QueryBuilder
     }
 
     public function delete($table, $id)
-  {
-    $sql = "DELETE FROM `{$table}` WHERE id = {$id}";
+    {
+        $sql = "DELETE FROM `{$table}` WHERE id = {$id}";
 
-    try {
-      $stmt = $this->pdo->prepare($sql);
+        try {
+            $stmt = $this->pdo->prepare($sql);
 
-      $stmt->execute();
-    } catch (Exception $e) {
-      die($e->getMessage());
+            $stmt->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
-  }
 
+    public function enviaEmail($parametros)
+    {
+        require 'mailer/PHPMailerAutoload.php';
+
+        $mail = new PHPMailer();
+
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->SMTPSecure = 'tls';
+        $mail->Username = //'exemplo@gmail.com';
+        $mail->Password = //'senha';
+        $mail->Port = 587;
+
+        $mail->setFrom('remetente@email.com.br'); //e-mail do remetente
+        $mail->addReplyTo('no-reply@email.com.br'); //e-mail para o qual serão enviadas as respostas
+        $mail->addAddress('email@email.com.br', 'Nome'); //Adicionamos um destinatário
+
+        $mail->isHTML(true); //Indicamos o uso do HTML
+        $mail->Subject = 'Assunto do email'; //título para a mensagem
+        $mail->Body    = 'Este é o conteúdo da mensagem em <b>HTML!</b>'; //conteúdo do e-mail
+        $mail->AltBody = 'Para visualizar essa mensagem acesse http://site.com.br/mail'; //texto opcional para clientes que não suportem HTML
+
+        if(!$mail->send()) {
+            echo 'Não foi possível enviar a mensagem.<br>';
+            echo 'Erro: ' . $mail->ErrorInfo;
+        } else {
+            echo 'Mensagem enviada.';
+        }
+    }
 }

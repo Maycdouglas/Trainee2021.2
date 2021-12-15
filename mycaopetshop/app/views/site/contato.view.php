@@ -63,22 +63,22 @@
 
         </div>
 
-        <form class="formulario">
+        <form action="contato/enviar" method="POST" class="formulario">
             <div class="form-group">
               <label for="exampleFormControlInput1">Nome</label>
-              <input class="form-control" id="exampleFormControlInput1" placeholder="Seu nome completo aqui">
+              <input name="nome" class="form-control" id="exampleFormControlInput1" placeholder="Seu nome completo aqui">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Email</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+                <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
               </div>
               <div class="form-group">
                 <label for="exampleFormControlInput1">Assunto</label>
-                <input class="form-control" id="exampleFormControlInput1" placeholder="Seu texto aqui">
+                <input name="assunto" class="form-control" id="exampleFormControlInput1" placeholder="Seu texto aqui">
               </div>
             <div class="form-group">
               <label for="exampleFormControlTextarea1">Mensagem</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+              <textarea name="mensagem" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
             </div>
             <br>
             <button type="submit" class="botao-enviar btn btn-primary">Enviar</button>
