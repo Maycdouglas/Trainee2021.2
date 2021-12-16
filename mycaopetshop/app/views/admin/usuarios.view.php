@@ -29,7 +29,7 @@ para a index.php.*/
     <link rel="stylesheet" href="../../public/css/view-adm-produtos.css">
     <link rel="stylesheet" href="../../public/css/sidebar-adm.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <title>Admin - Usuários</title>
+    <title>Admin Usuários</title>
 
 </head>
 
@@ -114,7 +114,7 @@ para a index.php.*/
     <h3 class="text-center">Usuários MyCão</h3>
 
     <!--Espaço da barra de Pesquisa-->
-        <div class="container-fluid bottom-add d-flex justify-content-end">
+        <div class="container-fluid d-flex justify-content-end">
             <!--Espaço do botão de Adicionar Produto-->
             <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end"> -->
 
@@ -133,7 +133,7 @@ para a index.php.*/
 
 
 <!--Tabela de Gerenciamento dos Produtos-->
-<div class="container">
+<div class="container negrito">
     <table class="table table-hover justify-content-center align-items-center">
 
         <thead>

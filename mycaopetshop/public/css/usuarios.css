@@ -23,8 +23,7 @@ h3 {
     color: var(--azul-escuro);
 }
 
-.container {
-    padding-left: 76px !important;
+.negrito {
     font-weight: bold;
 }
 
