@@ -102,7 +102,7 @@ para a index.php.*/
 
     <div class="container">
 
-      <h2 class="text-center">Produtos MyCão</h2>
+      <h3 class="text-center">Produtos MyCão</h3>
 
       <!--Espaço da barra de Pesquisa-->
       <nav class="navbar navbar-light bg-light nav-search">

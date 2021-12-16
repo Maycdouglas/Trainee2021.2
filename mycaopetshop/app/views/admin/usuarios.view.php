@@ -93,7 +93,7 @@ para a index.php.*/
                 </ul>
             </div>
             <section class="home-section">
-                <div class="home-content">
+                <div class="home-content navbar">
                     <i class='bx bx-menu'></i>
                 </div>
             </section>

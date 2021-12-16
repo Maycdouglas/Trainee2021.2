@@ -28,6 +28,7 @@ para a index.php.*/
     <link rel="stylesheet" href="../../public/css/view-adm-categorias.css">
     <link rel="stylesheet" href="../../public/css/usuarios.css">
     <link rel="stylesheet" href="../../public/css/sidebar-adm.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 
 </head>
 
@@ -98,7 +99,7 @@ para a index.php.*/
 
             <div class=" row container-cabeca p-0 m-0">
 
-                <h3 class="titulo-adm-categoria text-center">Categorias</h3>
+                <h3 class="titulo-adm-categoria ">Categorias</h3>
                 <div class="pesquisa-container">
                     <div class="row justify-content-end">
                         <form class="d-flex justify-content-end">
