@@ -198,8 +198,8 @@ class QueryBuilder
         //corpo da mensagem que aparece no e-mail
         $mail->Body    =
             "<hr>".
-            "<div>Enviado por: {$parametros['nome']}</div>" . 
-            "<div>E-mail: {$parametros['email']}</div>".
+            "<div><b>Enviado por:</b> {$parametros['nome']}</div>" . 
+            "<div><b>E-mail:</b> {$parametros['email']}</div>".
             "<hr><br>".
             "<div>{$parametros['mensagem']}</div>"; 
         //fim do corpo da mensagem
@@ -209,7 +209,7 @@ class QueryBuilder
             echo 'Não foi possível enviar a mensagem.<br>';
             echo 'Erro: ' . $mail->ErrorInfo;
         } 
-        
+
         else 
         {
             header('Location: /contato');
