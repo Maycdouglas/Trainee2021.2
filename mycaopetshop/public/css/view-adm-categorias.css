@@ -16,6 +16,10 @@ body {
     justify-content: end;
 }
 
+main {
+    padding-left: 76px !important;
+}
+
 .container-corpo{
  max-width: 2000px;
  justify-content: center;

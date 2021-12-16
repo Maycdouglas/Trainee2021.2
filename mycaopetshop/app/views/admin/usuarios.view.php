@@ -113,7 +113,7 @@ para a index.php.*/
             <div class="header-container">
                 <div class="title-section">
                     <img src="../../public/assets/options.svg" alt="Options">
-                    <h3>Usuários</h3>
+                    <h3>Usuários MyCão</h3>
                 </div>
 
                 <!--Botão do modal de Adicionar-->
