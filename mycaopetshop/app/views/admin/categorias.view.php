@@ -2,6 +2,21 @@
 <html lang="en">
 
 <head>
+    <?php
+
+    /* esse bloco de código em php verifica se existe a sessão, pois o usuário pode
+simplesmente não fazer o login e digitar na barra de endereço do seu navegador
+o caminho para a página principal do site (sistema), burlando assim a obrigação de
+fazer um login, com isso se ele não estiver feito o login não será criado a session,
+então ao verificar que a session não existe a página redireciona o mesmo
+para a index.php.*/
+
+    session_start();
+    if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)) {
+        header('Location: /login');
+    }
+
+    ?>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <meta charset="UTF-8">
@@ -175,7 +190,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <input type="hidden" value="<?= $categoria->id ?>" name="id">
-                                    <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
                                         <button type="submit" class="btn btn-success">Editar</button>
                                     </div>
 

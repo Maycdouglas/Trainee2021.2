@@ -135,7 +135,7 @@ para a index.php.*/
                         <i class="icone-card fas fa-sign-out-alt pt-4"></i>
                         <div class="card-body">
                             <h5 class="card-title pb-3">Logout</h5>
-                            <a href="/app/views/site/logout.php" class="botao-abrir btn btn-primary">Abrir</a>
+                            <a href="/app/views/site/logout.php" class="botao-logout btn btn-primary">Sair</a>
                         </div>
                     </div>
 

@@ -19,6 +19,10 @@ h1, h2 {
     font-weight: 700;
 }
 
+.container {
+    padding-left: 76px !important;
+}
+
 .username {
     color: #F4A630;
 }
@@ -73,6 +77,11 @@ h1, h2 {
 .botao-abrir {
     background-color: #022049 !important;
     border-color: #022049 !important;
+}
+
+.botao-logout {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
 }
 
 .card {

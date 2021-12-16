@@ -16,15 +16,7 @@ $router->get('home', 'ExampleController@viewHome');
 
 $router->get('dashboard', 'ExampleController@viewDashboard');
 
-
-$router->get("usuarios", "UsuariosController@view");
-
-$router->post("usuarios/create", "UsuariosController@create");
-
-$router->post("usuarios/delete", "UsuariosController@delete");
-
-$router->post("usuarios/update", "UsuariosController@update");
-
+//rotas produtos
 
 $router->get("produtos", "ProdutosController@view");
 $router->get("admin/produtos", "ProdutosController@viewAdmin");
@@ -32,6 +24,8 @@ $router->get("admin/produtos/result", "ProdutosController@pesquisaProdutos");
 $router->post("admin/produtos/create", "ProdutosController@postProdutos");
 $router->post("admin/produtos/update","ProdutosController@updateProdutos");
 $router->post("admin/produtos/delete", "ProdutosController@deleteProdutos");
+
+// rotas categorias
 
 $router->get("categorias", "CategoriasController@view");
 $router->post("categorias/create", "CategoriasController@createCategoria");
