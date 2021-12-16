@@ -179,33 +179,40 @@ class QueryBuilder
 
     public function enviaEmail($parametros)
     {
-        require 'mailer/PHPMailerAutoload.php';
-
         $mail = new PHPMailer();
 
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'tls';
-        $mail->Username = //'E-mail do MyCão';
-        $mail->Password = //'Senha de segurança do e-mail';
+        $mail->Username = 'mycaopetshop@gmail.com';
+        $mail->Password = 'vovdonrivmjmsowt'; //senha de app
         $mail->Port = 587;
 
-        $mail->setFrom($parametros->email, $parametros->nome); //e-mail do remetente
-        $mail->addAddress('email@email.com.br', 'MyCão'); //Adicionamos um destinatário
+        $mail->setFrom($parametros['email'], $parametros['nome']);
+        $mail->addAddress('mycaopetshop@gmail.com', 'MyCão');
 
-        $mail->isHTML(true); //Indicamos o uso do HTML
-        $mail->Subject = $parametros->assunto; //título para a mensagem
-        $mail->Body    = "<div>Mensagem: {$parametros->mensagem}</div>"; //conteúdo do e-mail
-        //"<div>Nome: {$parametros->nome}</div>" .
-        //"<div>Email: {$parametros->email}</div>" .
-        //$mail->AltBody = 'Para visualizar essa mensagem acesse http://site.com.br/mail'; //texto opcional para clientes que não suportem HTML
+        $mail->isHTML(true); 
+        $mail->Subject = $parametros['assunto']; //título para a mensagem
 
-        if (!$mail->send()) {
+        //corpo da mensagem que aparece no e-mail
+        $mail->Body    =
+            "<hr>".
+            "<div>Enviado por: {$parametros['nome']}</div>" . 
+            "<div>E-mail: {$parametros['email']}</div>".
+            "<hr><br>".
+            "<div>{$parametros['mensagem']}</div>"; 
+        //fim do corpo da mensagem
+
+        if (!$mail->send()) 
+        {
             echo 'Não foi possível enviar a mensagem.<br>';
             echo 'Erro: ' . $mail->ErrorInfo;
-        } else {
-            echo 'Mensagem enviada!';
+        } 
+        
+        else 
+        {
+            header('Location: /contato');
         }
     }
 }
