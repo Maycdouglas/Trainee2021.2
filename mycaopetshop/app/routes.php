@@ -10,7 +10,11 @@ $router->post('usuarios/update', 'UsuariosController@update');
 
 //rotas login
 
-$router->get('login', 'ExampleController@viewLogin');
+$router->get('login', 'LoginController@viewLogin');
+
+$router->post('logar', 'LoginController@login');
+
+$router->post('logout', 'LoginController@logout');
 
 $router->get('home', 'ExampleController@viewHome');
 

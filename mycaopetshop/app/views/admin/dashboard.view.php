@@ -83,7 +83,8 @@ para a index.php.*/
                         <div class="name-job">
                             <div class="profile_name"><?= $_SESSION['nome']?></div>
                         </div>
-                        <a href="/app/views/site/logout.php"><i class='fas fa-sign-out-alt'></i></a>
+                        <form action="/logout" method="POST">
+                        <button style="background-color:transparent; border:none" type="submit"><i class='fas fa-sign-out-alt'></i></button>
                     </div>
                 </li>
             </ul>
@@ -134,8 +135,9 @@ para a index.php.*/
                     <div class="card d-flex mx-auto" style="width: 15rem;">
                         <i class="icone-card fas fa-sign-out-alt pt-4"></i>
                         <div class="card-body">
+                            <form action="/logout" method="POST">
                             <h5 class="card-title pb-3">Logout</h5>
-                            <a href="/app/views/site/logout.php" class="botao-logout btn btn-primary">Sair</a>
+                            <button type="submit" class="botao-logout btn btn-primary">Sair</button>
                         </div>
                     </div>
 

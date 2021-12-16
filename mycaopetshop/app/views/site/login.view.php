@@ -2,9 +2,15 @@
 <html lang="en">
 
 <head>
-    <?php
-    session_start();
+    <?php if (!isset($_SESSION)) {
+        session_start();
+    }
+    if (isset($_SESSION['usuario'])) {
+
+        header('Location: /dashboard');
+    }
     ?>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +39,7 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 ">
-                    <form action="/app/views/site/ope.php" method="POST" class="formulario-login">
+                    <form action="/logar" method="POST" class="formulario-login">
 
                         <div class="agrupamento-formulario form-group">
                             <label class="label-login" for="exampleDropdownFormEmail2">Endereço de E-mail:</label>
@@ -50,7 +56,7 @@
                 </div>
             </div>
         </div>
-        
+
         <?php
         if (isset($_SESSION['nao_autenticado'])) :
         ?>
