@@ -26,6 +26,7 @@ para a index.php.*/
     <script src="https://kit.fontawesome.com/c11bde093d.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../../public/css/usuarios.css">
+    <link rel="stylesheet" href="../../public/css/view-adm-produtos.css">
     <link rel="stylesheet" href="../../public/css/sidebar-adm.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <title>Admin - Usuários</title>
@@ -106,68 +107,86 @@ para a index.php.*/
 
     <main class="container principal">
 
-        <div class="main mx-auto px-auto">
+    <div class="product-table">
+
+<div class="container">
+
+    <h3 class="text-center">Usuários MyCão</h3>
+
+    <!--Espaço da barra de Pesquisa-->
+        <div class="container-fluid bottom-add d-flex justify-content-end">
+            <!--Espaço do botão de Adicionar Produto-->
+            <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end"> -->
+
+            <!-- Button modal adicionar produto-->
+            <button type="button" class="btn btn-success btn-adicionar mb-5" data-bs-toggle="modal" data-bs-target="#adicionar-modal">
+                <img alt="Adicionar" src="../../public/assets/plus-icon.svg">Adicionar
+            </button>
+
+            <!-- </div> -->
+            <!--Fim do espaço para o acréscimo de novos produtos-->
+        </div>
+</div>
+<!--Fim do espaço da barra de Pesquisa-->
+
+<hr>
 
 
-            <!--Início do título da tabela-->
-            <div class="header-container">
-                <div class="title-section">
-                    <img src="../../public/assets/options.svg" alt="Options">
-                    <h3>Usuários MyCão</h3>
-                </div>
+<!--Tabela de Gerenciamento dos Produtos-->
+<div class="container">
+    <table class="table table-hover justify-content-center align-items-center">
 
-                <!--Botão do modal de Adicionar-->
-                <button class="btn btn-outline btn-principal" type="submit" data-bs-toggle="modal" data-bs-target="#adicionar-modal"><img src="../../public/assets/plus-icon.svg" alt="plus">Adicionar</button>
-                <!--Fim do botão adicionar-->
-
-            </div>
-            <!--Fim do título da tabela-->
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col"><b>Nome do Usuário</b></th>
+                <th></th>
+            </tr>
+        </thead>
 
 
-            <hr>
+
+        <tbody>
+
+            <!--Início da parte que será cópia para as outras-->
+
+            <!--Continuação da Tabela apenas para visualização-->
+            <?php foreach ($usuarios as $usuario) : ?>
+                <tr class="container">
+                    <th scope="row justify-content-center align-items-center"><?= $usuario->id ?></th>
+                    <td class="justify-content-start name-itens-table"><?= $usuario->nome ?></td>
+                    <div class="d-grid gap-2 d-md-block">
+                        <td class="d-flex justify-content-end colum-bottons-table">
+
+                            <!-- Button modal editar usuario -->
+                            <button type="button" class="btn btn-primary bottom-options" data-bs-toggle="modal" data-bs-target="#editar-modal-<?= $usuario->id ?>">
+                                <img alt="Editar" src="../../public/assets/bx_bxs-edit.svg">
+                            </button>
+
+                            <!-- Button modal visualizar usuario -->
+                            <button type="button" class="btn btn-secondary bottom-options" data-bs-toggle="modal" data-bs-target="#detalhes-modal-<?= $usuario->id ?>">
+                                <img alt="Visualizar" src="../../public/assets/akar-icons_eye.svg">
+                            </button>
+
+                            <!-- Button modal exclui usuario-->
+                            <button type="button" class="btn btn-danger bottom-options" data-bs-toggle="modal" data-bs-target="#excluir-modal-<?= $usuario->id ?>">
+                                <img alt="Excluir" src="../../public/assets/bx_bx-trash.svg">
+                            </button>
+                        </td>
+
+                    </div>
+                </tr>
+
+            <?php endforeach; ?>
 
 
-            <!--Início da tabela-->
-            <div class="tabela">
-                <table class="table table-hover">
 
-                    <thead>
-                        <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col" class="email">Email</th>
-                            <th scope="col" class="senha">Senha</th>
-                        </tr>
-                    </thead>
+        </tbody>
+    </table>
+</div>
+<!--Fim da Tabela de Produtos-->
 
-
-                    <tbody>
-                        <?php foreach ($usuarios as $usuario) : ?>
-
-                            <tr>
-                                <th scope="row"><?= $usuario->id ?></th>
-                                <td><?= $usuario->nome ?></td>
-                                <td class="email"><?= $usuario->email ?></td>
-                                <td class="senha"><?= $usuario->senha ?></td>
-                                <td class="td-button">
-                                    <div class="botoes">
-
-                                        <!--Botões dos Modais (Editar, Excluir e Detalhes)-->
-                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar-modal-<?= $usuario->id ?>"><img src="../../public/assets/bx_bxs-edit.svg" alt="Editar"></button>
-                                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluir-modal-<?= $usuario->id ?>"><img src="../../public/assets/bx_bx-trash.svg" alt="Excluir"></button>
-                                        <button class="btn btn-success detalhes" data-bs-toggle="modal" data-bs-target="#detalhes-modal-<?= $usuario->id ?>"><img src="../../public/assets/akar-icons_eye.svg" alt="Detalhes"></button>
-                                        <!--Fim dos botões dos modais-->
-
-                                    </div>
-                                </td>
-                            </tr>
-
-                        <?php endforeach; ?>
-                    </tbody>
-
-                </table>
-            </div>
-            <!--Fim da tabela usuarios-->
+</div>
 
 
 

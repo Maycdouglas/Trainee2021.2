@@ -28,7 +28,9 @@ h3 {
     font-weight: bold;
 }
 
-
+.bar-search {
+    text-align: right !important;
+}
 
 .main {
     margin-top: 30px;
