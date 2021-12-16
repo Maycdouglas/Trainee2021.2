@@ -186,7 +186,7 @@ class QueryBuilder
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'tls';
         $mail->Username = 'mycaopetshop@gmail.com';
-        $mail->Password = 'vovdonrivmjmsowt'; //senha de app
+        $mail->Password = 'qvlttyzkqdugswka'; //senha de app
         $mail->Port = 587;
 
         $mail->setFrom($parametros['email'], $parametros['nome']);
