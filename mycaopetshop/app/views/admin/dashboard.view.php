@@ -53,24 +53,24 @@ para a index.php.*/
                 </li>
                 <li>
                     <div class="iocn-link">
-                        <a href="view-adm-categorias.html">
+                        <a href="/categorias">
                             <i class='fas fa-clipboard-list'></i>
                             <span class="link_name">Categorias</span>
                         </a>
                     </div>
                     <ul class="sub-menu blank">
-                        <li><a class="link_name" href="view-adm-categorias.html">Categorias</a></li>
+                        <li><a class="link_name" href="/categorias">Categorias</a></li>
                     </ul>
                 </li>
                 <li>
                     <div class="iocn-link">
-                        <a href="view-adm-produtos.html">
+                        <a href="/admin/produtos">
                             <i class='fas fa-boxes'></i>
                             <span class="link_name">Produtos</span>
                         </a>
                     </div>
                     <ul class="sub-menu blank">
-                        <li><a class="link_name" href="view-adm-produtos.html">Produtos</a></li>
+                        <li><a class="link_name" href="/admin/produtos">Produtos</a></li>
                     </ul>
                 </li>
 
@@ -115,7 +115,7 @@ para a index.php.*/
                         <i class="icone-card fas fa-clipboard-list pt-4"></i>
                         <div class="card-body">
                             <h5 class="card-title pb-3">Gerenciar Categorias</h5>
-                            <a href="#" class="botao-abrir btn btn-primary">Abrir</a>
+                            <a href="/categorias" class="botao-abrir btn btn-primary">Abrir</a>
                         </div>
                     </div>
                 </div>
@@ -124,7 +124,7 @@ para a index.php.*/
                         <i class="icone-card fas fa-boxes pt-4"></i>
                         <div class="card-body">
                             <h5 class="card-title pb-3">Gerenciar Produtos</h5>
-                            <a href="#" class="botao-abrir btn btn-primary">Abrir</a>
+                            <a href="/admin/produtos" class="botao-abrir btn btn-primary">Abrir</a>
                         </div>
                     </div>
 

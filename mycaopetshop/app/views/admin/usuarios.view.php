@@ -47,34 +47,34 @@ para a index.php.*/
                 </div>
                 <ul class="nav-links">
                     <li>
-                        <a href="usuarios.html">
+                        <a href="/usuarios">
                             <i class='fas fa-users-cog'></i>
                             <span class="link_name">Usuários</span>
                         </a>
                         <ul class="sub-menu blank">
-                            <li><a class="link_name" href="usuarios.html">Usuários</a></li>
+                            <li><a class="link_name" href="/usuarios">Usuários</a></li>
                         </ul>
                     </li>
                     <li>
                         <div class="iocn-link">
-                            <a href="view-adm-categorias.html">
+                            <a href="/categorias">
                                 <i class='fas fa-clipboard-list'></i>
                                 <span class="link_name">Categorias</span>
                             </a>
                         </div>
                         <ul class="sub-menu blank">
-                            <li><a class="link_name" href="view-adm-categorias.html">Categorias</a></li>
+                            <li><a class="link_name" href="/categorias">Categorias</a></li>
                         </ul>
                     </li>
                     <li>
                         <div class="iocn-link">
-                            <a href="view-adm-produtos.html">
+                            <a href="/admin/produtos">
                                 <i class='fas fa-boxes'></i>
                                 <span class="link_name">Produtos</span>
                             </a>
                         </div>
                         <ul class="sub-menu blank">
-                            <li><a class="link_name" href="view-adm-produtos.html">Produtos</a></li>
+                            <li><a class="link_name" href="/admin/produtos">Produtos</a></li>
                         </ul>
                     </li>
 
@@ -85,9 +85,9 @@ para a index.php.*/
                                 <img class="d-flex" src="../../public/assets/Icone com borda azul claro.png">
                             </div>
                             <div class="name-job">
-                                <div class="profile_name">Usuário</div>
+                                <div class="profile_name"><?= $_SESSION['nome']?></div>
                             </div>
-                            <i class='fas fa-sign-out-alt'></i>
+                            <a href="/app/views/site/logout.php"><i class='fas fa-sign-out-alt'></i></a>
                         </div>
                     </li>
                 </ul>

@@ -17,7 +17,6 @@ a:visited {
 body {
     background-color: #f6f8ff !important;
     font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
 }
 
 h3 {
@@ -26,7 +25,7 @@ h3 {
 
 .container {
     padding-left: 76px !important;
-    
+    font-weight: bold;
 }
 
 .main {
