@@ -89,7 +89,7 @@
                                 <button class="btn btn-categoria <?= $categoriaProduto[$produto->categoria] ?>"><?= $categoriaProduto[$produto->categoria] ?></button>
                             </div>
                             <h5 class="nome-produto"><?= $produto->nome ?></h5>
-                            <p class="preco-produto"><?= $produto->preco ?></p>
+                            <p class="preco-produto">R$ <?= $produto->preco ?></p>
                         </div>
                     </div>
                 <?php endforeach; ?>
