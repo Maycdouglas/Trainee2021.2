@@ -36,11 +36,11 @@
 
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="home.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="produtos.html">Produtos</a></li>
-                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="contato.html">Contato</a></li>
-                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="quemsomos.html">Quem Somos</a></li>
-                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="login.php">Login</a></li>
+                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="/home">Home</a></li>
+                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="/produtos">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="/contato">Contato</a></li>
+                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="/quemsomos">Quem Somos</a></li>
+                        <li class="nav-item"><a class="nav-item nav-link links-navbar" href="/login">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -142,7 +142,7 @@
                     metus odio, eget tempus sem maximus et. Sed quis placerat velit, vitae ullamcorper lectus. Nulla
                     suscipit eros a orci consectetur, vel feugiat ipsum posuere. Praesent consectetur varius
                     consectetur. Quisque</p>
-                <a href="quemsomos.html"><button class="btn btn-cta">Nos Conheça</button></a>
+                <a href="/quemsomos"><button class="btn btn-cta">Conheça-nos</button></a>
             </div>
         </section>
 
@@ -154,7 +154,7 @@
                     metus odio, eget tempus sem maximus et. Sed quis placerat velit, vitae ullamcorper lectus. Nulla
                     suscipit eros a orci consectetur, vel feugiat ipsum posuere. Praesent consectetur varius
                     consectetur. Quisque</p>
-                <a href="contato.html"><button class="btn btn-cta">Entrar em contato</button></a>
+                <a href="/contato"><button class="btn btn-cta">Entre em contato</button></a>
             </div>
             <div class="image-cta image-quem-somos">
                 <img src="../../public/img/contato.svg" alt="contato">
@@ -168,10 +168,10 @@
         <div class="container">
             <div class="row border-bottom justify-content-center align-items-center m-0 mb-4">
                 <ul class="nav justify-content-center mb-4">
-                    <li class="nav-item"><a href="home.html" class="nav-link px-2 links-footer">Início</a></li>
-                    <li class="nav-item"><a href="quemsomos.html" class="nav-link px-2 links-footer">Sobre Nós</a></li>
-                    <li class="nav-item"><a href="produtos.html" class="nav-link px-2 links-footer">Nossos Produtos</a></li>
-                    <li class="nav-item"><a href="contato.html" class="nav-link px-2 links-footer">Fale Conosco</a></li>
+                    <li class="nav-item"><a href="/home" class="nav-link px-2 links-footer">Início</a></li>
+                    <li class="nav-item"><a href="/quemsomos" class="nav-link px-2 links-footer">Sobre Nós</a></li>
+                    <li class="nav-item"><a href="/produtos" class="nav-link px-2 links-footer">Nossos Produtos</a></li>
+                    <li class="nav-item"><a href="/contato" class="nav-link px-2 links-footer">Fale Conosco</a></li>
                 </ul>
             </div>
 
@@ -194,11 +194,11 @@
                     <div class="row justify-content-center align-items-center m-0 mb-2">
 
                         <ul class="nav justify-content-center m-0 p-0">
-                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i class="fas fa-envelope redes-sociais"></i></a></li>
-                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i class="fab fa-instagram redes-sociais"></i></a></li>
-                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i class="fab fa-twitter redes-sociais"></i></a></li>
-                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i class="fab fa-whatsapp redes-sociais"></i></a></li>
-                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i class="fab fa-facebook redes-sociais"></i></a></li>
+                            <li class="nav-item"><a href="mailto: maycaopetshop@gmail.com" class="nav-link px-2 links-footer"><i class="fas fa-envelope redes-sociais"></i></a></li>
+                            <li class="nav-item"><a href="https://www.instagram.com" class="nav-link px-2 links-footer"><i class="fab fa-instagram redes-sociais"></i></a></li>
+                            <li class="nav-item"><a href="https://www.twitter.com" class="nav-link px-2 links-footer"><i class="fab fa-twitter redes-sociais"></i></a></li>
+                            <li class="nav-item"><a href="https://web.whatsapp.com" class="nav-link px-2 links-footer"><i class="fab fa-whatsapp redes-sociais"></i></a></li>
+                            <li class="nav-item"><a href="https://www.facebook.com" class="nav-link px-2 links-footer"><i class="fab fa-facebook redes-sociais"></i></a></li>
                         </ul>
 
                     </div>
