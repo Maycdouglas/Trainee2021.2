@@ -107,10 +107,9 @@ class ProdutosController
  {
  
     $produtos = App::get('database')->selectAll("produtos");
-    $conexao = mysqli_connect("127.0.0.1", "root", "", "mycaopetshop") or die("Sem conexão com o servidor");
+    $conexao = mysqli_connect("localhost", "root", "", "mycaopetshop") or die("Sem conexão com o servidor");
      
     $pagina = (isset($_GET['pagina'])) ? $_GET['pagina'] : 1;
-
 
     $resultado_produtos = mysqli_query($conexao, $produtos['produtos']);
 
