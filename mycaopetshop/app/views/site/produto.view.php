@@ -61,7 +61,7 @@
   <div class="container">
     <div class="caminho">
       <ul>
-        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="/produtos">Produtos</a></li>
         <li> > </li>
         <li><?= $produto->nome ?></li>
       </ul>

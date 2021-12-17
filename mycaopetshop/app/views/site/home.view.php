@@ -82,8 +82,8 @@
             <div class="cards-container">
                 <?php foreach ($produtos as $produto) : ?>
                     <div class="card card-principal" style="width: 18rem;">
-                        <a href="/produto/<?= $produto->id ?>"><img src="../../public/img/<?= $produto->imagem_1 ?>.jpg" class="card-img-top" alt="..."></a>
-                        <a href="/produto/<?= $produto->id ?>"><button class="btn btn-detalhes">Ver Produto</button></a>
+                        <a href="/produto?id=<?= $produto->id ?>"><img src="../../public/img/<?= $produto->imagem_1 ?>.jpg" class="card-img-top" alt="..."></a>
+                        <a href="/produto?id=<?= $produto->id ?>"><button class="btn btn-detalhes">Ver Produto</button></a>
                         <div class="corpo-card">
                             <div class="categorias">
                                 <button class="btn btn-categoria <?= $categoriaProduto[$produto->categoria] ?>"><?= $categoriaProduto[$produto->categoria] ?></button>
