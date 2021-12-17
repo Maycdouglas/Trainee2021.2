@@ -16,16 +16,7 @@ class ProdutosController
 
     }
 
-    public function view()
-    {
-        $produtos = App::get('database')->selectAll("produtos");
-
-        $tabela = [
-            "produtos" => $produtos
-        ];
-
-        return view("produtos", $tabela);
-    }
+    
 
     public function viewAdmin()
     {
@@ -108,5 +99,59 @@ class ProdutosController
 
         header("Location: /admin/produtos");
     }
+
+
+
+
+ public function paginacao()
+ {
+ 
+    $produtos = App::get('database')->selectAll("produtos");
+    $conexao = mysqli_connect("127.0.0.1", "root", "", "mycaopetshop") or die("Sem conexão com o servidor");
+     
+    $pagina = (isset($_GET['pagina'])) ? $_GET['pagina'] : 1;
+
+
+    $resultado_produtos = mysqli_query($conexao, $produtos['produtos']);
+
+    $total_produtos = mysqli_num_rows($resultado_produtos);
+
+    $quantidadeProd_pg = 6;
+
+    $num_pg = ceil($total_produtos / $quantidadeProd_pg);
+
+    //Calcula a pagina de qual valor será exibido
+    $inicio = ($quantidadeProd_pg * $pagina) - $quantidadeProd_pg;
+
+    $result_produtos = "SELECT FROM produtos ORDER BY data DESC LIMIT $inicio, $quantidadeProd_pg";
+    $resultado_produtos = mysqli_query($conexao, $result_produtos);
+    $total_produtos = mysqli_num_rows($resultado_produtos);
+    
+
+    $pag_anterior  = $pagina - 1;
+    $pag_posterior = $pagina + 1;
+
+    $paginacao = [
+      "pag_anterior" => $pag_anterior ,
+      "pag_posterior" => $pag_posterior ,
+      "num_pg" => $num_pg ,
+      "pagina" => $pagina
+    ];
+       return view('produtos', $paginacao);
+}
+
+
+public function view()  //paginacao
+    {
+        $produtos = App::get('database')->selectAll("produtos");
+
+        $tabela = [
+            "produtos" => $produtos
+        ];
+       
+        return view("produtos", $tabela);
+    }
+
+
 
 }

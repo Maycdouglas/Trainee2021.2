@@ -1,43 +1,3 @@
-<?php //include_once('../../../config.php');
-
-use App\Core\App;
-
-$tabProdutos = App::get('database')->selectAll('produtos');
-
-// session_start();
-$link = mysqli_connect("127.0.0.1", "root", "", "mycaopetshop") or die("Sem conexão com o servidor");
-
-
-
-// verificar se esta sendo passado na pagina atual, senão é atribuido a pagina
-$pagina = (isset($_GET['pagina'])) ? $_GET['pagina'] : 1;
-
-//selecionar todos os produtos da tabela
-$result_produtos =  "SELECT * from `produtos`";
-$resultado_produtos = mysqli_query($link, $result_produtos);
-
-//contar o total de produtos
-$total_produtos = mysqli_num_rows($resultado_produtos);
-
-//seta a quantidade de produtos por pagina
-$quantidade_pg = 6;
-
-//calcula o numero de paginas necessarias para apresentar os produtos
-$num_pg = ceil($total_produtos / $quantidade_pg);
-
-//calcular o inicio da visualizacao
-$inicio = ($quantidade_pg * $pagina) - $quantidade_pg;
-
-//selecionar os produtos a serem apresentados na pagin
-$result_produtos = "SELECT from produtos limit, $quantidade_pg";
-$resultado_produtos = mysqli_query($link, $result_produtos);
-$total_produtos = mysqli_num_rows($resultado_produtos);
-
-?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -149,7 +109,7 @@ $total_produtos = mysqli_num_rows($resultado_produtos);
 
                             <!-- apresentar a paginacao -->
                             <?php for ($i = 1; $i < $num_pg + 1; $i++) { ?>
-                                <li class="page-item active"><a class="page-link" href="produtos.view.php?pagina=<?php echo $i; ?> "><?php echo $i; ?>1</a></li>
+                                <li class="page-item active"><a class="page-link" href="produtos.view.php?pagina=<?php echo $i; ?> "><?php echo $i; ?></a></li>
                             <?php } ?>
 
                             </li>

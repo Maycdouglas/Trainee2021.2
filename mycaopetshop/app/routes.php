@@ -38,4 +38,7 @@ $router->post("categorias/create", "CategoriasController@createCategoria");
 $router->post("categorias/delete", "CategoriasController@delete");
 $router->post("categorias/edit", "CategoriasController@editCategoria");
 
+$router->get("paginacao", "ProdutosController@paginacao");
+
+
 ?>
