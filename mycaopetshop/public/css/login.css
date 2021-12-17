@@ -9,9 +9,14 @@
     margin-top: 3.5rem;
 }
 
+
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
 .formulario-login{
     /* text-align: center; */
-    font-family: 'Quicksand', sans-serif;
     padding-top: 60px;
     max-width: 80%;
     margin: auto;

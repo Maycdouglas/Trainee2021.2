@@ -3,29 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-        name="viewport">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
 
-    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
 
     <link href="../../public/css/home.css" rel="stylesheet">
     <link rel="stylesheet" href="../../public/css/navbarft.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <title>MyCão Pet Shop</title>
 </head>
 
 <body>
-    <button class="btn btn-warning btn-floating btn-lg" data-bs-toggle="tooltip" id="btn-back-to-top"
-        title="Back to top!" type="button">
-        <svg class="bi bi-arrow-up" fill="currentColor" height="16" viewBox="0 0 16 16" width="16"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
-                fill-rule="evenodd" />
+    <button class="btn btn-warning btn-floating btn-lg" data-bs-toggle="tooltip" id="btn-back-to-top" title="Back to top!" type="button">
+        <svg class="bi bi-arrow-up" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" fill-rule="evenodd" />
         </svg>
     </button>
 
@@ -37,9 +30,7 @@
                     <img class="logo-navbar p-0 m-0" src="../../public/assets/Logo escrita.png">
                 </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Alterna navegação">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -58,8 +49,7 @@
     <section class="container-principal">
         <div class="carousel carousel-dark slide mb-0" data-bs-ride="carousel" id="carousel">
             <div class="carousel-indicators">
-                <button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0"
-                    data-bs-target="#carousel" type="button"></button>
+                <button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#carousel" type="button"></button>
                 <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carousel" type="button"></button>
                 <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carousel" type="button"></button>
             </div>
@@ -204,16 +194,11 @@
                     <div class="row justify-content-center align-items-center m-0 mb-2">
 
                         <ul class="nav justify-content-center m-0 p-0">
-                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i
-                                        class="fas fa-envelope redes-sociais"></i></a></li>
-                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i
-                                        class="fab fa-instagram redes-sociais"></i></a></li>
-                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i
-                                        class="fab fa-twitter redes-sociais"></i></a></li>
-                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i
-                                        class="fab fa-whatsapp redes-sociais"></i></a></li>
-                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i
-                                        class="fab fa-facebook redes-sociais"></i></a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i class="fas fa-envelope redes-sociais"></i></a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i class="fab fa-instagram redes-sociais"></i></a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i class="fab fa-twitter redes-sociais"></i></a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i class="fab fa-whatsapp redes-sociais"></i></a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i class="fab fa-facebook redes-sociais"></i></a></li>
                         </ul>
 
                     </div>
@@ -229,8 +214,7 @@
         </div>
     </footer>
 
-    <script crossorigin="anonymous" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="../../public/js/home.js"></script>
 </body>
 

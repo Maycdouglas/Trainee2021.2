@@ -6,6 +6,7 @@
     text-align: right !important;
     height: 45px;
     margin-left: 40px;
+    overflow: hidden !important;
 }
 
 .links-navbar {

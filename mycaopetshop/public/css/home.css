@@ -4,6 +4,10 @@
     --azul-claro: #AFCBFF;
 }
 
+body, header {
+    font-family: 'Quicksand', sans-serif;
+}
+
 a,
 a:hover,
 a:visited {
