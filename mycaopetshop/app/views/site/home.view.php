@@ -47,20 +47,20 @@
         </nav>
     </header>
     <section class="container-principal">
-        <div class="carousel carousel-dark slide mb-0" data-bs-ride="carousel" id="carousel">
+        <div class="carousel slide mb-0" data-bs-ride="carousel" id="carousel">
             <div class="carousel-indicators">
                 <button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#carousel" type="button"></button>
                 <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carousel" type="button"></button>
                 <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carousel" type="button"></button>
             </div>
             <div class="carousel-inner rounded-bottom">
-                <div class="carousel-item active" data-bs-interval="7000">
+                <div class="carousel-item active" data-bs-interval="5000">
                     <img alt="Dog 1" src="../../../public/img/carrossel_1.jpg">
                 </div>
-                <div class="carousel-item" data-bs-interval="7000">
+                <div class="carousel-item" data-bs-interval="5000">
                     <img alt="Dog 2" src="../../../public/img/carrossel_2.jpg">
                 </div>
-                <div class="carousel-item" data-bs-interval="7000">
+                <div class="carousel-item" data-bs-interval="5000">
                     <img alt="Dog 3" src="../../../public/img/carrossel_3.jpg">
                 </div>
             </div>
