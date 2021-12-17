@@ -63,7 +63,7 @@
       <ul>
         <li><a href="produtos.html">Produtos</a></li>
         <li> > </li>
-        <li>Nome do Produto</li>
+        <li><?= $produto->nome ?></li>
       </ul>
     </div>
   </div>
@@ -110,10 +110,10 @@
 
             <div class="col-sm-12 col-md-12 col-lg-6">
               <div class="card-body px-0">
-                <h5 class="card-title"><b>Nome do Produto</b></h5>
-                <p class="card-text"><b>R$99,99</b></p>
+                <h5 class="card-title"><b><?= $produto->nome ?></b></h5>
+                <p class="card-text"><b>R$<?= $produto->preco ?></b></p>
                 <ul>
-                  <li>Categoria</li>
+                  <li><?= $categorias[$produto->categoria] ?></li>
                 </ul>
               </div>
             </div>
@@ -128,18 +128,10 @@
     <div class="informacoes-produto">
       <h3>Descrição</h3>
       <hr>
-      <p>Inspired by Paris, the new Cest la Vie 2021 collection brought exclusive pieces that reflect the refinement and
-        unique style of the city of love.
-        Modern and extremely comfortable, the leotard SD-1644 has long sleeves made of canvas, which in addition to
-        bringing the difference to the piece, guarantees total breathability.</p>
-      <p>Classic ballerina warming pants have also been redesigned with the French touch from the "Cest la Vie 2021"
-        collection. The stripes in bright colors bring style and elegance, making the piece desired and ideal for those
-        looking for comfort when performing the movements.</p>
-
+      <p><?= $produto->descricao ?></p>
       <h3>Informações</h3>
       <hr>
-      <p>Perfect combination of soft fabric, with modeling that provides total comfort and freedom for both your dance
-        classes and your day-to-day life, the Legging Pants SD-1443 is a key piece and a wildcard in the wardrobe.</p>
+      <p><?= $produto->informacoes_uteis ?></p>
     </div>
   </div>
 

@@ -80,13 +80,21 @@ class QueryBuilder
         }
     }
 
-    public function select($table, $id)
+    public function selectProduto($table, $table2, $id)
     {
         $query = "SELECT * FROM {$table} WHERE id = {$id}";
+        $categorias = $this->selectAll($table2);
 
         try {
             $stmt = $this->pdo->prepare($query);
             $stmt->execute();
+
+            $result = [
+                "produtos" => $stmt->fetchAll(PDO::FETCH_CLASS),
+                "categorias" => $categorias
+            ];
+
+            return $result;
         } catch (Exception $e) {
             die($e->getMessage());
         }

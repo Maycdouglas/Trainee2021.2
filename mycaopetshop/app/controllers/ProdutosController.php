@@ -113,10 +113,20 @@ class ProdutosController
     {
         $id = intval($_GET['id']);
         
-        $result = App::get('database')->select("produtos", $id);
+        $result = App::get('database')->selectProduto("produtos", "categorias" ,$id);
+
+
+        $categoriaProduto = array();
+        foreach ($result["categorias"] as $categoria)
+        {
+            $categoriaProduto += [
+                "{$categoria->id}" => $categoria->nome
+            ];
+        }
 
         $tabela = [
-            "produto" => $result
+            "produto" => $result["produtos"][0],
+            "categorias" => $categoriaProduto
         ];
 
 
