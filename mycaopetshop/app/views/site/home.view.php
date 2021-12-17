@@ -26,7 +26,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark shadow bg-blue">
             <div class="container">
 
-                <a href="#" class="d-flex align-items-center mb-0 text-decoration-none">
+                <a href="/home" class="d-flex align-items-center mb-0 text-decoration-none">
                     <img class="logo-navbar p-0 m-0" src="../../public/assets/Logo escrita.png">
                 </a>
 
