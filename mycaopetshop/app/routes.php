@@ -12,24 +12,17 @@ $router->post('usuarios/update', 'UsuariosController@update');
 
 
 
-//rotas login
-$router->get('login', 'ExampleController@viewLogin');
+$router->get('login', 'LoginController@viewLogin');
+
+$router->post('logar', 'LoginController@login');
+
+$router->post('logout', 'LoginController@logout');
 
 $router->get('home', 'ExampleController@viewHome');
 
 $router->get('dashboard', 'ExampleController@viewDashboard');
 
-
-$router->get("usuarios", "UsuariosController@view");
-
-$router->post("usuarios/create", "UsuariosController@create");
-
-$router->post("usuarios/delete", "UsuariosController@delete");
-
-$router->post("usuarios/update", "UsuariosController@update");
-//------------------------------------------------------------------
-
-
+//rotas produtos
 
 //rotas produtos
 $router->get("produtos", "ProdutosController@view");
@@ -44,8 +37,10 @@ $router->post("admin/produtos/update","ProdutosController@updateProdutos");
 
 $router->post("admin/produtos/delete", "ProdutosController@deleteProdutos");
 
-$router->get("categorias", "CategoriasController@view");
+// rotas categorias
 
+$router->get("categorias", "CategoriasController@view");
+$router->get("categorias/result", "CategoriasController@pesquisaCategorias");
 $router->post("categorias/create", "CategoriasController@createCategoria");
 
 $router->post("categorias/delete", "CategoriasController@delete");

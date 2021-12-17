@@ -28,6 +28,31 @@ class QueryBuilder
         }
     }
 
+    public function selectDescProdutos($table, $table2)
+    {
+        $query = "SELECT * FROM $table ORDER BY id DESC LIMIT 4";
+        $queryCat = "SELECT * FROM $table2";
+
+        try {
+            $stmt = $this->pdo->prepare($query);
+            $stmt2 = $this->pdo->prepare($queryCat);
+            $stmt->execute();
+            $stmt2->execute();
+
+            $produtos = $stmt->fetchAll(PDO::FETCH_CLASS);
+            $categorias = $stmt2->fetchAll(PDO::FETCH_CLASS);
+
+            $result = [
+                "produtos" => $produtos,
+                "categorias" => $categorias
+            ];
+
+            return $result;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function selectAllWithFk($table, $table2)
     {
         $queryProdutos = "SELECT * FROM {$table}";
