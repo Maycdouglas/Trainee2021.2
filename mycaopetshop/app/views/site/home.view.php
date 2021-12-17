@@ -55,13 +55,13 @@
             </div>
             <div class="carousel-inner rounded-bottom">
                 <div class="carousel-item active" data-bs-interval="7000">
-                    <img alt="Dog 1" src="../../public/img/macacode.svg">
+                    <img alt="Dog 1" src="../../../public/img/carrossel_1.jpg">
                 </div>
                 <div class="carousel-item" data-bs-interval="7000">
-                    <img alt="Dog 2" src="../../public/img/macacode.svg">
+                    <img alt="Dog 2" src="../../../public/img/carrossel_2.jpg">
                 </div>
                 <div class="carousel-item" data-bs-interval="7000">
-                    <img alt="Dog 3" src="../../public/img/macacode.svg">
+                    <img alt="Dog 3" src="../../../public/img/carrossel_3.jpg">
                 </div>
             </div>
             <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carousel" type="button">
@@ -80,54 +80,19 @@
                 <h2>Novos Produtos</h2>
             </div>
             <div class="cards-container">
-                <div class="card card-principal" style="width: 18rem;">
-                    <a href="view-produto.html"><img src="../../public/img/macacode.svg" class="card-img-top" alt="..."></a>
-                    <a href="view-produto.html"><button class="btn btn-detalhes">Ver Produto</button></a>
-                    <div class="corpo-card">
-                        <div class="categorias">
-                            <button class="btn btn-categoria racao">Ração</button>
-                            <button class="btn btn-categoria cachorro">Cachorro</button>
+                <?php foreach ($produtos as $produto) : ?>
+                    <div class="card card-principal" style="width: 18rem;">
+                        <a href="/produto/<?= $produto->id ?>"><img src="../../public/img/<?= $produto->imagem_1 ?>.jpg" class="card-img-top" alt="..."></a>
+                        <a href="/produto/<?= $produto->id ?>"><button class="btn btn-detalhes">Ver Produto</button></a>
+                        <div class="corpo-card">
+                            <div class="categorias">
+                                <button class="btn btn-categoria <?= $categoriaProduto[$produto->categoria] ?>"><?= $categoriaProduto[$produto->categoria] ?></button>
+                            </div>
+                            <h5 class="nome-produto"><?= $produto->nome ?></h5>
+                            <p class="preco-produto"><?= $produto->preco ?></p>
                         </div>
-                        <h5 class="nome-produto">MyRação para raças pequenas</h5>
-                        <p class="preco-produto">R$29,90</p>
                     </div>
-                </div><!-- card1 -->
-                <div class="card card-principal" style="width: 18rem;">
-                    <a href="view-produto.html"><img src="../../public/img/macacode.svg" class="card-img-top" alt="..."></a>
-                    <a href="view-produto.html"><button class="btn btn-detalhes">Ver Produto</button></a>
-                    <div class="corpo-card">
-                        <div class="categorias">
-                            <button class="btn btn-categoria racao">Ração</button>
-                            <button class="btn btn-categoria cachorro">Cachorro</button>
-                        </div>
-                        <h5 class="nome-produto">MyRação para raças pequenas</h5>
-                        <p class="preco-produto">R$29,90</p>
-                    </div>
-                </div><!-- card2 -->
-                <div class="card card-principal" style="width: 18rem;">
-                    <a href="view-produto.html"><img src="../../public/img/macacode.svg" class="card-img-top" alt="..."></a>
-                    <a href="view-produto.html"><button class="btn btn-detalhes">Ver Produto</button></a>
-                    <div class="corpo-card">
-                        <div class="categorias">
-                            <button class="btn btn-categoria racao">Ração</button>
-                            <button class="btn btn-categoria cachorro">Cachorro</button>
-                        </div>
-                        <h5 class="nome-produto">MyRação para raças pequenas</h5>
-                        <p class="preco-produto">R$29,90</p>
-                    </div>
-                </div><!-- card3 -->
-                <div class="card card-principal" style="width: 18rem;">
-                    <a href="view-produto.html"><img src="../../public/img/macacode.svg" class="card-img-top" alt="..."></a>
-                    <a href="view-produto.html"><button class="btn btn-detalhes">Ver Produto</button></a>
-                    <div class="corpo-card">
-                        <div class="categorias">
-                            <button class="btn btn-categoria racao">Ração</button>
-                            <button class="btn btn-categoria cachorro">Cachorro</button>
-                        </div>
-                        <h5 class="nome-produto">MyRação para raças pequenas</h5>
-                        <p class="preco-produto">R$29,90</p>
-                    </div>
-                </div><!-- card4 -->
+                <?php endforeach; ?>
             </div>
         </section>
 
