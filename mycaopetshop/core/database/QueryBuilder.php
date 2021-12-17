@@ -82,7 +82,7 @@ class QueryBuilder
 
     public function select($table, $id)
     {
-        $query = "SELECT FROM {$table} WHERE id = {$id}";
+        $query = "SELECT * FROM {$table} WHERE id = {$id}";
 
         try {
             $stmt = $this->pdo->prepare($query);

@@ -109,4 +109,19 @@ class ProdutosController
         header("Location: /admin/produtos");
     }
 
+    public function produto()
+    {
+        $id = intval($_GET['id']);
+        
+        $result = App::get('database')->select("produtos", $id);
+
+        $tabela = [
+            "produto" => $result
+        ];
+
+
+        return view('produto', $tabela);
+        
+    }
+
 }

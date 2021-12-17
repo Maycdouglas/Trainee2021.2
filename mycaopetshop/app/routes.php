@@ -55,4 +55,8 @@ $router->get("contato", "ContatoController@viewContato");
 
 $router->post("contato/enviar", "ContatoController@Contato");
 
+//Rotas do produto
+
+$router->get("produto", "ProdutosController@produto");
+
 ?>
