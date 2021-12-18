@@ -140,4 +140,8 @@ h1, h2 {
         font-size: 0;
         display: block;
     }
+
+    .card {
+        max-width: 90% !important;
+    }
 }
