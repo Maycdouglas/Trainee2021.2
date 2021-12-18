@@ -87,7 +87,7 @@
                 </div>
                 <div class="carousel-inner rounded">
                   <div class="carousel-item active" data-bs-interval="7000">
-                    <img alt="Dog 1" src="../../public/img/macacode.svg">
+                    <img alt="Dog 1" src="../../public/img/<?= $produto->imagem_1 ?>.jpg">
                   </div>
                   <div class="carousel-item" data-bs-interval="7000">
                     <img alt="Dog 2" src="../../public/img/macacode.svg">
@@ -113,7 +113,7 @@
                 <h5 class="card-title"><b><?= $produto->nome ?></b></h5>
                 <p class="card-text"><b>R$<?= $produto->preco ?></b></p>
                 <ul>
-                  <li><?= $categorias[$produto->categoria] ?></li>
+                  <li class="<?= $categorias[$produto->categoria] ?>"><?= $categorias[$produto->categoria] ?></li>
                 </ul>
               </div>
             </div>
