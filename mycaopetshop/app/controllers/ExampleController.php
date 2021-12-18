@@ -44,4 +44,9 @@ class ExampleController
     {
         return redirect('home'); 
     }
+
+    public function viewQuemSomos()
+    {
+        return view('quemsomos');
+    }
 }
