@@ -127,6 +127,10 @@ hr {
         display: none;
     }
 
+    .btn-adicionar {
+        margin-top: 10px;
+    }
+
     .detalhes {
         display: block;
     }
@@ -181,5 +185,15 @@ hr {
 
     .td-button {
         padding: 2px !important;
+    }
+
+    .principal {
+        padding-right: 0 !important;
+    }
+
+    .negrito {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        overflow: hidden;
     }
 }

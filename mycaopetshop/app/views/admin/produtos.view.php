@@ -99,7 +99,7 @@ para a index.php.*/
     </section>
   </header>
 
-  <main class="container">
+  <main class="container principal">
     <div class="product-table">
 
       <div class="container">
@@ -132,7 +132,7 @@ para a index.php.*/
 
 
       <!--Tabela de Gerenciamento dos Produtos-->
-      <div class="container">
+      <div class="container negrito">
         <table class="table table-hover justify-content-center align-items-center">
 
           <thead>
