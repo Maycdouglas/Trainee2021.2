@@ -30,8 +30,8 @@
         <div>
 
           <h3 class="d-flex flex-column align-items-center text-center vias-contato">
-            <span><a href="mailto:contato@mycao.com.br" target="_blank"><i class="far fa-envelope me-2"></i>contato@mycao.com.br</a></span>
-            <span><a href="#" target="_blank"><i class="fab fa-instagram me-2"></i>mycao</a></span>
+            <span><a href="mailto:mycaopetshop@gmail.com" target="_blank"><i class="far fa-envelope me-2"></i>mycaopetshop</a></span>
+            <span><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram me-2"></i>mycao</a></span>
             <span><a href="tel:(32) 99999-9999" target="_blank"><i class="fas fa-mobile-alt me-2"></i>(32) 99999-9999</a></span>
           </h3>
 

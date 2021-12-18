@@ -96,7 +96,7 @@ para a index.php.*/
         </section>
     </header>
 
-    <div class="container">
+    <div class="container corpo-dashboard">
 
         <div class="welcome text-center mt-4">
             <h1 class="d-flex flex-column m-0">Seja bem-vindo(a), <span class="username"><?= $_SESSION['nome']?>!</span></h1>
