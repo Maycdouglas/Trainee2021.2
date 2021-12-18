@@ -31,6 +31,7 @@ para a index.php.*/
   <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../public/css/view-adm-produtos.css">
   <link rel="stylesheet" href="../../public/css/sidebar-adm.css">
+  <link rel="stylesheet" href="../../public/css/usuarios.css">
 </head>
 
 
@@ -245,8 +246,8 @@ para a index.php.*/
               </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-success">Adicionar</button>
+            <button type="button" class="btn btn-danger " data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-principal">Adicionar</button>
           </div>
           </form>
 
@@ -308,8 +309,8 @@ para a index.php.*/
                   </select>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
-                  <button type="submit" class="btn btn-success">Editar</button>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="submit" class="btn btn-principal">Editar</button>
                 </div>
               </form>
             </div>
@@ -371,7 +372,7 @@ para a index.php.*/
               </fieldset>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
             </div>
           </div>
         </div>
@@ -393,9 +394,9 @@ para a index.php.*/
               <p class="text-center">Deseja mesmo excluir esse produto?</p>
             </div>
             <div class="modal-footer">
+              <button type="button" class="btn btn-principal bottom-add" data-bs-dismiss="modal">Cancelar</button>
               <form action="produtos/delete" method="post">
                 <input type="hidden" value="<?= $produto->id ?>" name="id">
-                <button type="button" class="btn btn-secondary bottom-exit" data-bs-dismiss="modal">Cancelar</button>
                 <button type="submit" class="btn btn-danger">Excluir</button>
               </form>
             </div>

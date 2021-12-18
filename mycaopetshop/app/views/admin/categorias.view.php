@@ -28,6 +28,7 @@ para a index.php.*/
     <link rel="stylesheet" href="../../public/css/view-adm-categorias.css">
     <link rel="stylesheet" href="../../public/css/view-adm-produtos.css">
     <link rel="stylesheet" href="../../public/css/sidebar-adm.css">
+    <link rel="stylesheet" href="../../public/css/usuarios.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 
 </head>
@@ -199,8 +200,8 @@ para a index.php.*/
                             <input class="form-control" id="exampleFormControlInput1" placeholder="Insira o nome da Categoria" name="nome">
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn btn-success">Adicionar</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-principal">Adicionar</button>
                         </div>
                     </form>
                 </div>
@@ -226,8 +227,8 @@ para a index.php.*/
                             </div>
                             <div class="modal-footer">
                                 <input type="hidden" value="<?= $categoria->id ?>" name="id">
-                                <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="submit" class="btn btn-success">Editar</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-principal">Editar</button>
                             </div>
 
                         </form>
@@ -253,9 +254,9 @@ para a index.php.*/
                         <p><?= $categoria->nome ?></p>
                     </div>
                     <div class="modal-footer">
+                        <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
                         <form action="categorias/delete" method="post">
                             <input type="hidden" value="<?= $categoria->id ?>" name="id">
-                            <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
                             <button type="submit" class="btn btn-danger">Excluir</button>
                         </form>
                     </div>
@@ -282,7 +283,7 @@ para a index.php.*/
                         <p><?= $categoria->nome ?></p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-principal" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
                     </div>
                 </div>
             </div>
