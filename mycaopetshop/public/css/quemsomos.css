@@ -4,6 +4,10 @@
     --azul-claro: #AFCBFF;
 }
 
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
 .navbarT {
     background-color: #022049 !important;
     height: 50px !important;

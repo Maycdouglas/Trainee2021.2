@@ -59,4 +59,7 @@ $router->post("contato/enviar", "ContatoController@Contato");
 
 $router->get("produto", "ProdutosController@produto");
 
+//rotas quemsomos
+$router->get("quemsomos", "QuemSomosController@viewQuemSomos");
+
 ?>
