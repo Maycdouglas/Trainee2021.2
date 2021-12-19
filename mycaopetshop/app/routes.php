@@ -24,7 +24,7 @@ $router->get('dashboard', 'ExampleController@viewDashboard');
 
 //rotas produtos
 
-$router->get("produtos", "ProdutosController@paginacao2");
+$router->get("produtos", "ProdutosController@paginacao");
 $router->get("admin/produtos", "ProdutosController@viewAdmin");
 
 $router->get("admin/produtos/result", "ProdutosController@pesquisaProdutos");
@@ -62,8 +62,6 @@ $router->get("quemsomos", "ExampleController@viewQuemSomos");
 //Rotas do produto
 
 $router->get("produto", "ProdutosController@produto");
-
-$router->get("paginacao", "ProdutosController@paginacao2");
 
 
 ?>

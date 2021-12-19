@@ -55,16 +55,16 @@
 
 
                             <li class="page-item <?php if($pagina == 1) :?> disabled <?php else : ?> active <?php endif; ?> ">
-                                <a class="page-link" href="/paginacao?pg=<?= $pag_anterior ?>">Previous</a>
+                                <a class="page-link" href="/produtos?pg=<?= $pag_anterior ?>">Previous</a>
                             </li>
 
                             <!-- apresentar a paginacao -->
                             <?php for ($i = 1; $i < $totalPaginas + 1; $i++) { ?>
-                                <li class="page-item active"><a class="page-link" href="/paginacao?pg=<?= $i ?> "><?= $i ?></a></li>
+                                <li class="page-item active"><a class="page-link" href="/produtos?pg=<?= $i ?> "><?= $i ?></a></li>
                             <?php } ?>
                             </li>
                             <li class="page-item <?php if($pagina == $totalPaginas) :?> disabled <?php else : ?> active <?php endif; ?>">
-                                <a class="page-link" href="/paginacao?pg=<?= $pag_posterior ?> ">Next</a>
+                                <a class="page-link" href="/produtos?pg=<?= $pag_posterior ?> ">Next</a>
                             </li>
                         </ul>
                     </nav>
