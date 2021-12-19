@@ -54,6 +54,12 @@ $router->post("categorias/edit", "CategoriasController@editCategoria");
 $router->get("contato", "ContatoController@viewContato");
 
 $router->post("contato/enviar", "ContatoController@Contato");
+//---------------------------------------------------------------------------
+
+
+
+//rotas quemsomos
+$router->get("quemsomos", "ExampleController@viewQuemSomos");
 
 //Rotas do produto
 
