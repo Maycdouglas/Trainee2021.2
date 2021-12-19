@@ -130,6 +130,25 @@ a:visited {
     color: #f6f8ff;
 }
 
+.Ração {
+    background-color: orange;
+    color: white;
+}
+
+.Brinquedo {
+    background-color: rgb(13, 13, 173);
+    color: white;
+}
+
+.Saúde {
+    background-color: rgb(241, 78, 105);
+    color: white;
+}
+
+.btn-categoria {
+    pointer-events: none;
+}
+
 .cachorro {
     background-color: red;
     color: white;

@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../../public/css/produtos.css">
     <link rel="stylesheet" href="../../public/css/navbarft.css">
+    <link rel="stylesheet" href="../../public/css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <title>MyCão Pet Shop - Produtos</title>
@@ -32,14 +33,15 @@
                         <a href="/produto?id=<?= $produto->id ?>"><img src="../../../public/img/<?= $produto->imagem_1 ?>.jpg" class="card-img-top" alt="..."></a>
                         <div class="card-body">
                             <div class="categorias">
-                                <button class="btn btn-categoria racao">Ração</button> <!--- aqui deve vir a categoria do produto referenciado, tanto na classo quanto no escrito --->
+                                <button class="btn btn-categoria <?= $categoriaProduto[$produto->categoria] ?>"><?= $categoriaProduto[$produto->categoria] ?></button> <!--- aqui deve vir a categoria do produto referenciado, tanto na classo quanto no escrito --->
                             </div>
                             <h5 class="card-title"><?= $produto->nome ?></h5>
-                            <p class="card-text"><?= $produto->preco ?></p>
+                            <p class="card-text">R$ <?= $produto->preco ?></p>
                             <a href="/produto?id=<?= $produto->id ?>" class="btn btn-details">Ver Detalhes</a>
                         </div>
                     </div><!-- card1 -->
                 <?php endforeach; ?>
+            </div>
                 <?php
                 //verificar a pagina anterior e posterior
                 $totalPaginas = ceil($totalPaginas);
@@ -91,8 +93,7 @@
                         <a class="page-link" href="#">Next</a>
                       </li>
                     </ul>
-                  </nav>
-            </div> -->
+                  </nav> -->
         </section>
     </main>
 

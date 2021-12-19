@@ -141,7 +141,7 @@ class ProdutosController
 
 public function paginacao2()
 {
-    $qtdProdutos = 6;
+    $qtdProdutos = 8;
     $pagina = $_GET['pg'] ?? 1;
     $inicio = $pagina - 1;
     $inicio *= $qtdProdutos;
@@ -149,14 +149,21 @@ public function paginacao2()
     
     $limite = $inicio . "," . $qtdProdutos;
 
-    $produtos = App::get('database')->selectAll('produtos');
-    $quantidadeTotal = count($produtos);
+    $produtos = App::get('database')->selectAllWithFk('produtos', 'categorias');
+    $quantidadeTotal = count($produtos["produtos"]);
 
     $totalPaginas = $quantidadeTotal / $qtdProdutos;
 
 
     $produtosPaginacao = App::get('database')->paginacao($limite);
 
+    $categoriaUsuario = array();
+    foreach ($produtos["categorias"] as $categoria)
+    {
+        $categoriaUsuario += [
+            "{$categoria->id}" => $categoria->nome
+        ];
+    }
 
     $arr = [
         "pagina" => $pagina,
@@ -164,7 +171,8 @@ public function paginacao2()
         "totalProdutos" => $quantidadeTotal,
         "qtdProdutos" => $qtdProdutos,
         "inicio" => $inicio,
-        "produtos" => $produtos,
+        "produtos" => $produtos["produtos"],
+        "categoriaProduto" => $categoriaUsuario,
         "produtosPaginacao" => $produtosPaginacao
     ];
 
