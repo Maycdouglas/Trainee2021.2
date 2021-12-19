@@ -26,7 +26,7 @@ $router->post("usuarios/delete", "UsuariosController@delete");
 $router->post("usuarios/update", "UsuariosController@update");
 
 
-$router->get("produtos", "ProdutosController@view");
+$router->get("produtos", "ProdutosController@paginacao2");
 $router->get("admin/produtos", "ProdutosController@viewAdmin");
 $router->get("admin/produtos/result", "ProdutosController@pesquisaProdutos");
 $router->post("admin/produtos/create", "ProdutosController@postProdutos");
@@ -38,7 +38,7 @@ $router->post("categorias/create", "CategoriasController@createCategoria");
 $router->post("categorias/delete", "CategoriasController@delete");
 $router->post("categorias/edit", "CategoriasController@editCategoria");
 
-$router->get("paginacao", "ProdutosController@paginacao");
+$router->get("paginacao", "ProdutosController@paginacao2");
 
 
 ?>

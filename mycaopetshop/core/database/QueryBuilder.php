@@ -93,6 +93,20 @@ class QueryBuilder
         }
     }
 
+    public function paginacao($limite)
+    {
+        $sql = "SELECT * FROM produtos LIMIT {$limite}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exeption $e) {
+            die($e->getMessage());
+        }
+    }
+
 
     public function insertProdutos($table, $parameters)
     {

@@ -60,7 +60,7 @@
                         <a href="view-produto.html" class="btn btn-details">Ver Detalhes</a>
                     </div>
                 </div><!-- card1 -->
-                <?php foreach ($produtos as $produto) : ?>
+                <?php foreach ($produtosPaginacao as $produto) : ?>
                     <div class="card cards" style="width: 18rem;">
                         <a href="view-produto.html"><img src="<?= $produto->foto ?>" class="card-img-top" alt="..."></a>
                         <div class="card-body">
@@ -76,6 +76,7 @@
                 <?php endforeach; ?>
                 <?php
                 //verificar a pagina anterior e posterior
+                $totalPaginas = ceil($totalPaginas);
                 $pag_anterior = $pagina - 1;
                 $pag_posterior = $pagina + 1;
 
@@ -85,33 +86,17 @@
                         <ul class="pagination">
 
 
-                            <li class="page-item disabled">
-                                <?php
-                                if ($pag_anterior != 0) { ?>
-                                    <a class="page-link" href="produtos.view.php?pagina=<?php echo $pag_anterior; ?> ">Previous</a>
-
-                                <?php } else {  ?>
-                                    <a class="page-link" href="#">Previous</a>
-
-                                <?php }  ?>
-                            </li>
-
-                            <li class="page-item disabled">
-                                <?php
-                                if ($pag_posterior != 0) { ?>
-                                    <a class="page-link" href="produtos.view.php?pagina=<?php echo $pag_posterior; ?> ">Next</a>
-
-                                <?php } else {  ?>
-                                    <a class="page-link" href="#">Next</a>
-
-                                <?php }  ?>
+                            <li class="page-item <?php if($pagina == 1) :?> disabled <?php else : ?> active <?php endif; ?> ">
+                                <a class="page-link" href="/paginacao?pg=<?= $pag_anterior ?>">Previous</a>
                             </li>
 
                             <!-- apresentar a paginacao -->
-                            <?php for ($i = 1; $i < $num_pg + 1; $i++) { ?>
-                                <li class="page-item active"><a class="page-link" href="produtos.view.php?pagina=<?php echo $i; ?> "><?php echo $i; ?></a></li>
+                            <?php for ($i = 1; $i < $totalPaginas + 1; $i++) { ?>
+                                <li class="page-item active"><a class="page-link" href="/paginacao?pg=<?= $i ?> "><?= $i ?></a></li>
                             <?php } ?>
-
+                            </li>
+                            <li class="page-item <?php if($pagina == $totalPaginas) :?> disabled <?php else : ?> active <?php endif; ?>">
+                                <a class="page-link" href="/paginacao?pg=<?= $pag_posterior ?> ">Next</a>
                             </li>
                         </ul>
                     </nav>

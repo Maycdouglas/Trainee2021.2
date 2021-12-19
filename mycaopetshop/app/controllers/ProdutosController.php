@@ -139,6 +139,40 @@ class ProdutosController
        return view('produtos', $paginacao);
 }
 
+public function paginacao2()
+{
+    $qtdProdutos = 6;
+    $pagina = $_GET['pg'] ?? 1;
+    $inicio = $pagina - 1;
+    $inicio *= $qtdProdutos;
+    $qtdProdutosAtualizada = $pagina * $qtdProdutos;
+    
+    $limite = $inicio . "," . $qtdProdutos;
+
+    $produtos = App::get('database')->selectAll('produtos');
+    $quantidadeTotal = count($produtos);
+
+    $totalPaginas = $quantidadeTotal / $qtdProdutos;
+
+
+    $produtosPaginacao = App::get('database')->paginacao($limite);
+
+
+    $arr = [
+        "pagina" => $pagina,
+        "totalPaginas" => $totalPaginas,
+        "totalProdutos" => $quantidadeTotal,
+        "qtdProdutos" => $qtdProdutos,
+        "inicio" => $inicio,
+        "produtos" => $produtos,
+        "produtosPaginacao" => $produtosPaginacao
+    ];
+
+
+    return view("produtos", $arr);
+
+}
+
 
 public function view()  //paginacao
     {
