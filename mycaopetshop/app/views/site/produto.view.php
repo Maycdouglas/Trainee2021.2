@@ -26,33 +26,7 @@
 
 <body>
 
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark shadow bg-blue">
-        <div class="container">
-
-            <a href="#" class="d-flex align-items-center mb-0 text-decoration-none">
-                <img class="logo-navbar p-0 m-0" src="../../public/assets/Logo escrita.png">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                aria-label="Alterna navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-item nav-link links-navbar" href="home.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-item nav-link links-navbar" href="produtos.html">Produtos</a></li>
-                    <li class="nav-item"><a class="nav-item nav-link links-navbar" href="contato.html">Contato</a></li>
-                    <li class="nav-item"><a class="nav-item nav-link links-navbar" href="quemsomos.html">Quem Somos</a></li>
-                    <li class="nav-item"><a class="nav-item nav-link links-navbar" href="login.html">Login</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </nav>
-</header>
+<?php include 'app/views/includes/navbar.php';?>
 
 
 
@@ -140,60 +114,7 @@
 
 
 
-  <footer class="py-4 mt-4 bg-blue">
-    <div class="container">
-        <div class="row border-bottom justify-content-center align-items-center m-0 mb-4">
-            <ul class="nav justify-content-center mb-4">
-                <li class="nav-item"><a href="home.html" class="nav-link px-2 links-footer">Início</a></li>
-                <li class="nav-item"><a href="quemsomos.html" class="nav-link px-2 links-footer">Sobre Nós</a></li>
-                <li class="nav-item"><a href="produtos.html" class="nav-link px-2 links-footer">Nossos Produtos</a></li>
-                <li class="nav-item"><a href="contato.html" class="nav-link px-2 links-footer">Fale Conosco</a></li>
-            </ul>
-        </div>
-
-
-        <div class="row justify-content-center align-items-center m-0 mb-2">
-            <div class="col-md-8 col-12">
-                <p class="text-center my-2 texto-footer">Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem
-                    accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                    explicabo.
-                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                    consequuntur.</p>
-            </div>
-        </div>
-
-
-        <div class="row justify-content-center align-items-center m-0 mb-2">
-            <div class="col-md-8 col-12">
-                <div class="row justify-content-center align-items-center m-0 mb-2">
-
-                    <ul class="nav justify-content-center m-0 p-0">
-                        <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i
-                                    class="fas fa-envelope redes-sociais"></i></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i
-                                    class="fab fa-instagram redes-sociais"></i></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i
-                                    class="fab fa-twitter redes-sociais"></i></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i
-                                    class="fab fa-whatsapp redes-sociais"></i></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 links-footer"><i
-                                    class="fab fa-facebook redes-sociais"></i></a></li>
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row justify-content-center align-items-center m-0">
-            <p class="text-center text-muted m-0 p-0 mt-2">© 2021 Code Jr</p>
-        </div>
-
-
-    </div>
-</footer>
+  <?php include 'app/views/includes/footer.php';?>
 
 
 
