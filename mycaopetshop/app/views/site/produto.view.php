@@ -85,7 +85,7 @@
             <div class="col-sm-12 col-md-12 col-lg-6">
               <div class="card-body px-0">
                 <h5 class="card-title"><b><?= $produto->nome ?></b></h5>
-                <p class="card-text"><b>R$<?= $produto->preco ?></b></p>
+                <p class="card-text"><b>R$ <?= $produto->preco ?></b></p>
                 <ul>
                   <li class="<?= $categorias[$produto->categoria] ?>"><?= $categorias[$produto->categoria] ?></li>
                 </ul>
