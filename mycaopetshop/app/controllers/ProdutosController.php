@@ -142,6 +142,47 @@ class ProdutosController
 
     }
 
+    public function pesquisa()
+    {
+        $pesquisa = $_GET["pesquisa"];
+
+        $qtdProdutos = 8;
+        $pagina = $_GET['pg'] ?? 1;
+        $inicio = $pagina - 1;
+        $inicio *= $qtdProdutos;
+        $qtdProdutosAtualizada = $pagina * $qtdProdutos;
+        
+        $limite = $inicio . "," . $qtdProdutos;
+
+
+        $produtos = App::get('database')->selectPesquisaWithFk("produtos", "categorias", $pesquisa, $limite);
+
+        $quantidadeTotal = count($produtos["produtos"]);
+
+        $totalPaginas = $quantidadeTotal / $qtdProdutos;
+
+
+        $categoriaUsuario = array();
+        foreach ($produtos["categorias"] as $categoria)
+        {
+            $categoriaUsuario += [
+                "{$categoria->id}" => $categoria->nome
+            ];
+        }
+
+        $arr = [
+            "pagina" => $pagina,
+            "totalPaginas" => $totalPaginas,
+            "totalProdutos" => $quantidadeTotal,
+            "qtdProdutos" => $qtdProdutos,
+            "inicio" => $inicio,
+            "produtos" => $produtos["produtos"],
+            "categoriaProduto" => $categoriaUsuario,
+            "produtosPaginacao" => $produtos["produtos"]
+        ];
+
+        return view("produtos", $arr);
+    }
 
     public function view()  //paginacao
         {

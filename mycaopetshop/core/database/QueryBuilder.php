@@ -126,6 +126,33 @@ class QueryBuilder
         }
     }
 
+    public function selectPesquisaWithFk($table, $table2, $pesquisa, $limite)
+    {
+        $queryProdutos = "SELECT * FROM {$table} WHERE nome LIKE '%{$pesquisa}%' LIMIT $limite";
+        $queryCategorias = "SELECT * FROM {$table2}";
+
+        try {
+            $stmt = $this->pdo->prepare($queryProdutos);
+            $stmt2 = $this->pdo->prepare($queryCategorias);
+
+            $stmt->execute();
+            $stmt2->execute();
+
+            $produtos = $stmt->fetchAll(PDO::FETCH_CLASS);
+            $categorias = $stmt2->fetchAll(PDO::FETCH_CLASS);
+
+
+            $result = [
+                "produtos" => $produtos,
+                "categorias" => $categorias
+            ];
+
+            return $result;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function paginacao($limite)
     {
         $sql = "SELECT * FROM produtos LIMIT {$limite}";

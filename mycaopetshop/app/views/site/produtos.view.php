@@ -22,8 +22,8 @@
         <section>
             <div class="principal text-center mt-4">
                 <h1>Nossos Produtos</h1>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search">
+                <form class="d-flex" action="/produtos/result" method="GET">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Search" name="pesquisa">
                     <button class="btn btn-outline btn-principal" type="submit">Pesquisar</button>
                 </form>
             </div>

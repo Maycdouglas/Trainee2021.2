@@ -25,6 +25,7 @@ $router->get('dashboard', 'ExampleController@viewDashboard');
 //rotas produtos
 
 $router->get("produtos", "ProdutosController@paginacao");
+$router->get("produtos/result", "ProdutosController@pesquisa");
 $router->get("admin/produtos", "ProdutosController@viewAdmin");
 
 $router->get("admin/produtos/result", "ProdutosController@pesquisaProdutos");
