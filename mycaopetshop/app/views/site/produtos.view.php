@@ -28,10 +28,10 @@
             <div class="section-principal">
                 <?php foreach ($produtosPaginacao as $produto) : ?>
                     <div class="card cards" style="width: 18rem;">
-                        <a href="/produto?id=<?= $produto->id ?>"><img src="../../../public/img/<?= $produto->foto ?>.jpg" class="card-img-top" alt="..."></a>
+                        <a href="/produto?id=<?= $produto->id ?>"><img src="../../../public/img/<?= $produto->imagem_1 ?>.jpg" class="card-img-top" alt="..."></a>
                         <div class="card-body">
                             <div class="categorias">
-                                <button class="btn btn-categoria racao">Ração</button> <!--- aqui deve vir a categoria do produto referenciado --->
+                                <button class="btn btn-categoria racao">Ração</button> <!--- aqui deve vir a categoria do produto referenciado, tanto na classo quanto no escrito --->
                             </div>
                             <h5 class="card-title"><?= $produto->nome ?></h5>
                             <p class="card-text"><?= $produto->preco ?></p>
