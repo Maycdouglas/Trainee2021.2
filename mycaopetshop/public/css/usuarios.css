@@ -17,16 +17,18 @@ a:visited {
 body {
     background-color: #f6f8ff !important;
     font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
 }
 
 h3 {
     color: var(--azul-escuro);
 }
 
-.container {
-    padding-left: 76px !important;
-    
+.negrito {
+    font-weight: bold;
+}
+
+.bar-search {
+    text-align: right !important;
 }
 
 .main {
@@ -125,6 +127,10 @@ hr {
         display: none;
     }
 
+    .btn-adicionar {
+        margin-top: 10px;
+    }
+
     .detalhes {
         display: block;
     }
@@ -179,5 +185,15 @@ hr {
 
     .td-button {
         padding: 2px !important;
+    }
+
+    .principal {
+        padding-right: 0 !important;
+    }
+
+    .negrito {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        overflow: hidden;
     }
 }

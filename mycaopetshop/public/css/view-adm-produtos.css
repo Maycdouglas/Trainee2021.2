@@ -1,20 +1,26 @@
 body {
     background-color: #f6f8ff;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: normal;
 }
 
 body h5 {
-    font-family: 'Quicksand', sans-serif !important;
     color: #022049;
 }
 
-body h2 {
-    font-family: 'Quicksand', sans-serif !important;
+body h3 {
     color: #022049;
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
 
+main {
+    padding-left: 76px !important;
+}
 
+.container {
+    font-weight: bold;
+}
 
 
 .nav-search {

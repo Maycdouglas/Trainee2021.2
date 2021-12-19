@@ -14,7 +14,23 @@ class ExampleController
     
     public function viewHome()
     {
-        return view('home'); 
+        $descProdutos = App::get('database')->selectDescProdutos('produtos', 'categorias');
+
+        $categoriaProduto = array();
+        foreach ($descProdutos["categorias"] as $categoria)
+        {
+            $categoriaProduto += [
+                "{$categoria->id}" => $categoria->nome
+            ];
+        }
+
+        $tabela = [
+            "produtos" => $descProdutos["produtos"],
+            "categorias" => $descProdutos["categorias"],
+            "categoriaProduto" => $categoriaProduto
+        ];
+
+        return view('home', $tabela);
     }
 
     public function viewDashboard()
@@ -27,5 +43,10 @@ class ExampleController
     public function redirectHome()
     {
         return redirect('home'); 
+    }
+
+    public function viewQuemSomos()
+    {
+        return view('quemsomos');
     }
 }

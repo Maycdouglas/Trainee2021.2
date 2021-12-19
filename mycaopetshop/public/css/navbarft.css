@@ -2,10 +2,21 @@
     background-color: #022049 !important;
 }
 
-.navbar a {
+
+
+body, header
+{
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+
+.navbar a 
+{
     text-align: right !important;
     height: 45px;
     margin-left: 40px;
+    overflow: hidden !important;
 }
 
 .links-navbar {
@@ -27,16 +38,6 @@
 .navbar-brand {
     margin-top: 0px !important;
 }
-
-
-
-
-
-.conteudo_site {
-    background-color: white !important;
-    height: 1000px;
-}
-
 
 
 

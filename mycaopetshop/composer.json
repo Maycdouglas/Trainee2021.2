@@ -6,6 +6,7 @@
         "files": ["core/helpers.php"]
     },
   "require": {
-    "ext-pdo": "*"
+    "ext-pdo": "*",
+        "phpmailer/phpmailer": "^6.5"
   }
 }

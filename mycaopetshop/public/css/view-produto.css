@@ -1,3 +1,9 @@
+:root {
+    --azul-escuro: #022049;
+    --laranja: #F4A630;
+    --azul-claro: #AFCBFF;
+}
+
 body {
     background-color: #f6f8ff;
 }
@@ -109,7 +115,25 @@ body h3 {
     color: white;
 }
 
+.Bifinhos {
+    background-color: var(--laranja) !important;
+    color: #f6f8ff !important;
+}
 
+.Casinha {
+    background-color: rgb(255, 92, 92) !important;
+    color: #f6f8ff !important;
+}
+
+.Coleira {
+    background-color: rgb(127, 127, 255) !important;
+    color: #f6f8ff !important;
+}
+
+.Roupa {
+    background-color: rgb(45, 133, 45) !important;
+    color: #f6f8ff !important;
+}
 
 
 .informacoes-produto h3 {
